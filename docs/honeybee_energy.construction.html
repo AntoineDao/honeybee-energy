@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.construction module &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="honeybee_energy.constructionset module" href="honeybee_energy.constructionset.html" />
+    <link rel="prev" title="honeybee_energy.boundarycondition module" href="honeybee_energy.boundarycondition.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee_energy.boundarycondition.html" title="Previous Chapter: honeybee_energy.boundarycondition module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee_ener...</span>
+    </a>
+  </li>
+  <li>
+    <a href="honeybee_energy.constructionset.html" title="Next Chapter: honeybee_energy.constructionset module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">honeybee_ener... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee_energy.construction.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-honeybee_energy.construction">
+<span id="honeybee-energy-construction-module"></span><h1>honeybee_energy.construction module<a class="headerlink" href="#module-honeybee_energy.construction" title="Permalink to this headline">¶</a></h1>
+<p>Energy Construction.</p>
+<dl class="class">
+<dt id="honeybee_energy.construction.OpaqueConstruction">
+<em class="property">class </em><code class="descclassname">honeybee_energy.construction.</code><code class="descname">OpaqueConstruction</code><span class="sig-paren">(</span><em>name</em>, <em>materials</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.construction._ConstructionBase</span></code></p>
+<p>Opaque energy construction.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+materials
+layers
+unique_materials
+r_value
+u_value
+u_factor
+r_factor
+inside_emissivity
+inside_solar_reflectance
+inside_visible_reflectance
+outside_emissivity
+outside_solar_reflectance
+outside_visible_reflectance
+mass_area_density
+area_heat_capacity</dd>
+</dl>
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.area_heat_capacity">
+<code class="descname">area_heat_capacity</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.area_heat_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The heat capacity per unit area of the construction [kg/K-m2].</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="honeybee_energy.construction.OpaqueConstruction.extract_all_from_idf_file">
+<em class="property">static </em><code class="descname">extract_all_from_idf_file</code><span class="sig-paren">(</span><em>idf_file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.extract_all_from_idf_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.extract_all_from_idf_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract all OpaqueConstruction objects from an EnergyPlus IDF file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idf_file</strong> – A path to an IDF file containing objects for opaque
+constructions and corresponding materials.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt>A list of all OpaqueConstruction objects in the IDF</dt>
+<dd>file as honeybee_energy OpaqueConstruction objects.</dd>
+<dt>materials: A list of all opaque materials in the IDF file as</dt>
+<dd>honeybee_energy EnergyMaterial objects.</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">constructions</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.construction.OpaqueConstruction.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a OpaqueConstruction from a dictionary.</p>
+<p>Note that the dictionary must be a non-abridged version for this
+classmethod to work.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – <p>{
+“type”: ‘OpaqueConstruction’,
+“name”: ‘Generic Brick Wall’,
+“layers”: [] // list of material names (from outside to inside)
+“materials”: []  // list of unique material objects
+}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.construction.OpaqueConstruction.from_idf">
+<em class="property">classmethod </em><code class="descname">from_idf</code><span class="sig-paren">(</span><em>idf_string</em>, <em>ep_mat_strings</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.from_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.from_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an OpaqueConstruction from an EnergyPlus IDF text string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>idf_string</strong> – A text string fully describing an EnergyPlus construction.</li>
+<li><strong>ep_mat_strings</strong> – A list of text strings for each of the materials in
+the construction.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.construction.OpaqueConstruction.from_standards_dict">
+<em class="property">classmethod </em><code class="descname">from_standards_dict</code><span class="sig-paren">(</span><em>data</em>, <em>data_materials</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.from_standards_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.from_standards_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an OpaqueConstruction from an OpenStudio standards gem dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> – An OpenStudio standards dictionary of a Construction in the
+format below.</li>
+<li><strong>code-block:</strong> (<em>.</em>) – <p>json: {
+“name”: “Typical Insulated Exterior Mass Wall”,
+“intended_surface_type”: “ExteriorWall”,
+“standards_construction_type”: “Mass”,
+“insulation_layer”: “Typical Insulation”,
+“materials”: [</p>
+<blockquote>
+<div>”1IN Stucco”,
+“8IN CONCRETE HW RefBldg”,
+“Typical Insulation”,
+“1/2IN Gypsum”]</div></blockquote>
+<p>}</p>
+</li>
+<li><strong>data_materials</strong> – Dictionary representation of all materials in the
+OpenStudio standards gem.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.inside_emissivity">
+<code class="descname">inside_emissivity</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.inside_emissivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>“The emissivity of the inside face of the construction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.inside_solar_reflectance">
+<code class="descname">inside_solar_reflectance</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.inside_solar_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>“The solar reflectance of the inside face of the construction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.inside_visible_reflectance">
+<code class="descname">inside_visible_reflectance</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.inside_visible_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>“The visible reflectance of the inside face of the construction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.mass_area_density">
+<code class="descname">mass_area_density</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.mass_area_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>The area density of the construction [kg/m2].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.materials">
+<code class="descname">materials</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.materials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the list of materials in the construction (outside to inside).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.outside_emissivity">
+<code class="descname">outside_emissivity</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.outside_emissivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>“The emissivity of the outside face of the construction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.outside_solar_reflectance">
+<code class="descname">outside_solar_reflectance</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.outside_solar_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>“The solar reflectance of the outside face of the construction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.outside_visible_reflectance">
+<code class="descname">outside_visible_reflectance</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.outside_visible_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>“The visible reflectance of the outside face of the construction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.OpaqueConstruction.temperature_profile">
+<code class="descname">temperature_profile</code><span class="sig-paren">(</span><em>outside_temperature=-18</em>, <em>inside_temperature=21</em>, <em>outside_wind_speed=6.7</em>, <em>height=1.0</em>, <em>angle=90.0</em>, <em>pressure=101325</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.temperature_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.temperature_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of temperatures at each material boundary across the construction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>outside_temperature</strong> – The temperature on the outside of the construction [C].
+Default is -18, which is consistent with NFRC 100-2010.</li>
+<li><strong>inside_temperature</strong> – The temperature on the inside of the construction [C].
+Default is 21, which is consistent with NFRC 100-2010.</li>
+<li><strong>wind_speed</strong> – The average outdoor wind speed [m/s]. This affects outdoor
+convective heat transfer coefficient. Default is 6.7 m/s.</li>
+<li><strong>height</strong> – An optional height for the surface in meters. Default is 1.0 m.</li>
+<li><strong>angle</strong> – An angle in degrees between 0 and 180.
+0 = A horizontal surface with the outside boundary on the bottom.
+90 = A vertical surface
+180 = A horizontal surface with the outside boundary on the top.</li>
+<li><strong>pressure</strong> – The average pressure of in Pa.
+Default is 101325 Pa for standard pressure at sea level.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>A list of temperature values [C].</dt>
+<dd><p class="first last">The first value will always be the outside temperature and the
+second will be the exterior surface temperature.
+The last value will always be the inside temperature and the second
+to last will be the interior surface temperature.</p>
+</dd>
+<dt>r_values: A list of R-values for each of the material layers [m2-K/W].</dt>
+<dd><p class="first last">The first value will always be the resistance of the exterior air
+and the last value is the resistance of the interior air.
+The sum of this list is the R-factor for this construction given
+the input parameters.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">temperatures</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.OpaqueConstruction.thickness">
+<code class="descname">thickness</code><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.thickness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thickness of the construction [m].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.OpaqueConstruction.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><em>abridged=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opaque construction dictionary representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>abridged</strong> – Boolean to note whether the full dictionary describing the
+object should be returned (False) or just an abridged version (True),
+which only specifies the names of material layers. Default: False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.OpaqueConstruction.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDF string representation of construction object.</p>
+<p>Note that this method only outputs a single string for the construction and,
+to write the full construction into an IDF, the construction’s unique_materials
+must also be written.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Text string representation of the construction.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">construction_idf</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.OpaqueConstruction.to_radiance_solar_exterior">
+<code class="descname">to_radiance_solar_exterior</code><span class="sig-paren">(</span><em>specularity=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.to_radiance_solar_exterior"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.to_radiance_solar_exterior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Honeybee Radiance material with the exterior solar reflectance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.OpaqueConstruction.to_radiance_solar_interior">
+<code class="descname">to_radiance_solar_interior</code><span class="sig-paren">(</span><em>specularity=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.to_radiance_solar_interior"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.to_radiance_solar_interior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Honeybee Radiance material with the interior solar reflectance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.OpaqueConstruction.to_radiance_visible_exterior">
+<code class="descname">to_radiance_visible_exterior</code><span class="sig-paren">(</span><em>specularity=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.to_radiance_visible_exterior"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.to_radiance_visible_exterior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Honeybee Radiance material with the exterior visible reflectance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.OpaqueConstruction.to_radiance_visible_interior">
+<code class="descname">to_radiance_visible_interior</code><span class="sig-paren">(</span><em>specularity=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#OpaqueConstruction.to_radiance_visible_interior"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.OpaqueConstruction.to_radiance_visible_interior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Honeybee Radiance material with the interior visible reflectance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.construction.ShadeConstruction">
+<em class="property">class </em><code class="descclassname">honeybee_energy.construction.</code><code class="descname">ShadeConstruction</code><span class="sig-paren">(</span><em>name</em>, <em>solar_reflectance=0.2</em>, <em>visible_reflectance=0.2</em>, <em>is_specular=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#ShadeConstruction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Construction for Shade objects.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+solar_reflectance
+visible_reflectance
+is_specular
+is_default</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.construction.ShadeConstruction.ToString">
+<code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#ShadeConstruction.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.ShadeConstruction.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#ShadeConstruction.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this construction.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.construction.ShadeConstruction.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#ShadeConstruction.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ShadeConstruction from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – <p>{
+“type”: ‘ShadeConstruction’,
+“name”: ‘Generic Overhang Construction’,
+“solar_reflectance”: 0.35,
+“visible_reflectance”: 0.35,
+“is_specular”: False
+}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.ShadeConstruction.glazing_construction">
+<code class="descname">glazing_construction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#ShadeConstruction.glazing_construction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.glazing_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a WindowConstruction that EnergyPlus uses for specular reflection.</p>
+<p>Will be None if is_specular is False.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.ShadeConstruction.is_default">
+<code class="descname">is_default</code><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.is_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean to note whether all properties follow the EnergyPlus default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.ShadeConstruction.is_specular">
+<code class="descname">is_specular</code><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.is_specular" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean to note whether the reflection is diffuse or specular.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.ShadeConstruction.lock">
+<code class="descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.lock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.ShadeConstruction.name">
+<code class="descname">name</code><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the text string for construction name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.ShadeConstruction.solar_reflectance">
+<code class="descname">solar_reflectance</code><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.solar_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the solar reflectance of the shade.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.ShadeConstruction.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#ShadeConstruction.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shade construction dictionary representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.ShadeConstruction.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><em>host_shade_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#ShadeConstruction.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDF string for the ShadingProperty:Reflectance of this construction.</p>
+<p>Note that, if is_specular is True, the glazing_construction() method must
+be used to also write the glazing counstruction into the IDF.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>host_shade_name</strong> – Text string for the name of a Shade object that
+possesses this ShadeConstruction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.ShadeConstruction.to_radiance_solar">
+<code class="descname">to_radiance_solar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#ShadeConstruction.to_radiance_solar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.to_radiance_solar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Honeybee Radiance material with the solar reflectance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.ShadeConstruction.to_radiance_visible">
+<code class="descname">to_radiance_visible</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#ShadeConstruction.to_radiance_visible"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.to_radiance_visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Honeybee Radiance material with the visible reflectance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.ShadeConstruction.unlock">
+<code class="descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.unlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.ShadeConstruction.visible_reflectance">
+<code class="descname">visible_reflectance</code><a class="headerlink" href="#honeybee_energy.construction.ShadeConstruction.visible_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the visible reflectance of the shade.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.construction.WindowConstruction">
+<em class="property">class </em><code class="descclassname">honeybee_energy.construction.</code><code class="descname">WindowConstruction</code><span class="sig-paren">(</span><em>name</em>, <em>materials</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.construction._ConstructionBase</span></code></p>
+<p>Window energy construction.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+materials
+layers
+unique_materials
+r_value
+u_value
+u_factor
+r_factor
+inside_emissivity
+outside_emissivity
+unshaded_solar_transmittance
+unshaded_visible_transmittance
+glazing_count
+gap_count
+has_shade
+shade_location</dd>
+</dl>
+<dl class="staticmethod">
+<dt id="honeybee_energy.construction.WindowConstruction.extract_all_from_idf_file">
+<em class="property">static </em><code class="descname">extract_all_from_idf_file</code><span class="sig-paren">(</span><em>idf_file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction.extract_all_from_idf_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.extract_all_from_idf_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all WindowConstruction objects in an EnergyPlus IDF file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idf_file</strong> – A path to an IDF file containing objects for window
+constructions and corresponding materials. For example, the
+IDF Report output by LBNL WINDOW.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.construction.WindowConstruction.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a WindowConstruction from a dictionary.</p>
+<p>Note that the dictionary must be a non-abridged version for this
+classmethod to work.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – <p>{
+“type”: ‘WindowConstruction’,
+“name”: ‘Generic Double Pane Window’,
+“materials”: []  // list of material objects
+}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.construction.WindowConstruction.from_idf">
+<em class="property">classmethod </em><code class="descname">from_idf</code><span class="sig-paren">(</span><em>idf_string</em>, <em>ep_mat_strings</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction.from_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.from_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an WindowConstruction from an EnergyPlus text string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>idf_string</strong> – A text string fully describing an EnergyPlus construction.</li>
+<li><strong>ep_mat_strings</strong> – A list of text strings for each of the materials in
+the construction.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.construction.WindowConstruction.from_standards_dict">
+<em class="property">classmethod </em><code class="descname">from_standards_dict</code><span class="sig-paren">(</span><em>data</em>, <em>data_materials</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction.from_standards_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.from_standards_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a WindowConstruction from an OpenStudio standards gem dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> – <p>{
+“name”: “ASHRAE 189.1-2009 ExtWindow ClimateZone 4-5”,
+“intended_surface_type”: “ExteriorWindow”,
+“materials”: [“Theoretical Glass [207]”]
+}</p>
+</li>
+<li><strong>data_materials</strong> – Dictionary representation of all materials in the
+OpenStudio standards gem.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.gap_count">
+<code class="descname">gap_count</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.gap_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of gas gaps contained within the window construction.</p>
+<p>Note that this property will count the distance between shades and glass
+as a gap in addition to any gas layers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.glazing_count">
+<code class="descname">glazing_count</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.glazing_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of glazing materials contained within the window construction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.has_shade">
+<code class="descname">has_shade</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.has_shade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean noting whether there is a shade or blind in the construction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.inside_emissivity">
+<code class="descname">inside_emissivity</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.inside_emissivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>“The emissivity of the inside face of the construction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.materials">
+<code class="descname">materials</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.materials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a list of materials in the construction (outside to inside).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.outside_emissivity">
+<code class="descname">outside_emissivity</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.outside_emissivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>“The emissivity of the outside face of the construction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.r_factor">
+<code class="descname">r_factor</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.r_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction R-factor [m2-K/W] (including standard resistances for air films).</p>
+<p>Formulas for film coefficients come from EN673 / ISO10292.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.r_value">
+<code class="descname">r_value</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.r_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>R-value of the construction [m2-K/W] (excluding air films).</p>
+<p>Note that shade materials are currently considered impermeable to air within
+the U-value calculation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.shade_location">
+<code class="descname">shade_location</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.shade_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text noting the location of shade in the construction.</p>
+<p>This will be one of the following: (‘Interior’, ‘Exterior’, ‘Between’, None).
+None indicates that there is no shade within the construction.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.WindowConstruction.temperature_profile">
+<code class="descname">temperature_profile</code><span class="sig-paren">(</span><em>outside_temperature=-18</em>, <em>inside_temperature=21</em>, <em>wind_speed=6.7</em>, <em>height=1.0</em>, <em>angle=90.0</em>, <em>pressure=101325</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction.temperature_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.temperature_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of temperatures at each material boundary across the construction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>outside_temperature</strong> – The temperature on the outside of the construction [C].
+Default is -18, which is consistent with NFRC 100-2010.</li>
+<li><strong>inside_temperature</strong> – The temperature on the inside of the construction [C].
+Default is 21, which is consistent with NFRC 100-2010.</li>
+<li><strong>wind_speed</strong> – The average outdoor wind speed [m/s]. This affects outdoor
+convective heat transfer coefficient. Default is 6.7 m/s.</li>
+<li><strong>height</strong> – An optional height for the surface in meters. Default is 1.0 m.</li>
+<li><strong>angle</strong> – An angle in degrees between 0 and 180.
+0 = A horizontal surface with the outside boundary on the bottom.
+90 = A vertical surface
+180 = A horizontal surface with the outside boundary on the top.</li>
+<li><strong>pressure</strong> – The average pressure of in Pa.
+Default is 101325 Pa for standard pressure at sea level.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>A list of temperature values [C].</dt>
+<dd><p class="first last">The first value will always be the outside temperature and the
+second will be the exterior surface temperature.
+The last value will always be the inside temperature and the second
+to last will be the interior surface temperature.</p>
+</dd>
+<dt>r_values: A list of R-values for each of the material layers [m2-K/W].</dt>
+<dd><p class="first last">The first value will always be the resistance of the exterior air
+and the last value is the resistance of the interior air.
+The sum of this list is the R-factor for this construction given
+the input parameters.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">temperatures</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.thickness">
+<code class="descname">thickness</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.thickness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thickness of the construction [m].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.WindowConstruction.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><em>abridged=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Window construction dictionary representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>abridged</strong> – Boolean to note whether the full dictionary describing the
+object should be returned (False) or just an abridged version (True),
+which only specifies the names of material layers. Default: False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.WindowConstruction.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDF string representation of construction object.</p>
+<p>Note that this method only outputs a single string for the construction and,
+to write the full construction into an IDF, the construction’s unique_materials
+must also be written.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Text string representation of the construction.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">construction_idf</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.WindowConstruction.to_radiance_solar">
+<code class="descname">to_radiance_solar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction.to_radiance_solar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.to_radiance_solar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Honeybee Radiance material with the solar transmittance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.construction.WindowConstruction.to_radiance_visible">
+<code class="descname">to_radiance_visible</code><span class="sig-paren">(</span><em>specularity=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/construction.html#WindowConstruction.to_radiance_visible"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.to_radiance_visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Honeybee Radiance material with the visible transmittance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.unshaded_solar_transmittance">
+<code class="descname">unshaded_solar_transmittance</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.unshaded_solar_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unshaded solar transmittance of the window at normal incidence.</p>
+<p>Note that ‘unshaded’ means that all shade materials in the construction
+are ignored.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.construction.WindowConstruction.unshaded_visible_transmittance">
+<code class="descname">unshaded_visible_transmittance</code><a class="headerlink" href="#honeybee_energy.construction.WindowConstruction.unshaded_visible_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unshaded visible transmittance of the window at normal incidence.</p>
+<p>Note that ‘unshaded’ means that all shade materials in the construction
+are ignored.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

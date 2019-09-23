@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.constructionset module &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="honeybee_energy.idealair module" href="honeybee_energy.idealair.html" />
+    <link rel="prev" title="honeybee_energy.construction module" href="honeybee_energy.construction.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee_energy.construction.html" title="Previous Chapter: honeybee_energy.construction module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee_ener...</span>
+    </a>
+  </li>
+  <li>
+    <a href="honeybee_energy.idealair.html" title="Next Chapter: honeybee_energy.idealair module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">honeybee_ener... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee_energy.constructionset.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-honeybee_energy.constructionset">
+<span id="honeybee-energy-constructionset-module"></span><h1>honeybee_energy.constructionset module<a class="headerlink" href="#module-honeybee_energy.constructionset" title="Permalink to this headline">¶</a></h1>
+<p>Energy Construction Set.</p>
+<dl class="class">
+<dt id="honeybee_energy.constructionset.ApertureSet">
+<em class="property">class </em><code class="descclassname">honeybee_energy.constructionset.</code><code class="descname">ApertureSet</code><span class="sig-paren">(</span><em>window_construction=None</em>, <em>interior_construction=None</em>, <em>skylight_construction=None</em>, <em>operable_construction=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ApertureSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Set containing all energy constructions needed to for an energy model’s Apertures.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>window_construction
+interior_construction
+skylight_construction
+operable_construction
+constructions
+modified_constructions
+is_modified</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ApertureSet.ToString">
+<code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ApertureSet.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ApertureSet.constructions">
+<code class="descname">constructions</code><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.constructions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all constructions contained within the set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ApertureSet.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ApertureSet.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ApertureSet.interior_construction">
+<code class="descname">interior_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.interior_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the WindowConstruction for all interior apertures.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ApertureSet.is_modified">
+<code class="descname">is_modified</code><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.is_modified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean noting whether any constructions are modified from the default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ApertureSet.lock">
+<code class="descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.lock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ApertureSet.modified_constructions">
+<code class="descname">modified_constructions</code><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.modified_constructions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all constructions that are not defaulted within the set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ApertureSet.operable_construction">
+<code class="descname">operable_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.operable_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the WindowConstruction for all exterior operable windows.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ApertureSet.skylight_construction">
+<code class="descname">skylight_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.skylight_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the WindowConstruction for exterior fixed windows in roofs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ApertureSet.unlock">
+<code class="descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.unlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ApertureSet.window_construction">
+<code class="descname">window_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.ApertureSet.window_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the WindowConstruction for exterior fixed windows in walls.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.constructionset.ConstructionSet">
+<em class="property">class </em><code class="descclassname">honeybee_energy.constructionset.</code><code class="descname">ConstructionSet</code><span class="sig-paren">(</span><em>name</em>, <em>wall_set=None</em>, <em>floor_set=None</em>, <em>roof_ceiling_set=None</em>, <em>aperture_set=None</em>, <em>door_set=None</em>, <em>shade_construction=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Set containing all energy constructions needed to create an energy model.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+wall_set
+floor_set
+roof_ceiling_set
+aperture_set
+door_set
+shade_construction
+constructions
+modified_constructions
+constructions_unique
+modified_constructions_unique
+materials_unique
+modified_materials_unique</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ConstructionSet.ToString">
+<code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.aperture_set">
+<code class="descname">aperture_set</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.aperture_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the ApertureSet assigned to this ConstructionSet.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.constructions">
+<code class="descname">constructions</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.constructions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all constructions contained within the set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.constructions_unique">
+<code class="descname">constructions_unique</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.constructions_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all unique constructions contained within the set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.door_set">
+<code class="descname">door_set</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.door_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the DoorSet assigned to this ConstructionSet.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ConstructionSet.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this ConstructionSet.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.floor_set">
+<code class="descname">floor_set</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.floor_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the FloorSet assigned to this ConstructionSet.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.constructionset.ConstructionSet.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ConstructionSet from a dictionary.</p>
+<p>Note that the dictionary must be a non-abridged version for this
+classmethod to work.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – Dictionary describing the ConstructionSet.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.constructionset.ConstructionSet.from_dict_abridged">
+<em class="property">classmethod </em><code class="descname">from_dict_abridged</code><span class="sig-paren">(</span><em>data</em>, <em>construction_dict</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.from_dict_abridged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.from_dict_abridged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ConstructionSet from an abridged dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> – A ConstructionSetAbridged dictionary.</li>
+<li><strong>construction_dict</strong> – A dictionary with construction names as keys and
+honeybee construction objects as values. These will be used to
+assign the constructions to the ConstructionSet object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ConstructionSet.get_aperture_construction">
+<code class="descname">get_aperture_construction</code><span class="sig-paren">(</span><em>boundary_condition</em>, <em>is_operable</em>, <em>parent_face_type</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.get_aperture_construction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.get_aperture_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a construction object that will be assigned to a given type of aperture.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>boundary_condition</strong> – Text string for the boundary condition
+(eg. ‘Outdoors’, ‘Surface’)</li>
+<li><strong>is_operable</strong> – Boolean to note whether the aperture is operable.</li>
+<li><strong>parent_face_type</strong> – Text string for the type of face to which the aperture
+is a child (eg. ‘Wall’, ‘Floor’, ‘Roof’).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ConstructionSet.get_door_construction">
+<code class="descname">get_door_construction</code><span class="sig-paren">(</span><em>boundary_condition</em>, <em>is_glass</em>, <em>parent_face_type</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.get_door_construction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.get_door_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a construction object that will be assigned to a given type of door.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>boundary_condition</strong> – Text string for the boundary condition
+(eg. ‘Outdoors’, ‘Surface’)</li>
+<li><strong>is_glass</strong> – Boolean to note whether the door is glass (instead of opaque).</li>
+<li><strong>parent_face_type</strong> – Text string for the type of face to which the door
+is a child (eg. ‘Wall’, ‘Floor’, ‘Roof’).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ConstructionSet.get_face_construction">
+<code class="descname">get_face_construction</code><span class="sig-paren">(</span><em>face_type</em>, <em>boundary_condition</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.get_face_construction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.get_face_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a construction object that will be assigned to a given type of face.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>face_type</strong> – Text string for the type of face (eg. ‘Wall’, ‘Floor’,
+‘Roof’, ‘AirWall’).</li>
+<li><strong>boundary_condition</strong> – Text string for the boundary condition
+(eg. ‘Outdoors’, ‘Surface’, ‘Adiabatic’, ‘Ground’)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ConstructionSet.lock">
+<code class="descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lock() method to will also lock the WallSet, FloorSet, etc.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.materials_unique">
+<code class="descname">materials_unique</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.materials_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all unique materials contained within the set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.modified_constructions">
+<code class="descname">modified_constructions</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.modified_constructions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all constructions that are not defaulted within the set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.modified_constructions_unique">
+<code class="descname">modified_constructions_unique</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.modified_constructions_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all unique constructions that are not defaulted within the set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.modified_materials_unique">
+<code class="descname">modified_materials_unique</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.modified_materials_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all unique materials that are not defaulted within the set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.name">
+<code class="descname">name</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a text string for construction set name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.roof_ceiling_set">
+<code class="descname">roof_ceiling_set</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.roof_ceiling_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the RoofCeilingSet assigned to this ConstructionSet.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.shade_construction">
+<code class="descname">shade_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.shade_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the ShadeConstruction assigned to this ConstructionSet.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ConstructionSet.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><em>abridged=False</em>, <em>none_for_defaults=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get ConstructionSet as a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>abridged</strong> – Boolean noting whether detailed materials and construction
+objects should be written into the ConstructionSet (False) or just
+an abridged version (True). Default: False.</li>
+<li><strong>none_for_defaults</strong> – Boolean to note whether default constructions in the
+set should be included in detail (False) or should be None (True).
+Default: True.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.ConstructionSet.unlock">
+<code class="descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#ConstructionSet.unlock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.unlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unlock() method will also unlock the WallSet, FloorSet, etc.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.ConstructionSet.wall_set">
+<code class="descname">wall_set</code><a class="headerlink" href="#honeybee_energy.constructionset.ConstructionSet.wall_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the WallSet assigned to this ConstructionSet.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.constructionset.DoorSet">
+<em class="property">class </em><code class="descclassname">honeybee_energy.constructionset.</code><code class="descname">DoorSet</code><span class="sig-paren">(</span><em>exterior_construction=None</em>, <em>interior_construction=None</em>, <em>exterior_glass_construction=None</em>, <em>interior_glass_construction=None</em>, <em>overhead_construction=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#DoorSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Set containing all energy constructions needed to for an energy model’s Roofs.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>exterior_construction
+interior_construction
+exterior_glass_construction
+interior_glass_construction
+overhead_construction
+constructions
+modified_constructions
+is_modified</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.constructionset.DoorSet.ToString">
+<code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#DoorSet.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.DoorSet.constructions">
+<code class="descname">constructions</code><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.constructions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all constructions contained within the set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.DoorSet.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#DoorSet.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.DoorSet.exterior_construction">
+<code class="descname">exterior_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.exterior_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for exterior opaque doors in walls.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.DoorSet.exterior_glass_construction">
+<code class="descname">exterior_glass_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.exterior_glass_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the WindowConstruction for exterior glass doors.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.DoorSet.interior_construction">
+<code class="descname">interior_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.interior_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for all interior opaque doors.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.DoorSet.interior_glass_construction">
+<code class="descname">interior_glass_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.interior_glass_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the WindowConstruction for all interior glass doors.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.DoorSet.is_modified">
+<code class="descname">is_modified</code><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.is_modified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean noting whether any constructions are modified from the default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.DoorSet.lock">
+<code class="descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.lock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.DoorSet.modified_constructions">
+<code class="descname">modified_constructions</code><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.modified_constructions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all constructions that are not defaulted within the set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.DoorSet.overhead_construction">
+<code class="descname">overhead_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.overhead_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for exterior opaque doors in roofs/floors.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.constructionset.DoorSet.unlock">
+<code class="descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#honeybee_energy.constructionset.DoorSet.unlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.constructionset.FloorSet">
+<em class="property">class </em><code class="descclassname">honeybee_energy.constructionset.</code><code class="descname">FloorSet</code><span class="sig-paren">(</span><em>exterior_construction=None</em>, <em>interior_construction=None</em>, <em>ground_construction=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#FloorSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.FloorSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.constructionset._FaceSetBase</span></code></p>
+<p>Set containing all energy constructions needed to for an energy model’s Floors.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>exterior_construction
+interior_construction
+ground_construction
+constructions
+modified_constructions
+is_modified</dd>
+</dl>
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.FloorSet.exterior_construction">
+<code class="descname">exterior_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.FloorSet.exterior_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for exterior-exposed floors.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.FloorSet.ground_construction">
+<code class="descname">ground_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.FloorSet.ground_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for ground-contact floor slabs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.FloorSet.interior_construction">
+<code class="descname">interior_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.FloorSet.interior_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for interior floors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.constructionset.RoofCeilingSet">
+<em class="property">class </em><code class="descclassname">honeybee_energy.constructionset.</code><code class="descname">RoofCeilingSet</code><span class="sig-paren">(</span><em>exterior_construction=None</em>, <em>interior_construction=None</em>, <em>ground_construction=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#RoofCeilingSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.RoofCeilingSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.constructionset._FaceSetBase</span></code></p>
+<p>Set containing all energy constructions needed to for an energy model’s Roofs.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>exterior_construction
+interior_construction
+ground_construction
+constructions
+modified_constructions
+is_modified</dd>
+</dl>
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.RoofCeilingSet.exterior_construction">
+<code class="descname">exterior_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.RoofCeilingSet.exterior_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for exterior roofs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.RoofCeilingSet.ground_construction">
+<code class="descname">ground_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.RoofCeilingSet.ground_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for underground roofs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.RoofCeilingSet.interior_construction">
+<code class="descname">interior_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.RoofCeilingSet.interior_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for interior ceilings.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.constructionset.WallSet">
+<em class="property">class </em><code class="descclassname">honeybee_energy.constructionset.</code><code class="descname">WallSet</code><span class="sig-paren">(</span><em>exterior_construction=None</em>, <em>interior_construction=None</em>, <em>ground_construction=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/constructionset.html#WallSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.constructionset.WallSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.constructionset._FaceSetBase</span></code></p>
+<p>Set containing all energy constructions needed to for an energy model’s Walls.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>exterior_construction
+interior_construction
+ground_construction
+constructions
+modified_constructions
+is_modified</dd>
+</dl>
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.WallSet.exterior_construction">
+<code class="descname">exterior_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.WallSet.exterior_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for exterior walls.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.WallSet.ground_construction">
+<code class="descname">ground_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.WallSet.ground_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for underground walls.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.constructionset.WallSet.interior_construction">
+<code class="descname">interior_construction</code><a class="headerlink" href="#honeybee_energy.constructionset.WallSet.interior_construction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the OpaqueConstruction for interior walls.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

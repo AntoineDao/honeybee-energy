@@ -1,0 +1,10 @@
+honeybee\_energy.lib.library package
+====================================
+
+Module contents
+---------------
+
+.. automodule:: honeybee_energy.lib.library
+    :members:
+    :undoc-members:
+    :show-inheritance:

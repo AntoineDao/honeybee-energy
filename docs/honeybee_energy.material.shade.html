@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.material.shade module &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="honeybee_energy.properties package" href="honeybee_energy.properties.html" />
+    <link rel="prev" title="honeybee_energy.material.opaque module" href="honeybee_energy.material.opaque.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee_energy.material.opaque.html" title="Previous Chapter: honeybee_energy.material.opaque module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee_ener...</span>
+    </a>
+  </li>
+  <li>
+    <a href="honeybee_energy.properties.html" title="Next Chapter: honeybee_energy.properties package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">honeybee_ener... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee_energy.material.shade.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-honeybee_energy.material.shade">
+<span id="honeybee-energy-material-shade-module"></span><h1>honeybee_energy.material.shade module<a class="headerlink" href="#module-honeybee_energy.material.shade" title="Permalink to this headline">¶</a></h1>
+<p>Shade materials representing shades, blinds, or screens in a window construction.</p>
+<p>They can exist in only one of three possible locations in a window construction:
+1) On the innermost material layer.
+2) On the outermost material layer.
+3) In between two glazing materials. In the case of window constructions with</p>
+<blockquote>
+<div>multiple glazing surfaces, the shade mateerial must be between the two
+inner glass layers.</div></blockquote>
+<p>Note that shade materials should never be bounded by gas gap layers in honeybee-energy.</p>
+<dl class="class">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind">
+<em class="property">class </em><code class="descclassname">honeybee_energy.material.shade.</code><code class="descname">EnergyWindowMaterialBlind</code><span class="sig-paren">(</span><em>name</em>, <em>slat_orientation='Horizontal'</em>, <em>slat_width=0.025</em>, <em>slat_separation=0.01875</em>, <em>slat_thickness=0.001</em>, <em>slat_angle=45</em>, <em>slat_conductivity=221</em>, <em>solar_transmittance=0</em>, <em>solar_reflectance=0.5</em>, <em>visible_transmittance=0</em>, <em>visible_reflectance=0.5</em>, <em>infrared_transmittance=0</em>, <em>emissivity=0.9</em>, <em>distance_to_glass=0.05</em>, <em>opening_multiplier=0.5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialBlind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.material.shade._EnergyWindowMaterialShadeBase</span></code></p>
+<p>A material for a blind layer in a window construction.</p>
+<p>Window blind properties consist of flat, equally-spaced slats.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+slat_orientation
+slat_width
+slat_separation
+slat_thickness
+slat_angle
+slat_conductivity
+beam_solar_transmittance
+beam_solar_reflectance
+beam_solar_reflectance_back
+diffuse_solar_transmittance
+diffuse_solar_reflectance
+diffuse_solar_reflectance_back
+beam_visible_transmittance
+beam_visible_reflectance
+beam_visible_reflectance_back
+diffuse_visible_transmittance
+diffuse_visible_reflectance
+diffuse_visible_reflectance_back
+infrared_transmittance
+emissivity
+emissivity_back
+distance_to_glass
+top_opening_multiplier
+bottom_opening_multiplier
+left_opening_multiplier
+right_opening_multiplier
+minimum_slat_angle
+maximum_slat_angle
+slat_resistivity
+u_value
+r_value</dd>
+</dl>
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.ORIENTATIONS">
+<code class="descname">ORIENTATIONS</code><em class="property"> = ('Horizontal', 'Vertical')</em><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.ORIENTATIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_solar_reflectance">
+<code class="descname">beam_solar_reflectance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_solar_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the front beam solar reflectance of the blind.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_solar_reflectance_back">
+<code class="descname">beam_solar_reflectance_back</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_solar_reflectance_back" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the back beam solar reflectance of the blind.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_solar_transmittance">
+<code class="descname">beam_solar_transmittance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_solar_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the beam solar transmittance of the blind material.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_visible_reflectance">
+<code class="descname">beam_visible_reflectance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_visible_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the front beam visible reflectance of the blind.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_visible_reflectance_back">
+<code class="descname">beam_visible_reflectance_back</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_visible_reflectance_back" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the back beam visible reflectance of the blind.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_visible_transmittance">
+<code class="descname">beam_visible_transmittance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.beam_visible_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the beam visible transmittance of the blind material.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_solar_reflectance">
+<code class="descname">diffuse_solar_reflectance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_solar_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the front diffuse solar reflectance of the blind.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_solar_reflectance_back">
+<code class="descname">diffuse_solar_reflectance_back</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_solar_reflectance_back" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the back diffuse solar reflectance of the blind.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_solar_transmittance">
+<code class="descname">diffuse_solar_transmittance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_solar_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the diffuse solar transmittance of the blind material.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_visible_reflectance">
+<code class="descname">diffuse_visible_reflectance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_visible_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the front diffuse visible reflectance of the blind.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_visible_reflectance_back">
+<code class="descname">diffuse_visible_reflectance_back</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_visible_reflectance_back" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the back diffuse visible reflectance of the blind.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_visible_transmittance">
+<code class="descname">diffuse_visible_transmittance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.diffuse_visible_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the diffuse visible transmittance of the blind material.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.emissivity_back">
+<code class="descname">emissivity_back</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.emissivity_back" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the hemispherical emissivity of the back side of the glass.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialBlind.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a EnergyWindowMaterialBlind from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – <p>{
+“type”: ‘EnergyWindowMaterialBlind’,
+“name”: ‘Plastic Blind’,
+“slat_orientation”: ‘Horizontal’,
+“slat_width”: 0.04,
+“slat_separation”: 0.03,
+“slat_thickness”: 0.002,
+“slat_angle”: 90,
+“slat_conductivity”: 0.2}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.from_idf">
+<em class="property">classmethod </em><code class="descname">from_idf</code><span class="sig-paren">(</span><em>idf_string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialBlind.from_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.from_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create EnergyWindowMaterialBlind from an EnergyPlus text string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idf_string</strong> – A text string fully describing an EnergyPlus material.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.maximum_slat_angle">
+<code class="descname">maximum_slat_angle</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.maximum_slat_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the maximum angle between the slats and the glazing normal.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.minimum_slat_angle">
+<code class="descname">minimum_slat_angle</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.minimum_slat_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the minimum angle between the slats and the glazing normal.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.r_value">
+<code class="descname">r_value</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.r_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>R-value of the blind slats [m2-K/W] (excluding air film resistance).</p>
+<p>Note that this value assumes that blinds are cmpletely closed (at 0 degrees).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.set_all_solar_reflectance">
+<code class="descname">set_all_solar_reflectance</code><span class="sig-paren">(</span><em>reflectance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialBlind.set_all_solar_reflectance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.set_all_solar_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set all solar reflectance to the same value at once.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.set_all_solar_transmittance">
+<code class="descname">set_all_solar_transmittance</code><span class="sig-paren">(</span><em>transmittance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialBlind.set_all_solar_transmittance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.set_all_solar_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set all solar transmittance to the same value at once.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.set_all_visible_reflectance">
+<code class="descname">set_all_visible_reflectance</code><span class="sig-paren">(</span><em>reflectance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialBlind.set_all_visible_reflectance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.set_all_visible_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set all visible reflectance to the same value at once.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.set_all_visible_transmittance">
+<code class="descname">set_all_visible_transmittance</code><span class="sig-paren">(</span><em>transmittance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialBlind.set_all_visible_transmittance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.set_all_visible_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set all solar transmittance to the same value at once.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_angle">
+<code class="descname">slat_angle</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the angle between the slats and the glazing normal.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_conductivity">
+<code class="descname">slat_conductivity</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_conductivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the conductivity of the blind material [W/m-K].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_orientation">
+<code class="descname">slat_orientation</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set text describing the slat orientation.</p>
+<p>Must be one of the following: [“Horizontal”, “Vertical”].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_resistivity">
+<code class="descname">slat_resistivity</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_resistivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the resistivity of the blind layer [m-K/W].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_separation">
+<code class="descname">slat_separation</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_separation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the distance between each of the slats [m]</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_thickness">
+<code class="descname">slat_thickness</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_thickness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the thickness of the slat [m].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_width">
+<code class="descname">slat_width</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.slat_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the width of slat measured from edge to edge [m]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialBlind.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Energy Window Material Blind dictionary representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialBlind.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an EnergyPlus string representation of the material.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialBlind.u_value">
+<code class="descname">u_value</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialBlind.u_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>U-value of the blind slats [W/m2-K] (excluding air film resistance).</p>
+<p>Note that this value assumes that blinds are cmpletely closed (at 0 degrees).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade">
+<em class="property">class </em><code class="descclassname">honeybee_energy.material.shade.</code><code class="descname">EnergyWindowMaterialShade</code><span class="sig-paren">(</span><em>name</em>, <em>thickness=0.005</em>, <em>solar_transmittance=0.4</em>, <em>solar_reflectance=0.5</em>, <em>visible_transmittance=0.4</em>, <em>visible_reflectance=0.4</em>, <em>infrared_transmittance=0</em>, <em>emissivity=0.9</em>, <em>conductivity=0.9</em>, <em>distance_to_glass=0.05</em>, <em>opening_multiplier=0.5</em>, <em>airflow_permeability=0.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialShade"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.material.shade._EnergyWindowMaterialShadeBase</span></code></p>
+<p>A material for a shade layer in a window construction.</p>
+<p>Reflectance and emissivity properties are assumed to be the same on both sides of
+the shade. Shades are considered to be perfect diffusers.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+thickness
+solar_transmittance
+solar_reflectance
+visible_transmittance
+visible_reflectance
+infrared_transmittance
+emissivity
+conductivity
+distance_to_glass
+top_opening_multiplier
+bottom_opening_multiplier
+left_opening_multiplier
+right_opening_multiplier
+airflow_permeability
+resistivity
+u_value
+r_value</dd>
+</dl>
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.airflow_permeability">
+<code class="descname">airflow_permeability</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.airflow_permeability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the fraction of the shade surface open to air flow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.conductivity">
+<code class="descname">conductivity</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.conductivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the conductivity of the shade layer [W/m-K].</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialShade.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a EnergyWindowMaterialShade from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – <p>{
+“type”: ‘EnergyWindowMaterialShade’,
+“name”: ‘Dark Insulating Shade’,
+“thickness”: 0.02,
+“solar_transmittance”: 0.05,
+“solar_reflectance”: 0.2,
+“visible_transmittance”: 0.05,
+“visible_reflectance”: 0.15,
+“emissivity”: 0.9,
+“infrared_transmittance”: 0,
+“conductivity”: 0.1}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.from_idf">
+<em class="property">classmethod </em><code class="descname">from_idf</code><span class="sig-paren">(</span><em>idf_string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialShade.from_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.from_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create EnergyWindowMaterialShade from an EnergyPlus text string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idf_string</strong> – A text string fully describing an EnergyPlus material.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.r_value">
+<code class="descname">r_value</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.r_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>R-value of the material layer [m2-K/W] (excluding air film resistance).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.resistivity">
+<code class="descname">resistivity</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.resistivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the resistivity of the shade layer [m-K/W].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.solar_reflectance">
+<code class="descname">solar_reflectance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.solar_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the front solar reflectance of the shade.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.solar_transmittance">
+<code class="descname">solar_transmittance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.solar_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the solar transmittance of the shade.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.thickness">
+<code class="descname">thickness</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.thickness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the thickess of the shade material layer [m].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialShade.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Energy Window Material Shade dictionary representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/shade.html#EnergyWindowMaterialShade.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an EnergyPlus string representation of the material.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.u_value">
+<code class="descname">u_value</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.u_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>U-value of the material layer [W/m2-K] (excluding air film resistance).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.visible_reflectance">
+<code class="descname">visible_reflectance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.visible_reflectance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the front visible reflectance of the shade.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.visible_reflectance_back">
+<code class="descname">visible_reflectance_back</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.visible_reflectance_back" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the back visible reflectance of the glass at normal incidence.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.shade.EnergyWindowMaterialShade.visible_transmittance">
+<code class="descname">visible_transmittance</code><a class="headerlink" href="#honeybee_energy.material.shade.EnergyWindowMaterialShade.visible_transmittance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the visible transmittance of the shade.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

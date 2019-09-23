@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.load.lighting module &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="honeybee_energy.load.people module" href="honeybee_energy.load.people.html" />
+    <link rel="prev" title="honeybee_energy.load.infiltration module" href="honeybee_energy.load.infiltration.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee_energy.load.infiltration.html" title="Previous Chapter: honeybee_energy.load.infiltration module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee_ener...</span>
+    </a>
+  </li>
+  <li>
+    <a href="honeybee_energy.load.people.html" title="Next Chapter: honeybee_energy.load.people module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">honeybee_ener... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee_energy.load.lighting.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-honeybee_energy.load.lighting">
+<span id="honeybee-energy-load-lighting-module"></span><h1>honeybee_energy.load.lighting module<a class="headerlink" href="#module-honeybee_energy.load.lighting" title="Permalink to this headline">¶</a></h1>
+<p>Complete definition of lighting in a simulation, including schedule and load.</p>
+<dl class="class">
+<dt id="honeybee_energy.load.lighting.Lighting">
+<em class="property">class </em><code class="descclassname">honeybee_energy.load.lighting.</code><code class="descname">Lighting</code><span class="sig-paren">(</span><em>name</em>, <em>watts_per_area</em>, <em>schedule</em>, <em>return_air_fraction=0.0</em>, <em>radiant_fraction=0.32</em>, <em>visible_fraction=0.25</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/load/lighting.html#Lighting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.load._base._LoadBase</span></code></p>
+<p>A complete definition of lighting, including schedules and load.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd><ul class="first last simple">
+<li>name</li>
+<li>watts_per_area</li>
+<li>schedule</li>
+<li>return_air_fraction</li>
+<li>radiant_fraction</li>
+<li>visible_fraction</li>
+<li>convected_fraction</li>
+</ul>
+</dd>
+</dl>
+<dl class="staticmethod">
+<dt id="honeybee_energy.load.lighting.Lighting.average">
+<em class="property">static </em><code class="descname">average</code><span class="sig-paren">(</span><em>name</em>, <em>lightings</em>, <em>weights=None</em>, <em>timestep_resolution=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/load/lighting.html#Lighting.average"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a Lighting object that’s a weighted average between other Lighting objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> – A name for the new averaged Lighting object.</li>
+<li><strong>lightings</strong> – A list of Lighting objects that will be averaged together to make
+a new Lighting.</li>
+<li><strong>weights</strong> – An optional list of fractional numbers with the same length
+as the input lightings. These will be used to weight each of the
+Lighting objects in the resulting average. Note that these weights
+can sum to less than 1 in which case the average watts_per_area will
+assume 0 for the unaccounted fraction of the weights.
+If None, the objects will be weighted equally. Default: None.</li>
+<li><strong>timestep_resolution</strong> – An optional integer for the timestep resolution
+at which the schedules will be averaged. Any schedule details
+smaller than this timestep will be lost in the averaging process.
+Default: 1.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.load.lighting.Lighting.convected_fraction">
+<code class="descname">convected_fraction</code><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.convected_fraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the fraction of lighting heat that convects to the zone air.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.load.lighting.Lighting.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/load/lighting.html#Lighting.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Lighting object from a dictionary.</p>
+<p>Note that the dictionary must be a non-abridged version for this classmethod
+to work.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – A Lighting dictionary in following the format below.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+&quot;type&quot;: &#39;Lighting&#39;,
+&quot;name&quot;: &#39;Open Office Lighting&#39;,
+&quot;watts_per_area&quot;: 10, // lighting watts per square meter of floor area
+&quot;schedule&quot;: {}, // ScheduleRuleset/ScheduleFixedInterval dictionary
+&quot;return_air_fraction&quot;: 0, // fraction of heat going to return air
+&quot;radiant_fraction&quot;: 0.32, // fraction of heat that is long wave radiant
+&quot;visible_fraction&quot;: 0.25 // fraction of heat that is short wave visible
+}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.load.lighting.Lighting.from_dict_abridged">
+<em class="property">classmethod </em><code class="descname">from_dict_abridged</code><span class="sig-paren">(</span><em>data</em>, <em>schedule_dict</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/load/lighting.html#Lighting.from_dict_abridged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.from_dict_abridged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Lighting object from an abridged dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> – A LightingAbridged dictionary in following the format below.</li>
+<li><strong>schedule_dict</strong> – A dictionary with schedule names as keys and honeybee schedule
+objects as values (either ScheduleRuleset or ScheduleFixedInterval).
+These will be used to assign the schedules to the Lighting object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+&quot;type&quot;: &#39;LightingAbridged&#39;,
+&quot;name&quot;: &#39;Open Office Lighting&#39;,
+&quot;watts_per_area&quot;: 10, // lighting watts per square meter of floor area
+&quot;schedule&quot;: &quot;Office Lighting Schedule&quot;, // Schedule name
+&quot;return_air_fraction&quot;: 0, // fraction of heat going to return air
+&quot;radiant_fraction&quot;: 0.32, // fraction of heat that is long wave radiant
+&quot;visible_fraction&quot;: 0.25 // fraction of heat that is short wave visible
+}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.load.lighting.Lighting.from_idf">
+<em class="property">classmethod </em><code class="descname">from_idf</code><span class="sig-paren">(</span><em>idf_string</em>, <em>schedule_dict</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/load/lighting.html#Lighting.from_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.from_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an Lighting object from an EnergyPlus IDF text string.</p>
+<p>Note that the Lighting idf_string must use the ‘watts per zone floor area’
+method in order to be successfully imported.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>idf_string</strong> – A text string fully describing an EnergyPlus lighting definition.</li>
+<li><strong>schedule_dict</strong> – A dictionary with schedule names as keys and honeybee
+schedule objects as values (either ScheduleRuleset or
+ScheduleFixedInterval). These will be used to assign the schedules to
+the Lighting object.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>A Lighting object loaded from the idf_string.
+zone_name: The name of the zone to which the Lighting object should</p>
+<blockquote>
+<div><p>be assigned.</p>
+</div></blockquote>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">lighting</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.load.lighting.Lighting.radiant_fraction">
+<code class="descname">radiant_fraction</code><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.radiant_fraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the fraction of lighting heat given off as long wave radiation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.load.lighting.Lighting.return_air_fraction">
+<code class="descname">return_air_fraction</code><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.return_air_fraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the fraction of lighting heat that goes into the return air.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.load.lighting.Lighting.schedule">
+<code class="descname">schedule</code><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a ScheduleRuleset or ScheduleFixedInterval for lighting usage.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.load.lighting.Lighting.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><em>abridged=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/load/lighting.html#Lighting.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lighting dictionary representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>abridged</strong> – Boolean to note whether the full dictionary describing the
+object should be returned (False) or just an abridged version (True),
+which only specifies the names of schedules. Default: False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.load.lighting.Lighting.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><em>zone_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/load/lighting.html#Lighting.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDF string representation of Lighting object.</p>
+<p>Note that this method only outputs a single string for the Lights object and,
+to write everything needed to describe the object into an IDF, this object’s
+schedule must also be written. This is done to give more control over the
+export process since you typically want to check whether these schedules are
+used by multiple Lighting objects and write the schedule into the IDF only once.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>zone_name</strong> – Text for the zone name that the Lights object is assigned to.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.load.lighting.Lighting.visible_fraction">
+<code class="descname">visible_fraction</code><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.visible_fraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the fraction of lighting heat given off as visible light.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.load.lighting.Lighting.watts_per_area">
+<code class="descname">watts_per_area</code><a class="headerlink" href="#honeybee_energy.load.lighting.Lighting.watts_per_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the lighting power density in Watts/square meter of floor area.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

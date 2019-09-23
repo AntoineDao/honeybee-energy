@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.material.glazing &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../honeybee_energy.html">honeybee_energy package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../honeybee_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../honeybee_energy.html">honeybee_energy package</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../honeybee_energy.html">honeybee_energy package</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for honeybee_energy.material.glazing</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="sd">&quot;&quot;&quot;Glazing materials representing panes of glass within window constructions.</span>
+
+<span class="sd">They can exist anywhere within a window construction as long as they are not adjacent</span>
+<span class="sd">to other glazing materials.</span>
+<span class="sd">The one exception to this is the EnergyWindowMaterialSimpleGlazSys, which is meant to</span>
+<span class="sd">represent an entire window assembly (including glazing, gaps, and frame), and</span>
+<span class="sd">therefore must be the only material in its parent construction.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">division</span>
+
+<span class="kn">from</span> <span class="nn">._base</span> <span class="k">import</span> <span class="n">_EnergyMaterialWindowBase</span>
+<span class="kn">from</span> <span class="nn">..reader</span> <span class="k">import</span> <span class="n">parse_idf_string</span>
+<span class="kn">from</span> <span class="nn">..writer</span> <span class="k">import</span> <span class="n">generate_idf_string</span>
+
+<span class="kn">from</span> <span class="nn">honeybee._lockable</span> <span class="k">import</span> <span class="n">lockable</span>
+<span class="kn">from</span> <span class="nn">honeybee.typing</span> <span class="k">import</span> <span class="n">float_in_range</span><span class="p">,</span> <span class="n">float_positive</span>
+
+
+<span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">_EnergyWindowMaterialGlazingBase</span><span class="p">(</span><span class="n">_EnergyMaterialWindowBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Base for all glazing layers.&quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_glazing_material</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Boolean to note whether the material is a glazing layer.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+
+<div class="viewcode-block" id="EnergyWindowMaterialGlazing"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialGlazing">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">EnergyWindowMaterialGlazing</span><span class="p">(</span><span class="n">_EnergyWindowMaterialGlazingBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A single glass pane corresponding to a layer in a window construction.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        name</span>
+<span class="sd">        thickness</span>
+<span class="sd">        solar_transmittance</span>
+<span class="sd">        solar_reflectance</span>
+<span class="sd">        solar_reflectance_back</span>
+<span class="sd">        visible_transmittance</span>
+<span class="sd">        visible_reflectance</span>
+<span class="sd">        visible_reflectance_back</span>
+<span class="sd">        infrared_transmittance</span>
+<span class="sd">        emissivity</span>
+<span class="sd">        emissivity_back</span>
+<span class="sd">        conductivity</span>
+<span class="sd">        dirt_correction</span>
+<span class="sd">        solar_diffusing</span>
+<span class="sd">        resistivity</span>
+<span class="sd">        u_value</span>
+<span class="sd">        r_value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_thickness&#39;</span><span class="p">,</span> <span class="s1">&#39;_solar_transmittance&#39;</span><span class="p">,</span> <span class="s1">&#39;_solar_reflectance&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_solar_reflectance_back&#39;</span><span class="p">,</span> <span class="s1">&#39;_visible_transmittance&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_visible_reflectance&#39;</span><span class="p">,</span> <span class="s1">&#39;_visible_reflectance_back&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_infrared_transmittance&#39;</span><span class="p">,</span> <span class="s1">&#39;_emissivity&#39;</span><span class="p">,</span> <span class="s1">&#39;_emissivity_back&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_conductivity&#39;</span><span class="p">,</span> <span class="s1">&#39;_dirt_correction&#39;</span><span class="p">,</span> <span class="s1">&#39;_dirt_correction&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_solar_diffusing&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mf">0.003</span><span class="p">,</span> <span class="n">solar_transmittance</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span>
+                 <span class="n">solar_reflectance</span><span class="o">=</span><span class="mf">0.075</span><span class="p">,</span> <span class="n">visible_transmittance</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+                 <span class="n">visible_reflectance</span><span class="o">=</span><span class="mf">0.075</span><span class="p">,</span> <span class="n">infrared_transmittance</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                 <span class="n">emissivity</span><span class="o">=</span><span class="mf">0.84</span><span class="p">,</span> <span class="n">emissivity_back</span><span class="o">=</span><span class="mf">0.84</span><span class="p">,</span> <span class="n">conductivity</span><span class="o">=</span><span class="mf">0.9</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize energy window material glazing.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Text string for material name. Must be &lt;= 100 characters.</span>
+<span class="sd">                Can include spaces but special characters will be stripped out.</span>
+<span class="sd">            thickness: Number for the thickness of the glass layer [m].</span>
+<span class="sd">                Default is 0.003 meters (3 mm).</span>
+<span class="sd">            solar_transmittance: Number between 0 and 1 for the transmittance of solar</span>
+<span class="sd">                radiation through the glass at normal incidence.</span>
+<span class="sd">                Default is 0.85 for clear glass.</span>
+<span class="sd">            solar_reflectance: Number between 0 and 1 for the reflectance of solar</span>
+<span class="sd">                radiation off of the front side of the glass at normal incidence,</span>
+<span class="sd">                averaged over the solar spectrum. Default value is 0.075.</span>
+<span class="sd">            visible_transmittance: Number between 0 and 1 for the transmittance of</span>
+<span class="sd">                visible light through the glass at normal incidence.</span>
+<span class="sd">                Default is 0.9 for clear glass.</span>
+<span class="sd">            visible_reflectance: Number between 0 and 1 for the reflectance of</span>
+<span class="sd">                visible light off of the front side of the glass at normal incidence.</span>
+<span class="sd">                Default value is 0.075.</span>
+<span class="sd">            infrared_transmittance: Long-wave transmittance of the glass at normal</span>
+<span class="sd">                incidence. Default vallue is 0.</span>
+<span class="sd">            emissivity: Number between 0 and 1 for the infrared hemispherical</span>
+<span class="sd">                emissivity of the front side of the glass.  Default is 0.84, which</span>
+<span class="sd">                is typical of clear glass.</span>
+<span class="sd">            emissivity_back: Number between 0 and 1 for the infrared hemispherical</span>
+<span class="sd">                emissivity of the back side of the glass.  Default is 0.84, which</span>
+<span class="sd">                is typical of clear glass.</span>
+<span class="sd">            conductivity: Number for the thermal conductivity of the glass [W/m-K].</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_EnergyWindowMaterialGlazingBase</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+        <span class="c1"># default for checking transmittance + reflectance &lt; 1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance_back</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance_back</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">thickness</span> <span class="o">=</span> <span class="n">thickness</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solar_transmittance</span> <span class="o">=</span> <span class="n">solar_transmittance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solar_reflectance</span> <span class="o">=</span> <span class="n">solar_reflectance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">visible_transmittance</span> <span class="o">=</span> <span class="n">visible_transmittance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">visible_reflectance</span> <span class="o">=</span> <span class="n">visible_reflectance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">infrared_transmittance</span> <span class="o">=</span> <span class="n">infrared_transmittance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">emissivity</span> <span class="o">=</span> <span class="n">emissivity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">emissivity_back</span> <span class="o">=</span> <span class="n">emissivity_back</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span> <span class="o">=</span> <span class="n">conductivity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dirt_correction</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solar_diffusing</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the thickess of the glass material layer [m].&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thickness</span>
+
+    <span class="nd">@thickness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">thickness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">thick</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_thickness</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">thick</span><span class="p">,</span> <span class="s1">&#39;glazing material thickness&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">solar_transmittance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the solar transmittance of the glass at normal incidence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_transmittance</span>
+
+    <span class="nd">@solar_transmittance</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">solar_transmittance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s_tr</span><span class="p">):</span>
+        <span class="n">s_tr</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">s_tr</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material solar transmittance&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">s_tr</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Sum of window transmittance and &#39;</span> \
+            <span class="s1">&#39;reflectance (</span><span class="si">{}</span><span class="s1">) is greater than 1.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s_tr</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance_back</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">s_tr</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance_back</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Sum of window &#39;</span> \
+                <span class="s1">&#39;transmittance and reflectance (</span><span class="si">{}</span><span class="s1">) is greater than 1.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">s_tr</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance_back</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solar_transmittance</span> <span class="o">=</span> <span class="n">s_tr</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">solar_reflectance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the front solar reflectance of the glass at normal incidence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance</span>
+
+    <span class="nd">@solar_reflectance</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">solar_reflectance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s_ref</span><span class="p">):</span>
+        <span class="n">s_ref</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">s_ref</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material solar reflectance&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">s_ref</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_transmittance</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Sum of window transmittance &#39;</span> \
+            <span class="s1">&#39;and reflectance (</span><span class="si">{}</span><span class="s1">) is greater than 1.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">s_ref</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_transmittance</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance</span> <span class="o">=</span> <span class="n">s_ref</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">solar_reflectance_back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the back solar reflectance of the glass at normal incidence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance_back</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance_back</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> \
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance</span>
+
+    <span class="nd">@solar_reflectance_back</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">solar_reflectance_back</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s_ref</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">s_ref</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">s_ref</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">s_ref</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material solar reflectance&#39;</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="n">s_ref</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_transmittance</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Sum of window transmittance &#39;</span> \
+                <span class="s1">&#39;and reflectance (</span><span class="si">{}</span><span class="s1">) is greater than 1.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">s_ref</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_transmittance</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance_back</span> <span class="o">=</span> <span class="n">s_ref</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visible_transmittance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the visible transmittance of the glass at normal incidence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_transmittance</span>
+
+    <span class="nd">@visible_transmittance</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">visible_transmittance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_tr</span><span class="p">):</span>
+        <span class="n">v_tr</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">v_tr</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material visible transmittance&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">v_tr</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Sum of window transmittance &#39;</span> \
+            <span class="s1">&#39;and reflectance (</span><span class="si">{}</span><span class="s1">) is greater than 1.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">v_tr</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance_back</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">v_tr</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance_back</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Sum of window &#39;</span> \
+                <span class="s1">&#39;transmittance and reflectance (</span><span class="si">{}</span><span class="s1">) is greater than 1.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">v_tr</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance_back</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_visible_transmittance</span> <span class="o">=</span> <span class="n">v_tr</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visible_reflectance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the front visible reflectance of the glass at normal incidence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance</span>
+
+    <span class="nd">@visible_reflectance</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">visible_reflectance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_ref</span><span class="p">):</span>
+        <span class="n">v_ref</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">v_ref</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material visible reflectance&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">v_ref</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_transmittance</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Sum of window transmittance &#39;</span> \
+            <span class="s1">&#39;and reflectance (</span><span class="si">{}</span><span class="s1">) is greater than 1.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">v_ref</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_transmittance</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance</span> <span class="o">=</span> <span class="n">v_ref</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visible_reflectance_back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the back visible reflectance of the glass at normal incidence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance_back</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance_back</span> \
+            <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance</span>
+
+    <span class="nd">@visible_reflectance_back</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">visible_reflectance_back</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_ref</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">v_ref</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">v_ref</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">v_ref</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span>
+                                   <span class="s1">&#39;glazing material visible reflectance&#39;</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="n">v_ref</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_transmittance</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Sum of window &#39;</span> \
+                <span class="s1">&#39;transmittance and reflectance (</span><span class="si">{}</span><span class="s1">) is greater than 1.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">v_ref</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_transmittance</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance_back</span> <span class="o">=</span> <span class="n">v_ref</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">infrared_transmittance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the infrared transmittance of the glass at normal incidence.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_infrared_transmittance</span>
+
+    <span class="nd">@infrared_transmittance</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">infrared_transmittance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ir_tr</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_infrared_transmittance</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span>
+            <span class="n">ir_tr</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material infrared transmittance&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">emissivity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the hemispherical emissivity of the front side of the glass.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emissivity</span>
+
+    <span class="nd">@emissivity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">emissivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ir_e</span><span class="p">):</span>
+        <span class="n">ir_e</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">ir_e</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material emissivity&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emissivity</span> <span class="o">=</span> <span class="n">ir_e</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">emissivity_back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the hemispherical emissivity of the back side of the glass.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emissivity_back</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emissivity_back</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> \
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emissivity</span>
+
+    <span class="nd">@emissivity_back</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">emissivity_back</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ir_e</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ir_e</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ir_e</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">ir_e</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material emissivity&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emissivity_back</span> <span class="o">=</span> <span class="n">ir_e</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">conductivity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the conductivity of the glazing layer [W/m-K].&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span>
+
+    <span class="nd">@conductivity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">conductivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cond</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="s1">&#39;glazing material conductivity&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dirt_correction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the hemispherical emissivity of the back side of the glass.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dirt_correction</span>
+
+    <span class="nd">@dirt_correction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dirt_correction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dirt</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dirt_correction</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span>
+            <span class="n">dirt</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material dirt correction&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">solar_diffusing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the solar diffusing property of the glass.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_diffusing</span>
+
+    <span class="nd">@solar_diffusing</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">solar_diffusing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s_diff</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_solar_diffusing</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">s_diff</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">resistivity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the resistivity of the glazing layer [m-K/W].&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span>
+
+    <span class="nd">@resistivity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">resistivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resis</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">resis</span><span class="p">,</span> <span class="s1">&#39;glazing material resistivity&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">u_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the U-value of the material layer [W/m2-K] (excluding air films).</span>
+
+<span class="sd">        Note that, when setting the R-value, the thickness of the material will</span>
+<span class="sd">        remain fixed and only the conductivity will be adjusted.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">thickness</span>
+
+    <span class="nd">@u_value</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">u_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u_val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r_value</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">u_val</span><span class="p">,</span> <span class="s1">&#39;glazing material u-value&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">r_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the R-value of the material [m2-K/W] (excluding air films).</span>
+
+<span class="sd">        Note that, when setting the R-value, the thickness of the material will</span>
+<span class="sd">        remain fixed and only the conductivity will be adjusted.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">thickness</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span>
+
+    <span class="nd">@r_value</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">r_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r_val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">thickness</span> <span class="o">/</span> \
+            <span class="n">float_positive</span><span class="p">(</span><span class="n">r_val</span><span class="p">,</span> <span class="s1">&#39;glazing material r-value&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="EnergyWindowMaterialGlazing.from_idf"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialGlazing.from_idf">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_idf</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">idf_string</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create EnergyWindowMaterialGlazing from an EnergyPlus text string.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            idf_string: A text string fully describing an EnergyPlus material.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ep_s</span> <span class="o">=</span> <span class="n">parse_idf_string</span><span class="p">(</span><span class="n">idf_string</span><span class="p">,</span> <span class="s1">&#39;WindowMaterial:Glazing,&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;SpectralAverage&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected SpectralAverage glazing type. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ep_s</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">new_mat</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">ep_s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span>
+                      <span class="n">ep_s</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">13</span><span class="p">])</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">solar_reflectance_back</span> <span class="o">=</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">visible_reflectance_back</span> <span class="o">=</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">dirt_correction</span> <span class="o">=</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ep_s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">14</span> <span class="k">else</span> <span class="mf">1.0</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ep_s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+            <span class="n">new_mat</span><span class="o">.</span><span class="n">solar_diffusing</span> <span class="o">=</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">ep_s</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;No&#39;</span> <span class="k">else</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="n">new_mat</span></div>
+
+<div class="viewcode-block" id="EnergyWindowMaterialGlazing.from_standards_dict"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialGlazing.from_standards_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_standards_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create EnergyWindowMaterialGlazing from OpenStudio standards gem dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: {</span>
+<span class="sd">                &quot;name&quot;: &#39;Blue 6mm&#39;,</span>
+<span class="sd">                &quot;material_type&quot;: &quot;StandardGlazing&quot;,</span>
+<span class="sd">                &quot;thickness&quot;: 0.2362204,</span>
+<span class="sd">                &quot;solar_transmittance&quot;: 0.45,</span>
+<span class="sd">                &quot;solar_reflectance&quot;: 0.36,</span>
+<span class="sd">                &quot;visible_transmittance&quot;: 0.714,</span>
+<span class="sd">                &quot;visible_reflectance&quot;: 0.207,</span>
+<span class="sd">                &quot;infrared_transmittance&quot;: 0,</span>
+<span class="sd">                &quot;emissivity&quot;: 0.84,</span>
+<span class="sd">                &quot;emissivity_back&quot;: 0.0466,</span>
+<span class="sd">                &quot;conductivity&quot;: 6.24012}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;material_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;StandardGlazing&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected StandardGlazing. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;material_type&#39;</span><span class="p">])</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;optical_data_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;SpectralAverage&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected SpectralAverage. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;optical_data_type&#39;</span><span class="p">])</span>
+        <span class="n">thickness</span> <span class="o">=</span> <span class="mf">0.0254</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;thickness&#39;</span><span class="p">]</span>  <span class="c1"># convert from inches</span>
+        <span class="n">conductivity</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;conductivity&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mf">6.9381117</span>  <span class="c1"># convert from Btu*in/hr*ft2*F</span>
+        <span class="n">solar_diff</span> <span class="o">=</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;solar_diffusing&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">True</span>
+        <span class="n">new_mat</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">thickness</span><span class="p">,</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;solar_transmittance_at_normal_incidence&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;front_side_solar_reflectance_at_normal_incidence&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;visible_transmittance_at_normal_incidence&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;front_side_visible_reflectance_at_normal_incidence&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;infrared_transmittance_at_normal_incidence&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;front_side_infrared_hemispherical_emissivity&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;back_side_infrared_hemispherical_emissivity&#39;</span><span class="p">],</span>
+                      <span class="n">conductivity</span><span class="p">)</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">solar_reflectance_back</span> <span class="o">=</span> \
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;back_side_solar_reflectance_at_normal_incidence&#39;</span><span class="p">]</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">visible_reflectance_back</span> <span class="o">=</span> \
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;back_side_visible_reflectance_at_normal_incidence&#39;</span><span class="p">]</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">dirt_correction</span> <span class="o">=</span> \
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;dirt_correction_factor_for_solar_and_visible_transmittance&#39;</span><span class="p">]</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">solar_diffusing</span> <span class="o">=</span> <span class="n">solar_diff</span>
+        <span class="k">return</span> <span class="n">new_mat</span></div>
+
+<div class="viewcode-block" id="EnergyWindowMaterialGlazing.from_dict"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialGlazing.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a EnergyWindowMaterialGlazing from a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: {</span>
+<span class="sd">                &quot;type&quot;: &#39;EnergyWindowMaterialGlazing&#39;,</span>
+<span class="sd">                &quot;name&quot;: &#39;Low-e Glazing&#39;,</span>
+<span class="sd">                &quot;thickness&quot;: 0.003,</span>
+<span class="sd">                &quot;solar_transmittance&quot;: 0.45,</span>
+<span class="sd">                &quot;solar_reflectance&quot;: 0.36,</span>
+<span class="sd">                &quot;visible_transmittance&quot;: 0.714,</span>
+<span class="sd">                &quot;visible_reflectance&quot;: 0.207,</span>
+<span class="sd">                &quot;infrared_transmittance&quot;: 0,</span>
+<span class="sd">                &quot;emissivity&quot;: 0.84,</span>
+<span class="sd">                &quot;emissivity_back&quot;: 0.0466,</span>
+<span class="sd">                &quot;conductivity&quot;: 0.9}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyWindowMaterialGlazing&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected EnergyWindowMaterialGlazing. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+
+        <span class="n">optional_keys</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;thickness&#39;</span><span class="p">,</span> <span class="s1">&#39;solar_transmittance&#39;</span><span class="p">,</span> <span class="s1">&#39;solar_reflectance&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;solar_reflectance_back&#39;</span><span class="p">,</span> <span class="s1">&#39;visible_transmittance&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;visible_reflectance&#39;</span><span class="p">,</span> <span class="s1">&#39;visible_reflectance_back&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;infrared_transmittance&#39;</span><span class="p">,</span> <span class="s1">&#39;emissivity&#39;</span><span class="p">,</span> <span class="s1">&#39;emissivity_back&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;conductivity&#39;</span><span class="p">,</span> <span class="s1">&#39;dirt_correction&#39;</span><span class="p">,</span> <span class="s1">&#39;solar_diffusing&#39;</span><span class="p">)</span>
+        <span class="n">optional_vals</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.003</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.075</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.075</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+                         <span class="mf">0.84</span><span class="p">,</span> <span class="mf">0.84</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">optional_keys</span><span class="p">,</span> <span class="n">optional_vals</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+
+        <span class="n">new_mat</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;thickness&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;solar_transmittance&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;solar_reflectance&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;visible_transmittance&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;visible_reflectance&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;infrared_transmittance&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;emissivity&#39;</span><span class="p">],</span>
+                      <span class="n">data</span><span class="p">[</span><span class="s1">&#39;emissivity_back&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;conductivity&#39;</span><span class="p">])</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">solar_reflectance_back</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;solar_reflectance_back&#39;</span><span class="p">]</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">visible_reflectance_back</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;visible_reflectance_back&#39;</span><span class="p">]</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">dirt_correction</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;dirt_correction&#39;</span><span class="p">]</span>
+        <span class="n">new_mat</span><span class="o">.</span><span class="n">solar_diffusing</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;solar_diffusing&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">new_mat</span></div>
+
+<div class="viewcode-block" id="EnergyWindowMaterialGlazing.to_idf"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialGlazing.to_idf">[docs]</a>    <span class="k">def</span> <span class="nf">to_idf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get an EnergyPlus string representation of the material.&quot;&quot;&quot;</span>
+        <span class="n">solar_diffusing</span> <span class="o">=</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_diffusing</span> <span class="ow">is</span> <span class="kc">True</span> <span class="k">else</span> <span class="s1">&#39;No&#39;</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;SpectralAverage&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                  <span class="bp">self</span><span class="o">.</span><span class="n">thickness</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_transmittance</span><span class="p">,</span>
+                  <span class="bp">self</span><span class="o">.</span><span class="n">solar_reflectance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_reflectance_back</span><span class="p">,</span>
+                  <span class="bp">self</span><span class="o">.</span><span class="n">visible_transmittance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_reflectance</span><span class="p">,</span>
+                  <span class="bp">self</span><span class="o">.</span><span class="n">visible_reflectance_back</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">infrared_transmittance</span><span class="p">,</span>
+                  <span class="bp">self</span><span class="o">.</span><span class="n">emissivity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">emissivity_back</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span><span class="p">,</span>
+                  <span class="bp">self</span><span class="o">.</span><span class="n">dirt_correction</span><span class="p">,</span> <span class="n">solar_diffusing</span><span class="p">)</span>
+        <span class="n">comments</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;optical data type&#39;</span><span class="p">,</span> <span class="s1">&#39;spectral data set name&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;thickness </span><span class="si">{m}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;solar transmittance&#39;</span><span class="p">,</span> <span class="s1">&#39;solar reflectance front&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;solar reflectance back&#39;</span><span class="p">,</span> <span class="s1">&#39;visible transmittance&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;visible reflectance front&#39;</span><span class="p">,</span> <span class="s1">&#39;visible reflectance back&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;infrared_transmittance&#39;</span><span class="p">,</span> <span class="s1">&#39;emissivity front&#39;</span><span class="p">,</span> <span class="s1">&#39;emissivity back&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;conductivity {W/m-K}&#39;</span><span class="p">,</span> <span class="s1">&#39;dirt correction factor&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;solar diffusing&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">generate_idf_string</span><span class="p">(</span><span class="s1">&#39;WindowMaterial:Glazing&#39;</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">comments</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="EnergyWindowMaterialGlazing.to_dict"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialGlazing.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Energy Window Material Glazing dictionary representation.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;EnergyWindowMaterialGlazing&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s1">&#39;thickness&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">thickness</span><span class="p">,</span>
+            <span class="s1">&#39;solar_transmittance&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_transmittance</span><span class="p">,</span>
+            <span class="s1">&#39;solar_reflectance&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_reflectance</span><span class="p">,</span>
+            <span class="s1">&#39;solar_reflectance_back&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_reflectance_back</span><span class="p">,</span>
+            <span class="s1">&#39;visible_transmittance&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_transmittance</span><span class="p">,</span>
+            <span class="s1">&#39;visible_reflectance&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_reflectance</span><span class="p">,</span>
+            <span class="s1">&#39;visible_reflectance_back&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_reflectance_back</span><span class="p">,</span>
+            <span class="s1">&#39;infrared_transmittance&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">infrared_transmittance</span><span class="p">,</span>
+            <span class="s1">&#39;emissivity&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">emissivity</span><span class="p">,</span>
+            <span class="s1">&#39;emissivity_back&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">emissivity_back</span><span class="p">,</span>
+            <span class="s1">&#39;conductivity&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span><span class="p">,</span>
+            <span class="s1">&#39;dirt_correction&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">dirt_correction</span><span class="p">,</span>
+            <span class="s1">&#39;solar_diffusing&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_diffusing</span>
+        <span class="p">}</span></div>
+
+    <span class="k">def</span> <span class="nf">__key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A tuple based on the object properties, useful for hashing.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">thickness</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_transmittance</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">solar_reflectance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_reflectance_back</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">visible_transmittance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_reflectance</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">visible_reflectance_back</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">infrared_transmittance</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">emissivity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">emissivity_back</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dirt_correction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_diffusing</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">EnergyWindowMaterialGlazing</span><span class="p">)</span> <span class="ow">and</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_idf</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">new_material</span> <span class="o">=</span> <span class="n">EnergyWindowMaterialGlazing</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">thickness</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_transmittance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solar_reflectance</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">visible_transmittance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_reflectance</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">infrared_transmittance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">emissivity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emissivity_back</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span><span class="p">)</span>
+        <span class="n">new_material</span><span class="o">.</span><span class="n">_solar_reflectance_back</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_reflectance_back</span>
+        <span class="n">new_material</span><span class="o">.</span><span class="n">_visible_reflectance_back</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_reflectance_back</span>
+        <span class="n">new_material</span><span class="o">.</span><span class="n">_dirt_correction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dirt_correction</span>
+        <span class="n">new_material</span><span class="o">.</span><span class="n">_solar_diffusing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_solar_diffusing</span>
+        <span class="k">return</span> <span class="n">new_material</span></div>
+
+
+<div class="viewcode-block" id="EnergyWindowMaterialSimpleGlazSys"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialSimpleGlazSys">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">EnergyWindowMaterialSimpleGlazSys</span><span class="p">(</span><span class="n">_EnergyWindowMaterialGlazingBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A material to describe an entire glazing system, including glass, gaps, and frame.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        name</span>
+<span class="sd">        u_factor</span>
+<span class="sd">        shgc</span>
+<span class="sd">        vt</span>
+<span class="sd">        r_factor</span>
+<span class="sd">        u_value</span>
+<span class="sd">        r_value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_u_factor&#39;</span><span class="p">,</span> <span class="s1">&#39;_shgc&#39;</span><span class="p">,</span> <span class="s1">&#39;_vt&#39;</span><span class="p">)</span>
+    <span class="n">_film_resistance</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">23</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">7</span><span class="p">)</span>  <span class="c1"># interior + exterior films resistance</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">u_factor</span><span class="p">,</span> <span class="n">shgc</span><span class="p">,</span> <span class="n">vt</span><span class="o">=</span><span class="mf">0.6</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize energy window material simple glazing system.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Text string for material name. Must be &lt;= 100 characters.</span>
+<span class="sd">                Can include spaces but special characters will be stripped out.</span>
+<span class="sd">            u_factor: A number for the U-factor of the glazing system [W/m2-K]</span>
+<span class="sd">                including standard air gap resistances on either side of the system.</span>
+<span class="sd">            shgc: A number between 0 and 1 for the solar heat gain coefficient</span>
+<span class="sd">                of the glazing system. This includes both directly transmitted solar</span>
+<span class="sd">                heat as well as solar heat that is absorbed by the glazing system and</span>
+<span class="sd">                conducts towards the interior.</span>
+<span class="sd">            vt: A number between 0 and 1 for the visible transmittance of the</span>
+<span class="sd">                glazing system.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_EnergyWindowMaterialGlazingBase</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">u_factor</span> <span class="o">=</span> <span class="n">u_factor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shgc</span> <span class="o">=</span> <span class="n">shgc</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vt</span> <span class="o">=</span> <span class="n">vt</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">u_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the glazing system U-factor (including air film resistance).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_u_factor</span>
+
+    <span class="nd">@u_factor</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">u_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u_fac</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_u_factor</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">u_fac</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">5.8</span><span class="p">,</span> <span class="s1">&#39;glazing material u-factor&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">r_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the glazing system R-factor (including air film resistance).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_u_factor</span>
+
+    <span class="nd">@r_factor</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">r_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r_fac</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_u_factor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">r_fac</span><span class="p">,</span> <span class="s1">&#39;glazing material r-factor&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shgc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the glazing system solar heat gain coefficient (SHGC).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shgc</span>
+
+    <span class="nd">@shgc</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">shgc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sc</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shgc</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">sc</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material shgc&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">vt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the visible transmittance.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vt</span>
+
+    <span class="nd">@vt</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">vt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vt</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vt</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span><span class="n">vt</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;glazing material visible transmittance&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">u_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;U-value of the material layer [W/m2-K] (excluding air film resistance).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">r_value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">r_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;R-value of the material layer [m2-K/W] (excluding air film resistance).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">u_factor</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_film_resistance</span>
+
+<div class="viewcode-block" id="EnergyWindowMaterialSimpleGlazSys.from_idf"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialSimpleGlazSys.from_idf">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_idf</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">idf_string</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create EnergyWindowMaterialSimpleGlazSys from an EnergyPlus text string.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            idf_string: A text string fully describing an EnergyPlus material.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ep_strs</span> <span class="o">=</span> <span class="n">parse_idf_string</span><span class="p">(</span><span class="n">idf_string</span><span class="p">,</span> <span class="s1">&#39;WindowMaterial:SimpleGlazingSystem,&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">ep_strs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="EnergyWindowMaterialSimpleGlazSys.from_standards_dict"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialSimpleGlazSys.from_standards_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_standards_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create EnergyWindowMaterialSimpleGlazSys from OpenStudio standards dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: {</span>
+<span class="sd">                &quot;name&quot;: &#39;Fixed Window&#39;,</span>
+<span class="sd">                &quot;material_type&quot;: &quot;SimpleGlazing&quot;,</span>
+<span class="sd">                &quot;u_factor&quot;: 0.45,</span>
+<span class="sd">                &quot;solar_heat_gain_coefficient&quot;: 0.45,</span>
+<span class="sd">                &quot;visible_transmittance&quot;: 0.35}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;material_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;SimpleGlazing&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected SimpleGlazing. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;material_type&#39;</span><span class="p">])</span>
+        <span class="n">u_factor</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;u_factor&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">5.678</span>  <span class="c1"># convert from Btu/hr*ft2*F</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">u_factor</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;solar_heat_gain_coefficient&#39;</span><span class="p">],</span>
+                   <span class="n">data</span><span class="p">[</span><span class="s1">&#39;visible_transmittance&#39;</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="EnergyWindowMaterialSimpleGlazSys.from_dict"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialSimpleGlazSys.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a EnergyWindowMaterialSimpleGlazSys from a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: {</span>
+<span class="sd">                &quot;type&quot;: &#39;EnergyWindowMaterialSimpleGlazSys&#39;,</span>
+<span class="sd">                &quot;name&quot;: &#39;Double Low-e Glazing System&#39;,</span>
+<span class="sd">                &quot;u_factor&quot;: 2.0,</span>
+<span class="sd">                &quot;shgc&quot;: 0.4,</span>
+<span class="sd">                &quot;vt&quot;: 0.6}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyWindowMaterialSimpleGlazSys&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected EnergyWindowMaterialSimpleGlazSys. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="s1">&#39;vt&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;vt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.6</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;u_factor&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;shgc&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;vt&#39;</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="EnergyWindowMaterialSimpleGlazSys.to_idf"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialSimpleGlazSys.to_idf">[docs]</a>    <span class="k">def</span> <span class="nf">to_idf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get an EnergyPlus string representation of the material.&quot;&quot;&quot;</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">u_factor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">shgc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vt</span><span class="p">)</span>
+        <span class="n">comments</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;u-factor {W/m2-K}&#39;</span><span class="p">,</span> <span class="s1">&#39;shgc&#39;</span><span class="p">,</span> <span class="s1">&#39;vt&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">generate_idf_string</span><span class="p">(</span>
+            <span class="s1">&#39;WindowMaterial:SimpleGlazingSystem&#39;</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">comments</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="EnergyWindowMaterialSimpleGlazSys.to_dict"><a class="viewcode-back" href="../../../honeybee_energy.material.glazing.html#honeybee_energy.material.glazing.EnergyWindowMaterialSimpleGlazSys.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Energy Window Material Simple Glazing System dictionary representation.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;EnergyWindowMaterialSimpleGlazSys&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s1">&#39;u_factor&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">u_factor</span><span class="p">,</span>
+            <span class="s1">&#39;shgc&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">shgc</span><span class="p">,</span>
+            <span class="s1">&#39;vt&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">vt</span>
+        <span class="p">}</span></div>
+
+    <span class="k">def</span> <span class="nf">__key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A tuple based on the object properties, useful for hashing.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">u_factor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">shgc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vt</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">EnergyWindowMaterialSimpleGlazSys</span><span class="p">)</span> <span class="ow">and</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_idf</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">EnergyWindowMaterialSimpleGlazSys</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">u_factor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">shgc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vt</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.load.lighting &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../honeybee_energy.html">honeybee_energy package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../honeybee_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../honeybee_energy.html">honeybee_energy package</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../honeybee_energy.html">honeybee_energy package</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for honeybee_energy.load.lighting</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="sd">&quot;&quot;&quot;Complete definition of lighting in a simulation, including schedule and load.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">division</span>
+
+<span class="kn">from</span> <span class="nn">._base</span> <span class="k">import</span> <span class="n">_LoadBase</span>
+<span class="kn">from</span> <span class="nn">..schedule.ruleset</span> <span class="k">import</span> <span class="n">ScheduleRuleset</span>
+<span class="kn">from</span> <span class="nn">..schedule.fixedinterval</span> <span class="k">import</span> <span class="n">ScheduleFixedInterval</span>
+<span class="kn">from</span> <span class="nn">..reader</span> <span class="k">import</span> <span class="n">parse_idf_string</span>
+<span class="kn">from</span> <span class="nn">..writer</span> <span class="k">import</span> <span class="n">generate_idf_string</span>
+
+<span class="kn">from</span> <span class="nn">honeybee._lockable</span> <span class="k">import</span> <span class="n">lockable</span>
+<span class="kn">from</span> <span class="nn">honeybee.typing</span> <span class="k">import</span> <span class="n">float_in_range</span><span class="p">,</span> <span class="n">float_positive</span>
+
+
+<div class="viewcode-block" id="Lighting"><a class="viewcode-back" href="../../../honeybee_energy.load.lighting.html#honeybee_energy.load.lighting.Lighting">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">Lighting</span><span class="p">(</span><span class="n">_LoadBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A complete definition of lighting, including schedules and load.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * name</span>
+<span class="sd">        * watts_per_area</span>
+<span class="sd">        * schedule</span>
+<span class="sd">        * return_air_fraction</span>
+<span class="sd">        * radiant_fraction</span>
+<span class="sd">        * visible_fraction</span>
+<span class="sd">        * convected_fraction</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_watts_per_area&#39;</span><span class="p">,</span> <span class="s1">&#39;_schedule&#39;</span><span class="p">,</span> <span class="s1">&#39;_return_air_fraction&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_radiant_fraction&#39;</span><span class="p">,</span> <span class="s1">&#39;_visible_fraction&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">watts_per_area</span><span class="p">,</span> <span class="n">schedule</span><span class="p">,</span> <span class="n">return_air_fraction</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                 <span class="n">radiant_fraction</span><span class="o">=</span><span class="mf">0.32</span><span class="p">,</span> <span class="n">visible_fraction</span><span class="o">=</span><span class="mf">0.25</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize Lighting.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Text string for the lighting definition name. Must be &lt;= 100 characters.</span>
+<span class="sd">                Can include spaces but special characters will be stripped out.</span>
+<span class="sd">            watts_per_area: A numerical value for the lighting power density in</span>
+<span class="sd">                Watts per square meter of floor area.</span>
+<span class="sd">            schedule: A ScheduleRuleset or ScheduleFixedInterval for the use of lights</span>
+<span class="sd">                over the course of the year. The type of this schedule should be</span>
+<span class="sd">                Fractional and the fractional values will get multiplied by the</span>
+<span class="sd">                watts_per_area to yield a complete lighting profile.</span>
+<span class="sd">            return_air_fraction: A number between 0 and 1 for the fraction of the total</span>
+<span class="sd">                lighting load that goes into the zone return air (into the zone outlet</span>
+<span class="sd">                node). Default: 0.0 (representative of pendant lighting).</span>
+<span class="sd">            radiant_fraction: A number between 0 and 1 for the fraction of the total</span>
+<span class="sd">                lighting load given off as long wave radiant heat.</span>
+<span class="sd">                Default: 0.32 (representative of pendant lighting).</span>
+<span class="sd">            visible_fraction: A number between 0 and 1 for the fraction of the total</span>
+<span class="sd">                lighting load given off as short wave visible light.</span>
+<span class="sd">                Default: 0.25  (representative of pendant lighting).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_LoadBase</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_radiant_fraction</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># starting value so that check runs correctly</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_visible_fraction</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># starting value so that check runs correctly</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">watts_per_area</span> <span class="o">=</span> <span class="n">watts_per_area</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">schedule</span> <span class="o">=</span> <span class="n">schedule</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">return_air_fraction</span> <span class="o">=</span> <span class="n">return_air_fraction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">radiant_fraction</span> <span class="o">=</span> <span class="n">radiant_fraction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">visible_fraction</span> <span class="o">=</span> <span class="n">visible_fraction</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">watts_per_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the lighting power density in Watts/square meter of floor area.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_watts_per_area</span>
+
+    <span class="nd">@watts_per_area</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">watts_per_area</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_watts_per_area</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;lighting watts per area&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set a ScheduleRuleset or ScheduleFixedInterval for lighting usage.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schedule</span>
+
+    <span class="nd">@schedule</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="n">ScheduleRuleset</span><span class="p">,</span> <span class="n">ScheduleFixedInterval</span><span class="p">)),</span> \
+            <span class="s1">&#39;Expected ScheduleRuleset or ScheduleFixedInterval for Lighting &#39;</span> \
+            <span class="s1">&#39;schedule. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_fractional_schedule_type</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;Lighting&#39;</span><span class="p">)</span>
+        <span class="n">value</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>   <span class="c1"># lock editing in case schedule has multiple references</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schedule</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">return_air_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the fraction of lighting heat that goes into the return air.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_return_air_fraction</span>
+
+    <span class="nd">@return_air_fraction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">return_air_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_return_air_fraction</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span>
+                <span class="n">value</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;lighting return air fraction&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_return_air_fraction</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_fractions</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">radiant_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the fraction of lighting heat given off as long wave radiation.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_radiant_fraction</span>
+
+    <span class="nd">@radiant_fraction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">radiant_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_radiant_fraction</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span>
+                <span class="n">value</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;lighting radiant fraction&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_radiant_fraction</span> <span class="o">=</span> <span class="mf">0.32</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_fractions</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visible_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the fraction of lighting heat given off as visible light.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_fraction</span>
+
+    <span class="nd">@visible_fraction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">visible_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_visible_fraction</span> <span class="o">=</span> <span class="n">float_in_range</span><span class="p">(</span>
+                <span class="n">value</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;lighting visible fraction&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_visible_fraction</span> <span class="o">=</span> <span class="mf">0.25</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_fractions</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">convected_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the fraction of lighting heat that convects to the zone air.&quot;&quot;&quot;</span>
+        <span class="n">tot</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_return_air_fraction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_radiant_fraction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_fraction</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">tot</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Lighting.from_idf"><a class="viewcode-back" href="../../../honeybee_energy.load.lighting.html#honeybee_energy.load.lighting.Lighting.from_idf">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_idf</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">idf_string</span><span class="p">,</span> <span class="n">schedule_dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create an Lighting object from an EnergyPlus IDF text string.</span>
+
+<span class="sd">        Note that the Lighting idf_string must use the &#39;watts per zone floor area&#39;</span>
+<span class="sd">        method in order to be successfully imported.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            idf_string: A text string fully describing an EnergyPlus lighting definition.</span>
+<span class="sd">            schedule_dict: A dictionary with schedule names as keys and honeybee</span>
+<span class="sd">                schedule objects as values (either ScheduleRuleset or</span>
+<span class="sd">                ScheduleFixedInterval). These will be used to assign the schedules to</span>
+<span class="sd">                the Lighting object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            lighting: A Lighting object loaded from the idf_string.</span>
+<span class="sd">            zone_name: The name of the zone to which the Lighting object should</span>
+<span class="sd">                be assigned.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># check the inputs</span>
+        <span class="n">ep_strs</span> <span class="o">=</span> <span class="n">parse_idf_string</span><span class="p">(</span><span class="n">idf_string</span><span class="p">,</span> <span class="s1">&#39;Lights,&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;watts/area&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Lights must use Watts/Area method to be loaded from IDF to honeybee.&#39;</span>
+
+        <span class="c1"># extract the properties from the string</span>
+        <span class="n">return_fract</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">rad_fract</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">vis_fract</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">return_fract</span> <span class="o">=</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="k">if</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">rad_fract</span> <span class="o">=</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="k">if</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">vis_fract</span> <span class="o">=</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="k">if</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">pass</span>  <span class="c1"># shorter lighting definitipn lacking fractions</span>
+
+        <span class="c1"># extract the schedules from the string</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">sched</span> <span class="o">=</span> <span class="n">schedule_dict</span><span class="p">[</span><span class="n">ep_strs</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Failed to find </span><span class="si">{}</span><span class="s1"> in the schedule_dict.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+        <span class="c1"># return the lighting object and the zone name for the lighting object</span>
+        <span class="n">obj_name</span> <span class="o">=</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">zone_name</span> <span class="o">=</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">lighting</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">obj_name</span><span class="p">,</span> <span class="n">ep_strs</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">sched</span><span class="p">,</span> <span class="n">return_fract</span><span class="p">,</span> <span class="n">rad_fract</span><span class="p">,</span> <span class="n">vis_fract</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">lighting</span><span class="p">,</span> <span class="n">zone_name</span></div>
+
+<div class="viewcode-block" id="Lighting.from_dict"><a class="viewcode-back" href="../../../honeybee_energy.load.lighting.html#honeybee_energy.load.lighting.Lighting.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a Lighting object from a dictionary.</span>
+
+<span class="sd">        Note that the dictionary must be a non-abridged version for this classmethod</span>
+<span class="sd">        to work.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A Lighting dictionary in following the format below.</span>
+
+<span class="sd">        .. code-block:: json</span>
+
+<span class="sd">            {</span>
+<span class="sd">            &quot;type&quot;: &#39;Lighting&#39;,</span>
+<span class="sd">            &quot;name&quot;: &#39;Open Office Lighting&#39;,</span>
+<span class="sd">            &quot;watts_per_area&quot;: 10, // lighting watts per square meter of floor area</span>
+<span class="sd">            &quot;schedule&quot;: {}, // ScheduleRuleset/ScheduleFixedInterval dictionary</span>
+<span class="sd">            &quot;return_air_fraction&quot;: 0, // fraction of heat going to return air</span>
+<span class="sd">            &quot;radiant_fraction&quot;: 0.32, // fraction of heat that is long wave radiant</span>
+<span class="sd">            &quot;visible_fraction&quot;: 0.25 // fraction of heat that is short wave visible</span>
+<span class="sd">            }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Lighting&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected Lighting dictionary. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+        <span class="n">sched</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_schedule_from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;schedule&#39;</span><span class="p">])</span>
+        <span class="n">ret_fract</span><span class="p">,</span> <span class="n">rad_fract</span><span class="p">,</span> <span class="n">vis_fract</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_optional_dict_keys</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;watts_per_area&#39;</span><span class="p">],</span> <span class="n">sched</span><span class="p">,</span>
+                   <span class="n">ret_fract</span><span class="p">,</span> <span class="n">rad_fract</span><span class="p">,</span> <span class="n">vis_fract</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Lighting.from_dict_abridged"><a class="viewcode-back" href="../../../honeybee_energy.load.lighting.html#honeybee_energy.load.lighting.Lighting.from_dict_abridged">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict_abridged</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">schedule_dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a Lighting object from an abridged dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A LightingAbridged dictionary in following the format below.</span>
+<span class="sd">            schedule_dict: A dictionary with schedule names as keys and honeybee schedule</span>
+<span class="sd">                objects as values (either ScheduleRuleset or ScheduleFixedInterval).</span>
+<span class="sd">                These will be used to assign the schedules to the Lighting object.</span>
+
+<span class="sd">        .. code-block:: json</span>
+
+<span class="sd">            {</span>
+<span class="sd">            &quot;type&quot;: &#39;LightingAbridged&#39;,</span>
+<span class="sd">            &quot;name&quot;: &#39;Open Office Lighting&#39;,</span>
+<span class="sd">            &quot;watts_per_area&quot;: 10, // lighting watts per square meter of floor area</span>
+<span class="sd">            &quot;schedule&quot;: &quot;Office Lighting Schedule&quot;, // Schedule name</span>
+<span class="sd">            &quot;return_air_fraction&quot;: 0, // fraction of heat going to return air</span>
+<span class="sd">            &quot;radiant_fraction&quot;: 0.32, // fraction of heat that is long wave radiant</span>
+<span class="sd">            &quot;visible_fraction&quot;: 0.25 // fraction of heat that is short wave visible</span>
+<span class="sd">            }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;LightingAbridged&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected LightingAbridged dictionary. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">sched</span> <span class="o">=</span> <span class="n">schedule_dict</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;schedule&#39;</span><span class="p">]]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Failed to find </span><span class="si">{}</span><span class="s1"> in the schedule_dict.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+        <span class="n">ret_fract</span><span class="p">,</span> <span class="n">rad_fract</span><span class="p">,</span> <span class="n">vis_fract</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_optional_dict_keys</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;watts_per_area&#39;</span><span class="p">],</span> <span class="n">sched</span><span class="p">,</span>
+                   <span class="n">ret_fract</span><span class="p">,</span> <span class="n">rad_fract</span><span class="p">,</span> <span class="n">vis_fract</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Lighting.to_idf"><a class="viewcode-back" href="../../../honeybee_energy.load.lighting.html#honeybee_energy.load.lighting.Lighting.to_idf">[docs]</a>    <span class="k">def</span> <span class="nf">to_idf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;IDF string representation of Lighting object.</span>
+
+<span class="sd">        Note that this method only outputs a single string for the Lights object and,</span>
+<span class="sd">        to write everything needed to describe the object into an IDF, this object&#39;s</span>
+<span class="sd">        schedule must also be written. This is done to give more control over the</span>
+<span class="sd">        export process since you typically want to check whether these schedules are</span>
+<span class="sd">        used by multiple Lighting objects and write the schedule into the IDF only once.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            zone_name: Text for the zone name that the Lights object is assigned to.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">..</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">zone_name</span><span class="p">),</span> <span class="n">zone_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">schedule</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                  <span class="s1">&#39;Watts/Area&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">watts_per_area</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_air_fraction</span><span class="p">,</span>
+                  <span class="bp">self</span><span class="o">.</span><span class="n">radiant_fraction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_fraction</span><span class="p">)</span>
+        <span class="n">comments</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;zone name&#39;</span><span class="p">,</span> <span class="s1">&#39;schedule name&#39;</span><span class="p">,</span> <span class="s1">&#39;lighting level method&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;lighting power level </span><span class="si">{W}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;lighting per floor area {W/m2}&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;lighting per person {W/ppl}&#39;</span><span class="p">,</span> <span class="s1">&#39;return air fraction&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;radiant fration&#39;</span><span class="p">,</span> <span class="s1">&#39;visible fraction&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">generate_idf_string</span><span class="p">(</span><span class="s1">&#39;Lights&#39;</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">comments</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Lighting.to_dict"><a class="viewcode-back" href="../../../honeybee_energy.load.lighting.html#honeybee_energy.load.lighting.Lighting.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">abridged</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Lighting dictionary representation.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            abridged: Boolean to note whether the full dictionary describing the</span>
+<span class="sd">                object should be returned (False) or just an abridged version (True),</span>
+<span class="sd">                which only specifies the names of schedules. Default: False.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Lighting&#39;</span><span class="p">}</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">abridged</span> <span class="k">else</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;LightingAbridged&#39;</span><span class="p">}</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;watts_per_area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">watts_per_area</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;return_air_fraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_air_fraction</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;radiant_fraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">radiant_fraction</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;visible_fraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_fraction</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;schedule&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">schedule</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> \
+            <span class="n">abridged</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">schedule</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="Lighting.average"><a class="viewcode-back" href="../../../honeybee_energy.load.lighting.html#honeybee_energy.load.lighting.Lighting.average">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">lightings</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestep_resolution</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a Lighting object that&#39;s a weighted average between other Lighting objects.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: A name for the new averaged Lighting object.</span>
+<span class="sd">            lightings: A list of Lighting objects that will be averaged together to make</span>
+<span class="sd">                a new Lighting.</span>
+<span class="sd">            weights: An optional list of fractional numbers with the same length</span>
+<span class="sd">                as the input lightings. These will be used to weight each of the</span>
+<span class="sd">                Lighting objects in the resulting average. Note that these weights</span>
+<span class="sd">                can sum to less than 1 in which case the average watts_per_area will</span>
+<span class="sd">                assume 0 for the unaccounted fraction of the weights.</span>
+<span class="sd">                If None, the objects will be weighted equally. Default: None.</span>
+<span class="sd">            timestep_resolution: An optional integer for the timestep resolution</span>
+<span class="sd">                at which the schedules will be averaged. Any schedule details</span>
+<span class="sd">                smaller than this timestep will be lost in the averaging process.</span>
+<span class="sd">                Default: 1.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">weights</span><span class="p">,</span> <span class="n">u_weights</span> <span class="o">=</span> <span class="n">Lighting</span><span class="o">.</span><span class="n">_check_avg_weights</span><span class="p">(</span><span class="n">lightings</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="s1">&#39;Lighting&#39;</span><span class="p">)</span>
+
+        <span class="c1"># calculate the average values</span>
+        <span class="n">lpd</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">li</span><span class="o">.</span><span class="n">watts_per_area</span> <span class="o">*</span> <span class="n">w</span> <span class="k">for</span> <span class="n">li</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">lightings</span><span class="p">,</span> <span class="n">weights</span><span class="p">)])</span>
+        <span class="n">ret_fract</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">li</span><span class="o">.</span><span class="n">return_air_fraction</span> <span class="o">*</span> <span class="n">w</span> <span class="k">for</span> <span class="n">li</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">lightings</span><span class="p">,</span> <span class="n">u_weights</span><span class="p">)])</span>
+        <span class="n">rad_fract</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">li</span><span class="o">.</span><span class="n">radiant_fraction</span> <span class="o">*</span> <span class="n">w</span> <span class="k">for</span> <span class="n">li</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">lightings</span><span class="p">,</span> <span class="n">u_weights</span><span class="p">)])</span>
+        <span class="n">vis_fract</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">li</span><span class="o">.</span><span class="n">visible_fraction</span> <span class="o">*</span> <span class="n">w</span> <span class="k">for</span> <span class="n">li</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">lightings</span><span class="p">,</span> <span class="n">u_weights</span><span class="p">)])</span>
+
+        <span class="c1"># calculate the average schedules</span>
+        <span class="n">sched</span> <span class="o">=</span> <span class="n">Lighting</span><span class="o">.</span><span class="n">_average_schedule</span><span class="p">(</span>
+            <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> Schedule&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="p">[</span><span class="n">li</span><span class="o">.</span><span class="n">schedule</span> <span class="k">for</span> <span class="n">li</span> <span class="ow">in</span> <span class="n">lightings</span><span class="p">],</span>
+            <span class="n">u_weights</span><span class="p">,</span> <span class="n">timestep_resolution</span><span class="p">)</span>
+
+        <span class="c1"># return the averaged lighting object</span>
+        <span class="k">return</span> <span class="n">Lighting</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">lpd</span><span class="p">,</span> <span class="n">sched</span><span class="p">,</span> <span class="n">ret_fract</span><span class="p">,</span> <span class="n">rad_fract</span><span class="p">,</span> <span class="n">vis_fract</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_check_fractions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">tot</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_return_air_fraction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_radiant_fraction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_visible_fraction</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">tot</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Sum of lighting return_air_fraction, radiant_fraction &#39;</span> \
+            <span class="s1">&#39;and visible_fraction (</span><span class="si">{}</span><span class="s1">) is greater than 1.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">tot</span><span class="p">))</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_optional_dict_keys</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the optional keys from a Lighting dictionary.&quot;&quot;&quot;</span>
+        <span class="n">ret_fract</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;return_air_fraction&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;return_air_fraction&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="n">rad_fract</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;radiant_fraction&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;radiant_fraction&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">0.32</span>
+        <span class="n">vis_fract</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;visible_fraction&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;visible_fraction&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">0.25</span>
+        <span class="k">return</span> <span class="n">ret_fract</span><span class="p">,</span> <span class="n">rad_fract</span><span class="p">,</span> <span class="n">vis_fract</span>
+
+    <span class="k">def</span> <span class="nf">__key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A tuple based on the object properties, useful for hashing.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">watts_per_area</span><span class="p">,</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">schedule</span><span class="p">),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">return_air_fraction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">radiant_fraction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_fraction</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Lighting</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Lighting</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">watts_per_area</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">schedule</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_air_fraction</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">radiant_fraction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible_fraction</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Lighting:</span><span class="se">\n</span><span class="s1"> name: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> watts per area: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> schedule: &#39;</span> \
+            <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">watts_per_area</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">schedule</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

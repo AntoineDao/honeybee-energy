@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.programtype &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../honeybee_energy.html">honeybee_energy package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../honeybee_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../honeybee_energy.html">honeybee_energy package</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../honeybee_energy.html">honeybee_energy package</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for honeybee_energy.programtype</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="sd">&quot;&quot;&quot;Complete definition of a zone program, including schedules and loads.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">division</span>
+
+<span class="kn">from</span> <span class="nn">.load.people</span> <span class="k">import</span> <span class="n">People</span>
+<span class="kn">from</span> <span class="nn">.load.lighting</span> <span class="k">import</span> <span class="n">Lighting</span>
+<span class="kn">from</span> <span class="nn">.load.equipment</span> <span class="k">import</span> <span class="n">ElectricEquipment</span><span class="p">,</span> <span class="n">GasEquipment</span>
+<span class="kn">from</span> <span class="nn">.load.infiltration</span> <span class="k">import</span> <span class="n">Infiltration</span>
+<span class="kn">from</span> <span class="nn">.load.ventilation</span> <span class="k">import</span> <span class="n">Ventilation</span>
+<span class="kn">from</span> <span class="nn">.load.setpoint</span> <span class="k">import</span> <span class="n">Setpoint</span>
+<span class="kn">from</span> <span class="nn">.schedule.typelimit</span> <span class="k">import</span> <span class="n">ScheduleTypeLimit</span>
+<span class="kn">from</span> <span class="nn">.schedule.ruleset</span> <span class="k">import</span> <span class="n">ScheduleRuleset</span>
+<span class="kn">from</span> <span class="nn">.schedule.fixedinterval</span> <span class="k">import</span> <span class="n">ScheduleFixedInterval</span>
+
+<span class="kn">from</span> <span class="nn">honeybee._lockable</span> <span class="k">import</span> <span class="n">lockable</span>
+<span class="kn">from</span> <span class="nn">honeybee.typing</span> <span class="k">import</span> <span class="n">valid_ep_string</span><span class="p">,</span> <span class="n">tuple_with_length</span>
+
+
+<div class="viewcode-block" id="ProgramType"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">ProgramType</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Program Type object possessing all schedules and loads defining a program.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * name</span>
+<span class="sd">        * people</span>
+<span class="sd">        * lighting</span>
+<span class="sd">        * electric_equipment</span>
+<span class="sd">        * gas_equipment</span>
+<span class="sd">        * infiltration</span>
+<span class="sd">        * ventilation</span>
+<span class="sd">        * setpoint</span>
+<span class="sd">        * schedules</span>
+<span class="sd">        * schedules_unique</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_name&#39;</span><span class="p">,</span> <span class="s1">&#39;_people&#39;</span><span class="p">,</span> <span class="s1">&#39;_lighting&#39;</span><span class="p">,</span> <span class="s1">&#39;_electric_equipment&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_gas_equipment&#39;</span><span class="p">,</span> <span class="s1">&#39;_infiltration&#39;</span><span class="p">,</span> <span class="s1">&#39;_ventilation&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_setpoint&#39;</span><span class="p">,</span> <span class="s1">&#39;_locked&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">people</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">electric_equipment</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">gas_equipment</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">infiltration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ventilation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">setpoint</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize ProgramType.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Text string for ProgramType. Must be &lt;= 100 characters.</span>
+<span class="sd">                Can include spaces but special characters will be stripped out.</span>
+<span class="sd">            people: A People object to describe the occupancy of the program. If None,</span>
+<span class="sd">                no occupancy will be assumed for the program. Default: None.</span>
+<span class="sd">            lighting: A Lighting object to describe the lighting usage of the program.</span>
+<span class="sd">                If None, no lighting will be assumed for the program. Default: None.</span>
+<span class="sd">            electric_equipment: An ElectricEquipment object to describe the usage</span>
+<span class="sd">                of electric equipment within the program. If None, no electric equipment</span>
+<span class="sd">                will be assumed for the program. Default: None.</span>
+<span class="sd">            gas_equipment: A GasEquipment object to describe the usage of gas equipment</span>
+<span class="sd">                within the program. If None, no gas equipment will be assumed for</span>
+<span class="sd">                the program. Default: None.</span>
+<span class="sd">            infiltration: An Infiltration object to describe the outdoor air leakage of</span>
+<span class="sd">                the program. If None, no infiltration will be assumed for the program.</span>
+<span class="sd">                Default: None.</span>
+<span class="sd">            ventilation: A Ventilation object to describe the minimum outdoor air</span>
+<span class="sd">                requirement of the program. If None, no ventilation requirement will</span>
+<span class="sd">                be assumed for the program. Default: None</span>
+<span class="sd">            setpoint: A Setpoint object to describe the temperature and humidity</span>
+<span class="sd">                setpoints of the program.  If None, the ProgramType cannot be assigned</span>
+<span class="sd">                to a Room that is conditioned. Default: None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># unlocked by default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">people</span> <span class="o">=</span> <span class="n">people</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span> <span class="o">=</span> <span class="n">lighting</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span> <span class="o">=</span> <span class="n">electric_equipment</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span> <span class="o">=</span> <span class="n">gas_equipment</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span> <span class="o">=</span> <span class="n">infiltration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span> <span class="o">=</span> <span class="n">ventilation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span> <span class="o">=</span> <span class="n">setpoint</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the text string for program type name.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+
+    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">valid_ep_string</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;program type name&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">people</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set a People object to describe the occupancy of the program.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_people</span>
+
+    <span class="nd">@people</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">people</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">People</span><span class="p">),</span> <span class="s1">&#39;Expected People object for &#39;</span> \
+                <span class="s1">&#39;ProgramType.people. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_people</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">lighting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set a Lighting object to describe the lighting usage of the program.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lighting</span>
+
+    <span class="nd">@lighting</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">lighting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Lighting</span><span class="p">),</span> <span class="s1">&#39;Expected Lighting object for &#39;</span> \
+                <span class="s1">&#39;ProgramType.lighting. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lighting</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">electric_equipment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set an ElectricEquipment object to describe the usage of equipment.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_electric_equipment</span>
+
+    <span class="nd">@electric_equipment</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">electric_equipment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">ElectricEquipment</span><span class="p">),</span> <span class="s1">&#39;Expected ElectricEquipment &#39;</span> \
+                <span class="s1">&#39;object for ProgramType.electric_equipment. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_electric_equipment</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">gas_equipment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set a GasEquipment object to describe the usage of equipment.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gas_equipment</span>
+
+    <span class="nd">@gas_equipment</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">gas_equipment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">GasEquipment</span><span class="p">),</span> <span class="s1">&#39;Expected GasEquipment &#39;</span> \
+                <span class="s1">&#39;object for ProgramType.gas_equipment. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gas_equipment</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">infiltration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set an Infiltration object to describe the outdoor air leakage.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_infiltration</span>
+
+    <span class="nd">@infiltration</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">infiltration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Infiltration</span><span class="p">),</span> <span class="s1">&#39;Expected Infiltration &#39;</span> \
+                <span class="s1">&#39;object for ProgramType.infiltration. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_infiltration</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ventilation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set a Ventilation object to describe the minimum outdoor air flow.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ventilation</span>
+
+    <span class="nd">@ventilation</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ventilation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Ventilation</span><span class="p">),</span> <span class="s1">&#39;Expected Ventilation &#39;</span> \
+                <span class="s1">&#39;object for ProgramType.ventilation. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ventilation</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">setpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set a Setpoint object to describe the temperature setpoints.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_setpoint</span>
+
+    <span class="nd">@setpoint</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">setpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Setpoint</span><span class="p">),</span> <span class="s1">&#39;Expected Setpoint &#39;</span> \
+                <span class="s1">&#39;object for ProgramType.setpoint. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_setpoint</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">schedules</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all schedules contained within the ProgramType.&quot;&quot;&quot;</span>
+        <span class="n">sched</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">people</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">people</span><span class="o">.</span><span class="n">occupancy_schedule</span><span class="p">)</span>
+            <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">people</span><span class="o">.</span><span class="n">activity_schedule</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lighting</span><span class="o">.</span><span class="n">schedule</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span><span class="o">.</span><span class="n">schedule</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span><span class="o">.</span><span class="n">schedule</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span><span class="o">.</span><span class="n">schedule</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span><span class="o">.</span><span class="n">schedule</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span><span class="o">.</span><span class="n">schedule</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">heating_schedule</span><span class="p">)</span>
+            <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">cooling_schedule</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">humidifying_schedule</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">humidifying_schedule</span><span class="p">)</span>
+                <span class="n">sched</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">dehumidifying_schedule</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sched</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">schedules_unique</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all unique schedules contained within the ProgramType.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">schedules</span><span class="p">))</span>
+
+<div class="viewcode-block" id="ProgramType.from_standards_dict"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType.from_standards_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_standards_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">data_schedules</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create an ProgramType from an OpenStudio standards gem dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: An OpenStudio standards dictionary of a space type in the</span>
+<span class="sd">                format below.</span>
+
+<span class="sd">            .. code-block:: json</span>
+
+<span class="sd">                {</span>
+<span class="sd">                &quot;template&quot;: &quot;90.1-2013&quot;,</span>
+<span class="sd">                &quot;building_type&quot;: &quot;Office&quot;,</span>
+<span class="sd">                &quot;space_type&quot;: &quot;MediumOffice - OpenOffice&quot;,</span>
+<span class="sd">                &quot;lighting_standard&quot;: &quot;ASHRAE 90.1-2013&quot;,</span>
+<span class="sd">                &quot;lighting_per_area&quot;: 0.98,</span>
+<span class="sd">                &quot;lighting_per_person&quot;: None,</span>
+<span class="sd">                &quot;additional_lighting_per_area&quot;: None,</span>
+<span class="sd">                &quot;lighting_fraction_to_return_air&quot;: 0.0,</span>
+<span class="sd">                &quot;lighting_fraction_radiant&quot;: 0.7,</span>
+<span class="sd">                &quot;lighting_fraction_visible&quot;: 0.2,</span>
+<span class="sd">                &quot;lighting_schedule&quot;: &quot;OfficeMedium BLDG_LIGHT_SCH_2013&quot;,</span>
+<span class="sd">                &quot;ventilation_standard&quot;: &quot;ASHRAE 62.1-2007&quot;,</span>
+<span class="sd">                &quot;ventilation_primary_space_type&quot;: &quot;Office Buildings&quot;,</span>
+<span class="sd">                &quot;ventilation_secondary_space_type&quot;: &quot;Office space&quot;,</span>
+<span class="sd">                &quot;ventilation_per_area&quot;: 0.06,</span>
+<span class="sd">                &quot;ventilation_per_person&quot;: 5.0,</span>
+<span class="sd">                &quot;ventilation_air_changes&quot;: None,</span>
+<span class="sd">                &quot;minimum_total_air_changes&quot;: None,</span>
+<span class="sd">                &quot;occupancy_per_area&quot;: 5.25,</span>
+<span class="sd">                &quot;occupancy_schedule&quot;: &quot;OfficeMedium BLDG_OCC_SCH&quot;,</span>
+<span class="sd">                &quot;occupancy_activity_schedule&quot;: &quot;OfficeMedium ACTIVITY_SCH&quot;,</span>
+<span class="sd">                &quot;infiltration_per_exterior_area&quot;: 0.0446,</span>
+<span class="sd">                &quot;infiltration_schedule&quot;: &quot;OfficeMedium INFIL_SCH_PNNL&quot;,</span>
+<span class="sd">                &quot;gas_equipment_per_area&quot;: None,</span>
+<span class="sd">                &quot;gas_equipment_fraction_latent&quot;: None,</span>
+<span class="sd">                &quot;gas_equipment_fraction_radiant&quot;: None,</span>
+<span class="sd">                &quot;gas_equipment_fraction_lost&quot;: None,</span>
+<span class="sd">                &quot;gas_equipment_schedule&quot;: None,</span>
+<span class="sd">                &quot;electric_equipment_per_area&quot;: 0.96,</span>
+<span class="sd">                &quot;electric_equipment_fraction_latent&quot;: 0.0,</span>
+<span class="sd">                &quot;electric_equipment_fraction_radiant&quot;: 0.5,</span>
+<span class="sd">                &quot;electric_equipment_fraction_lost&quot;: 0.0,</span>
+<span class="sd">                &quot;electric_equipment_schedule&quot;: &quot;OfficeMedium BLDG_EQUIP_SCH_2013&quot;,</span>
+<span class="sd">                &quot;heating_setpoint_schedule&quot;: &quot;OfficeMedium HTGSETP_SCH_YES_OPTIMUM&quot;,</span>
+<span class="sd">                &quot;cooling_setpoint_schedule&quot;: &quot;OfficeMedium CLGSETP_SCH_YES_OPTIMUM&quot;</span>
+<span class="sd">                }</span>
+
+<span class="sd">            data_schedules: Dictionary representation of all schedules in the</span>
+<span class="sd">                OpenStudio standards gem. Each schedule should have the scheule</span>
+<span class="sd">                name as a key and the value should be a list of individual</span>
+<span class="sd">                ScheduleDay dictionary descriptions from the standards gem that</span>
+<span class="sd">                together define a complete ScheduleRuleset.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pr_type_name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;space_type&#39;</span><span class="p">]</span>
+        <span class="n">people</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">lighting</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">electric_equipment</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">gas_equipment</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">infiltration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">ventilation</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">setpoint</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;occupancy_schedule&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">occ_sched</span> <span class="o">=</span> <span class="n">ScheduleRuleset</span><span class="o">.</span><span class="n">from_standards_dict</span><span class="p">(</span>
+                <span class="n">data_schedules</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;occupancy_schedule&#39;</span><span class="p">]])</span>
+            <span class="n">act_sched</span> <span class="o">=</span> <span class="n">ScheduleRuleset</span><span class="o">.</span><span class="n">from_standards_dict</span><span class="p">(</span>
+                <span class="n">data_schedules</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;occupancy_activity_schedule&#39;</span><span class="p">]])</span>
+            <span class="n">occ_density</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;occupancy_per_area&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mf">92.903</span>
+            <span class="n">people</span> <span class="o">=</span> <span class="n">People</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_People&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pr_type_name</span><span class="p">),</span> <span class="n">occ_density</span><span class="p">,</span>
+                            <span class="n">occ_sched</span><span class="p">,</span> <span class="n">act_sched</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;lighting_schedule&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">light_sched</span> <span class="o">=</span> <span class="n">ScheduleRuleset</span><span class="o">.</span><span class="n">from_standards_dict</span><span class="p">(</span>
+                <span class="n">data_schedules</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;lighting_schedule&#39;</span><span class="p">]])</span>
+            <span class="n">lpd</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;lighting_per_area&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">10.7639</span>
+            <span class="n">lighting</span> <span class="o">=</span> <span class="n">Lighting</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Lighting&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pr_type_name</span><span class="p">),</span> <span class="n">lpd</span><span class="p">,</span> <span class="n">light_sched</span><span class="p">,</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;lighting_fraction_to_return_air&#39;</span><span class="p">],</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;lighting_fraction_radiant&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;lighting_fraction_visible&#39;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;electric_equipment_schedule&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">eequip_sched</span> <span class="o">=</span> <span class="n">ScheduleRuleset</span><span class="o">.</span><span class="n">from_standards_dict</span><span class="p">(</span>
+                <span class="n">data_schedules</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;electric_equipment_schedule&#39;</span><span class="p">]])</span>
+            <span class="n">eepd</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;electric_equipment_per_area&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">10.7639</span>
+            <span class="n">electric_equipment</span> <span class="o">=</span> <span class="n">ElectricEquipment</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Electric&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pr_type_name</span><span class="p">),</span> <span class="n">eepd</span><span class="p">,</span> <span class="n">eequip_sched</span><span class="p">,</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;electric_equipment_fraction_radiant&#39;</span><span class="p">],</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;electric_equipment_fraction_latent&#39;</span><span class="p">],</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;electric_equipment_fraction_lost&#39;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gas_equipment_schedule&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">gequip_sched</span> <span class="o">=</span> <span class="n">ScheduleRuleset</span><span class="o">.</span><span class="n">from_standards_dict</span><span class="p">(</span>
+                <span class="n">data_schedules</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;gas_equipment_schedule&#39;</span><span class="p">]])</span>
+            <span class="n">gepd</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gas_equipment_per_area&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">3.15459</span>
+            <span class="n">gas_equipment</span> <span class="o">=</span> <span class="n">GasEquipment</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Gas&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pr_type_name</span><span class="p">),</span> <span class="n">gepd</span><span class="p">,</span> <span class="n">gequip_sched</span><span class="p">,</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gas_equipment_fraction_radiant&#39;</span><span class="p">],</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gas_equipment_fraction_latent&#39;</span><span class="p">],</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gas_equipment_fraction_lost&#39;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;infiltration_schedule&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">inf_sched</span> <span class="o">=</span> <span class="n">ScheduleRuleset</span><span class="o">.</span><span class="n">from_standards_dict</span><span class="p">(</span>
+                <span class="n">data_schedules</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;infiltration_schedule&#39;</span><span class="p">]])</span>
+            <span class="n">inf</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;infiltration_per_exterior_area&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.00508</span>
+            <span class="n">infiltration</span> <span class="o">=</span> <span class="n">Infiltration</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Infiltration&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pr_type_name</span><span class="p">),</span> <span class="n">inf</span><span class="p">,</span> <span class="n">inf_sched</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ventilation_standard&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">person</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ventilation_per_person&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.000471947</span> <span class="k">if</span> \
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ventilation_per_person&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">area</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ventilation_per_area&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.00508</span> <span class="k">if</span> \
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ventilation_per_area&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">ach</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ventilation_air_changes&#39;</span><span class="p">]</span> <span class="k">if</span> \
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ventilation_air_changes&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">ventilation</span> <span class="o">=</span> <span class="n">Ventilation</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Ventilation&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pr_type_name</span><span class="p">),</span> <span class="n">person</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ach</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;heating_setpoint_schedule&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">heat_sched</span> <span class="o">=</span> <span class="n">ScheduleRuleset</span><span class="o">.</span><span class="n">from_standards_dict</span><span class="p">(</span>
+                <span class="n">data_schedules</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;heating_setpoint_schedule&#39;</span><span class="p">]])</span>
+            <span class="n">cool_sched</span> <span class="o">=</span> <span class="n">ScheduleRuleset</span><span class="o">.</span><span class="n">from_standards_dict</span><span class="p">(</span>
+                <span class="n">data_schedules</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cooling_setpoint_schedule&#39;</span><span class="p">]])</span>
+            <span class="n">setpoint</span> <span class="o">=</span> <span class="n">Setpoint</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Setpoint&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pr_type_name</span><span class="p">),</span> <span class="n">heat_sched</span><span class="p">,</span> <span class="n">cool_sched</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;space_type&#39;</span><span class="p">],</span> <span class="n">people</span><span class="p">,</span> <span class="n">lighting</span><span class="p">,</span> <span class="n">electric_equipment</span><span class="p">,</span>
+                   <span class="n">gas_equipment</span><span class="p">,</span> <span class="n">infiltration</span><span class="p">,</span> <span class="n">ventilation</span><span class="p">,</span> <span class="n">setpoint</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ProgramType.from_dict"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a ProgramType from a dictionary.</span>
+
+<span class="sd">        Note that the dictionary must be a non-abridged version for this</span>
+<span class="sd">        classmethod to work.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: Dictionary describing the ProgramType.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ProgramType&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected ProgramType. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+
+        <span class="c1"># gather all schedule type limits</span>
+        <span class="n">schedule_type_limits</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">sched_typ</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;schedule_type_limits&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">sched_typ</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ScheduleTypeLimit&#39;</span><span class="p">:</span>
+                <span class="n">schedule_type_limits</span><span class="p">[</span><span class="n">sched_typ</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> \
+                    <span class="n">ScheduleTypeLimit</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">sched_typ</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="s1">&#39;ScheduleTypeLimit </span><span class="si">{}</span><span class="s1"> is not supported.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sched_typ</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]))</span>
+
+        <span class="c1"># gather all schedule objects</span>
+        <span class="n">schedules</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">sched</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;schedules&#39;</span><span class="p">]:</span>
+            <span class="n">sched</span> <span class="o">=</span> <span class="n">sched</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  <span class="c1"># copy the original dictionary so that we don&#39;t edit it</span>
+            <span class="c1"># process the schedule type limits</span>
+            <span class="n">typ_lim</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="s1">&#39;schedule_type_limit&#39;</span> <span class="ow">in</span> <span class="n">sched</span><span class="p">:</span>
+                <span class="n">typ_lim</span> <span class="o">=</span> <span class="n">sched</span><span class="p">[</span><span class="s1">&#39;schedule_type_limit&#39;</span><span class="p">]</span>
+                <span class="n">sched</span><span class="p">[</span><span class="s1">&#39;schedule_type_limit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="c1"># create the schedule objects</span>
+            <span class="k">if</span> <span class="n">sched</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ScheduleRulesetAbridged&#39;</span><span class="p">:</span>
+                <span class="n">sched</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ScheduleRuleset&#39;</span>
+                <span class="n">schedules</span><span class="p">[</span><span class="n">sched</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">ScheduleRuleset</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">sched</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">sched</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ScheduleFixedIntervalAbridged&#39;</span><span class="p">:</span>
+                <span class="n">sched</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ScheduleFixedInterval&#39;</span>
+                <span class="n">schedules</span><span class="p">[</span><span class="n">sched</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">ScheduleFixedInterval</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">sched</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="s1">&#39;Schedule </span><span class="si">{}</span><span class="s1"> is not supported.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sched</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]))</span>
+            <span class="c1"># asign the schedule type limits</span>
+            <span class="n">schedules</span><span class="p">[</span><span class="n">sched</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">schedule_type_limit</span> <span class="o">=</span> \
+                <span class="n">schedule_type_limits</span><span class="p">[</span><span class="n">typ_lim</span><span class="p">]</span> <span class="k">if</span> <span class="n">typ_lim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">schedules</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># build each of the load objects</span>
+        <span class="n">people</span><span class="p">,</span> <span class="n">lighting</span><span class="p">,</span> <span class="n">electric_equipment</span><span class="p">,</span> <span class="n">gas_equipment</span><span class="p">,</span> <span class="n">infiltration</span><span class="p">,</span> \
+            <span class="n">ventilation</span><span class="p">,</span> <span class="n">setpoint</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_loads_from_abridged</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">schedules</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">people</span><span class="p">,</span> <span class="n">lighting</span><span class="p">,</span> <span class="n">electric_equipment</span><span class="p">,</span>
+                   <span class="n">gas_equipment</span><span class="p">,</span> <span class="n">infiltration</span><span class="p">,</span> <span class="n">ventilation</span><span class="p">,</span> <span class="n">setpoint</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ProgramType.from_dict_abridged"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType.from_dict_abridged">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict_abridged</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">schedule_dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a ProgramType object from an abridged dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A ProgramTypeAbridged dictionary.</span>
+<span class="sd">            schedule_dict: A dictionary with schedule names as keys and honeybee schedule</span>
+<span class="sd">                objects as values (either ScheduleRuleset or ScheduleFixedInterval).</span>
+<span class="sd">                These will be used to assign the schedules to the ProgramType object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ProgramTypeAbridged&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected ProgramTypeAbridged dictionary. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+
+        <span class="c1"># build each of the load objects</span>
+        <span class="n">people</span><span class="p">,</span> <span class="n">lighting</span><span class="p">,</span> <span class="n">electric_equipment</span><span class="p">,</span> <span class="n">gas_equipment</span><span class="p">,</span> <span class="n">infiltration</span><span class="p">,</span> \
+            <span class="n">ventilation</span><span class="p">,</span> <span class="n">setpoint</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_loads_from_abridged</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">schedule_dict</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">people</span><span class="p">,</span> <span class="n">lighting</span><span class="p">,</span> <span class="n">electric_equipment</span><span class="p">,</span>
+                   <span class="n">gas_equipment</span><span class="p">,</span> <span class="n">infiltration</span><span class="p">,</span> <span class="n">ventilation</span><span class="p">,</span> <span class="n">setpoint</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ProgramType.to_dict"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">abridged</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get ProgramType as a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            abridged: Boolean noting whether detailed schedule objects should be</span>
+<span class="sd">                written into the ProgramType (False) or just an abridged version (True)</span>
+<span class="sd">                that refrences the schedules by name. Default: False.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ProgramType&#39;</span><span class="p">}</span> <span class="k">if</span> <span class="ow">not</span> \
+            <span class="n">abridged</span> <span class="k">else</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ProgramTypeAbridged&#39;</span><span class="p">}</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">people</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;people&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">people</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;lighting&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;electric_equipment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;gas_equipment&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;infiltration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;ventilation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;setpoint&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">abridged</span><span class="p">:</span>
+            <span class="n">schedules</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">schedules_unique</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;schedules&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">type_limits</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">sched</span> <span class="ow">in</span> <span class="n">schedules</span><span class="p">:</span>
+                <span class="n">base</span><span class="p">[</span><span class="s1">&#39;schedules&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sched</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+                <span class="n">t_lim</span> <span class="o">=</span> <span class="n">sched</span><span class="o">.</span><span class="n">schedule_type_limit</span>
+                <span class="k">if</span> <span class="n">t_lim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_instance_in_array</span><span class="p">(</span><span class="n">t_lim</span><span class="p">,</span> <span class="n">type_limits</span><span class="p">):</span>
+                    <span class="n">type_limits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t_lim</span><span class="p">)</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;schedule_type_limits&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="p">[</span><span class="n">t_lim</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">for</span> <span class="n">t_lim</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">type_limits</span><span class="p">))]</span>
+
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="ProgramType.average"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType.average">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">program_types</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestep_resolution</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a ProgramType object that&#39;s a weighted average between other objects.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: A name for the new averaged ProgramType object.</span>
+<span class="sd">            program_types: A list of ProgramType objects that will be averaged</span>
+<span class="sd">                together to make a new ProgramType.</span>
+<span class="sd">            weights: An optional list of fractional numbers with the same length</span>
+<span class="sd">                as the input program_types that sum to 1. These will be used to weight</span>
+<span class="sd">                each of the ProgramType objects in the resulting average. If None, the</span>
+<span class="sd">                individual objects will be weighted equally. Default: None.</span>
+<span class="sd">            timestep_resolution: An optional integer for the timestep resolution</span>
+<span class="sd">                at which the schedules will be averaged. Any schedule details</span>
+<span class="sd">                smaller than this timestep will be lost in the averaging process.</span>
+<span class="sd">                Default: 1.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># check the weights input</span>
+        <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">program_types</span><span class="p">)]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">program_types</span><span class="p">)</span> <span class="k">if</span> \
+                <span class="nb">len</span><span class="p">(</span><span class="n">program_types</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">[]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">weights</span> <span class="o">=</span> <span class="n">tuple_with_length</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">program_types</span><span class="p">),</span> <span class="nb">float</span><span class="p">,</span>
+                                        <span class="s1">&#39;average ProgramType weights&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Average ProgramType weights must be equal to&#39;</span> \
+            <span class="s1">&#39; 1. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">weights</span><span class="p">))</span>
+
+        <span class="c1"># gather all of the load objects across all of the programs</span>
+        <span class="n">people_mtx</span> <span class="o">=</span> <span class="p">[[</span><span class="n">pr</span><span class="o">.</span><span class="n">people</span><span class="p">,</span> <span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">pr</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">program_types</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+                      <span class="k">if</span> <span class="n">pr</span><span class="o">.</span><span class="n">people</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">lighting_mtx</span> <span class="o">=</span> <span class="p">[[</span><span class="n">pr</span><span class="o">.</span><span class="n">lighting</span><span class="p">,</span> <span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">pr</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">program_types</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">pr</span><span class="o">.</span><span class="n">lighting</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">e_equip_mtx</span> <span class="o">=</span> <span class="p">[[</span><span class="n">pr</span><span class="o">.</span><span class="n">electric_equipment</span><span class="p">,</span> <span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">pr</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">program_types</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+                       <span class="k">if</span> <span class="n">pr</span><span class="o">.</span><span class="n">electric_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">g_equip_mtx</span> <span class="o">=</span> <span class="p">[[</span><span class="n">pr</span><span class="o">.</span><span class="n">gas_equipment</span><span class="p">,</span> <span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">pr</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">program_types</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+                       <span class="k">if</span> <span class="n">pr</span><span class="o">.</span><span class="n">gas_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">inf_mtx</span> <span class="o">=</span> <span class="p">[[</span><span class="n">pr</span><span class="o">.</span><span class="n">infiltration</span><span class="p">,</span> <span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">pr</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">program_types</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+                   <span class="k">if</span> <span class="n">pr</span><span class="o">.</span><span class="n">infiltration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">vent_mtx</span> <span class="o">=</span> <span class="p">[[</span><span class="n">pr</span><span class="o">.</span><span class="n">ventilation</span><span class="p">,</span> <span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">pr</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">program_types</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">pr</span><span class="o">.</span><span class="n">ventilation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">setp_mtx</span> <span class="o">=</span> <span class="p">[[</span><span class="n">pr</span><span class="o">.</span><span class="n">setpoint</span><span class="p">,</span> <span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">pr</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">program_types</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">pr</span><span class="o">.</span><span class="n">setpoint</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+
+        <span class="c1"># compute the average loads</span>
+        <span class="n">people</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">people_mtx</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">t_people_mtx</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">people_mtx</span><span class="p">))</span>
+            <span class="n">people</span> <span class="o">=</span> <span class="n">People</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_People&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">t_people_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                    <span class="n">t_people_mtx</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">timestep_resolution</span><span class="p">)</span>
+        <span class="n">lighting</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lighting_mtx</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">t_lighting_mtx</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">lighting_mtx</span><span class="p">))</span>
+            <span class="n">lighting</span> <span class="o">=</span> <span class="n">Lighting</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Lighting&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">t_lighting_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                        <span class="n">t_lighting_mtx</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">timestep_resolution</span><span class="p">)</span>
+        <span class="n">electric_equipment</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">e_equip_mtx</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">t_e_equip_mtx</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">e_equip_mtx</span><span class="p">))</span>
+            <span class="n">electric_equipment</span> <span class="o">=</span> <span class="n">ElectricEquipment</span><span class="o">.</span><span class="n">average</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Electric Equipment&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">t_e_equip_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">t_e_equip_mtx</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">timestep_resolution</span><span class="p">)</span>
+        <span class="n">gas_equipment</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">g_equip_mtx</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">t_g_equip_mtx</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">g_equip_mtx</span><span class="p">))</span>
+            <span class="n">gas_equipment</span> <span class="o">=</span> <span class="n">GasEquipment</span><span class="o">.</span><span class="n">average</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Gas Equipment&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">t_g_equip_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">t_g_equip_mtx</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">timestep_resolution</span><span class="p">)</span>
+        <span class="n">infiltration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">inf_mtx</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">t_inf_mtx</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">inf_mtx</span><span class="p">))</span>
+            <span class="n">infiltration</span> <span class="o">=</span> <span class="n">Infiltration</span><span class="o">.</span><span class="n">average</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Infiltration&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">t_inf_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">t_inf_mtx</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">timestep_resolution</span><span class="p">)</span>
+        <span class="n">ventilation</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vent_mtx</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">t_vent_mtx</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">vent_mtx</span><span class="p">))</span>
+            <span class="n">ventilation</span> <span class="o">=</span> <span class="n">Ventilation</span><span class="o">.</span><span class="n">average</span><span class="p">(</span>
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Ventilation&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">t_vent_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">t_vent_mtx</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">timestep_resolution</span><span class="p">)</span>
+        <span class="n">setpoint</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">setp_mtx</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">t_setp_mtx</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">setp_mtx</span><span class="p">))</span>
+            <span class="n">setpoint</span> <span class="o">=</span> <span class="n">Setpoint</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_Setpoint&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">t_setp_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                        <span class="n">t_setp_mtx</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">timestep_resolution</span><span class="p">)</span>
+
+        <span class="c1"># return the averaged object</span>
+        <span class="k">return</span> <span class="n">ProgramType</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">people</span><span class="p">,</span> <span class="n">lighting</span><span class="p">,</span> <span class="n">electric_equipment</span><span class="p">,</span> <span class="n">gas_equipment</span><span class="p">,</span>
+                           <span class="n">infiltration</span><span class="p">,</span> <span class="n">ventilation</span><span class="p">,</span> <span class="n">setpoint</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ProgramType.duplicate"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType.duplicate">[docs]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a copy of this object.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ProgramType.lock"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType.lock">[docs]</a>    <span class="k">def</span> <span class="nf">lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The lock() method to will also lock the loads.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">people</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">people</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ProgramType.unlock"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType.unlock">[docs]</a>    <span class="k">def</span> <span class="nf">unlock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The unlock() method will also unlock the loads.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">people</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">people</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ProgramType.ToString"><a class="viewcode-back" href="../../honeybee_energy.programtype.html#honeybee_energy.programtype.ProgramType.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrite .NET ToString.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_loads_from_abridged</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">schedule_dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get re-built load objects from abridged dictionaries.&quot;&quot;&quot;</span>
+        <span class="n">people</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">lighting</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">electric_equipment</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">gas_equipment</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">infiltration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">ventilation</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">setpoint</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="s1">&#39;people&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;people&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">people</span> <span class="o">=</span> <span class="n">People</span><span class="o">.</span><span class="n">from_dict_abridged</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;people&#39;</span><span class="p">],</span> <span class="n">schedule_dict</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;lighting&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;lighting&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lighting</span> <span class="o">=</span> <span class="n">Lighting</span><span class="o">.</span><span class="n">from_dict_abridged</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;lighting&#39;</span><span class="p">],</span> <span class="n">schedule_dict</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;electric_equipment&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;electric_equipment&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">electric_equipment</span> <span class="o">=</span> <span class="n">ElectricEquipment</span><span class="o">.</span><span class="n">from_dict_abridged</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;electric_equipment&#39;</span><span class="p">],</span> <span class="n">schedule_dict</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;gas_equipment&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gas_equipment&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">gas_equipment</span> <span class="o">=</span> <span class="n">GasEquipment</span><span class="o">.</span><span class="n">from_dict_abridged</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gas_equipment&#39;</span><span class="p">],</span> <span class="n">schedule_dict</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;infiltration&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;infiltration&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">infiltration</span> <span class="o">=</span> <span class="n">Infiltration</span><span class="o">.</span><span class="n">from_dict_abridged</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;infiltration&#39;</span><span class="p">],</span> <span class="n">schedule_dict</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;ventilation&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ventilation&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ventilation</span> <span class="o">=</span> <span class="n">Ventilation</span><span class="o">.</span><span class="n">from_dict_abridged</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ventilation&#39;</span><span class="p">],</span> <span class="n">schedule_dict</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;setpoint&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;setpoint&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">setpoint</span> <span class="o">=</span> <span class="n">Setpoint</span><span class="o">.</span><span class="n">from_dict_abridged</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;setpoint&#39;</span><span class="p">],</span> <span class="n">schedule_dict</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">people</span><span class="p">,</span> <span class="n">lighting</span><span class="p">,</span> <span class="n">electric_equipment</span><span class="p">,</span> <span class="n">gas_equipment</span><span class="p">,</span> <span class="n">infiltration</span><span class="p">,</span> \
+            <span class="n">ventilation</span><span class="p">,</span> <span class="n">setpoint</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_instance_in_array</span><span class="p">(</span><span class="n">object_instance</span><span class="p">,</span> <span class="n">object_array</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check if a specific object instance is already in an array.</span>
+
+<span class="sd">        This can be much faster than  `if object_instance in object_arrary`</span>
+<span class="sd">        when you expect to be testing a lot of the same instance of an object for</span>
+<span class="sd">        inclusion in an array since the builtin method uses an == operator to</span>
+<span class="sd">        test inclusion.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">object_array</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="n">object_instance</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">people</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">people</span><span class="o">.</span><span class="n">duplicate</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">people</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">lighting</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span><span class="o">.</span><span class="n">duplicate</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">lighting</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">electric_equipment</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span><span class="o">.</span><span class="n">duplicate</span><span class="p">()</span> <span class="k">if</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">gas_equipment</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span><span class="o">.</span><span class="n">duplicate</span><span class="p">()</span> <span class="k">if</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">infiltration</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span><span class="o">.</span><span class="n">duplicate</span><span class="p">()</span> <span class="k">if</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">ventilation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span><span class="o">.</span><span class="n">duplicate</span><span class="p">()</span> <span class="k">if</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">setpoint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">duplicate</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">ProgramType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">people</span><span class="p">,</span> <span class="n">lighting</span><span class="p">,</span> <span class="n">electric_equipment</span><span class="p">,</span>
+                           <span class="n">gas_equipment</span><span class="p">,</span> <span class="n">infiltration</span><span class="p">,</span> <span class="n">ventilation</span><span class="p">,</span> <span class="n">setpoint</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A tuple based on the object properties, useful for hashing.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">people</span><span class="p">),</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lighting</span><span class="p">),</span>
+                <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">electric_equipment</span><span class="p">),</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gas_equipment</span><span class="p">),</span>
+                <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">infiltration</span><span class="p">),</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ventilation</span><span class="p">),</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">setpoint</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">ProgramType</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Program Type:</span><span class="se">\n</span><span class="s1"> name: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

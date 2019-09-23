@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.properties.room module &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="honeybee_energy.properties.shade module" href="honeybee_energy.properties.shade.html" />
+    <link rel="prev" title="honeybee_energy.properties.model module" href="honeybee_energy.properties.model.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee_energy.properties.model.html" title="Previous Chapter: honeybee_energy.properties.model module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee_ener...</span>
+    </a>
+  </li>
+  <li>
+    <a href="honeybee_energy.properties.shade.html" title="Next Chapter: honeybee_energy.properties.shade module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">honeybee_ener... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee_energy.properties.room.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-honeybee_energy.properties.room">
+<span id="honeybee-energy-properties-room-module"></span><h1>honeybee_energy.properties.room module<a class="headerlink" href="#module-honeybee_energy.properties.room" title="Permalink to this headline">¶</a></h1>
+<p>Room Energy Properties.</p>
+<dl class="class">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties">
+<em class="property">class </em><code class="descclassname">honeybee_energy.properties.room.</code><code class="descname">RoomEnergyProperties</code><span class="sig-paren">(</span><em>host</em>, <em>program_type=None</em>, <em>construction_set=None</em>, <em>hvac=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/properties/room.html#RoomEnergyProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Energy Properties for Honeybee Room.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd><ul class="first last simple">
+<li>program_type</li>
+<li>construction_set</li>
+<li>hvac</li>
+<li>people</li>
+<li>lighting</li>
+<li>electric_equipment</li>
+<li>gas_equipment</li>
+<li>infiltration</li>
+<li>ventilation</li>
+<li>setpoint</li>
+<li>is_conditioned</li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.ToString">
+<code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/properties/room.html#RoomEnergyProperties.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.ToString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.apply_properties_from_dict">
+<code class="descname">apply_properties_from_dict</code><span class="sig-paren">(</span><em>abridged_data</em>, <em>construction_sets</em>, <em>program_types</em>, <em>schedules</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/properties/room.html#RoomEnergyProperties.apply_properties_from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.apply_properties_from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply properties from a RoomEnergyPropertiesAbridged dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>abridged_data</strong> – A RoomEnergyPropertiesAbridged dictionary (typically
+coming from a Model).</li>
+<li><strong>construction_sets</strong> – A dictionary of ConstructionSets with names of the sets
+as keys, which will be used to re-assign construction_sets.</li>
+<li><strong>program_types</strong> – A dictionary of ProgramTypes with names of the types ask
+keys, which will be used to re-assign program_types.</li>
+<li><strong>schedules</strong> – A dictionary of Schedules with names of the schedules ask
+keys, which will be used to re-assign schedules.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.construction_set">
+<code class="descname">construction_set</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.construction_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the Room ConstructionSet object.</p>
+<p>If not set, it will be the Honeybee default generic ConstructionSet.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><em>new_host=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/properties/room.html#RoomEnergyProperties.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this object.</p>
+<dl class="docutils">
+<dt>new_host: A new Room object that hosts these properties.</dt>
+<dd>If None, the properties will be duplicated with the same host.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.electric_equipment">
+<code class="descname">electric_equipment</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.electric_equipment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set an ElectricEquipment object to describe the equipment usage.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em>, <em>host</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/properties/room.html#RoomEnergyProperties.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create RoomEnergyProperties from a dictionary.</p>
+<p>Note that the dictionary must be a non-abridged version for this
+classmethod to work.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> – A dictionary representation of RoomEnergyProperties.</li>
+<li><strong>host</strong> – A Room object that hosts these properties.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.gas_equipment">
+<code class="descname">gas_equipment</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.gas_equipment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a GasEquipment object to describe the equipment usage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.host">
+<code class="descname">host</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Room object hosting these properties.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.hvac">
+<code class="descname">hvac</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.hvac" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the HVAC object for the Room.</p>
+<p>If None, it will be assumed that the Room is not conditioned.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.infiltration">
+<code class="descname">infiltration</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.infiltration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a Infiltration object to to describe the outdoor air leakage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.is_conditioned">
+<code class="descname">is_conditioned</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.is_conditioned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean to note whether the Room is conditioned.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.lighting">
+<code class="descname">lighting</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.lighting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a Lighting object to describe the lighting usage of the Room.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.people">
+<code class="descname">people</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.people" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a People object to describe the occupancy of the Room.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.program_type">
+<code class="descname">program_type</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.program_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the ProgramType object for the Room.</p>
+<p>If not set, it will default to a plenum ProgramType (with no loads assigned).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.setpoint">
+<code class="descname">setpoint</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.setpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a Setpoint object for the temperature setpoints of the Room.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><em>abridged=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/properties/room.html#RoomEnergyProperties.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return Room energy properties as a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>abridged</strong> – Boolean for whether the full dictionary of the Room should
+be written (False) or just the name of the the individual
+properties (True). Default: False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.properties.room.RoomEnergyProperties.ventilation">
+<code class="descname">ventilation</code><a class="headerlink" href="#honeybee_energy.properties.room.RoomEnergyProperties.ventilation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a Ventilation object for the minimum outdoor air requirement.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

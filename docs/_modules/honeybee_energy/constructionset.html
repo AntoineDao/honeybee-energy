@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.constructionset &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../honeybee_energy.html">honeybee_energy package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../honeybee_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../honeybee_energy.html">honeybee_energy package</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../honeybee_energy.html">honeybee_energy package</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <h1>Source code for honeybee_energy.constructionset</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="sd">&quot;&quot;&quot;Energy Construction Set.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">division</span>
+
+<span class="kn">from</span> <span class="nn">.material.opaque</span> <span class="k">import</span> <span class="n">EnergyMaterial</span><span class="p">,</span> <span class="n">EnergyMaterialNoMass</span>
+<span class="kn">from</span> <span class="nn">.material.glazing</span> <span class="k">import</span> <span class="n">EnergyWindowMaterialSimpleGlazSys</span><span class="p">,</span> \
+    <span class="n">EnergyWindowMaterialGlazing</span>
+<span class="kn">from</span> <span class="nn">.material.gas</span> <span class="k">import</span> <span class="n">EnergyWindowMaterialGas</span><span class="p">,</span> <span class="n">EnergyWindowMaterialGasMixture</span><span class="p">,</span> \
+    <span class="n">EnergyWindowMaterialGasCustom</span>
+<span class="kn">from</span> <span class="nn">.material.shade</span> <span class="k">import</span> <span class="n">EnergyWindowMaterialShade</span><span class="p">,</span> <span class="n">EnergyWindowMaterialBlind</span>
+<span class="kn">from</span> <span class="nn">.construction</span> <span class="k">import</span> <span class="n">OpaqueConstruction</span><span class="p">,</span> <span class="n">WindowConstruction</span><span class="p">,</span> <span class="n">ShadeConstruction</span>
+<span class="kn">import</span> <span class="nn">honeybee_energy.lib.constructions</span> <span class="k">as</span> <span class="nn">_lib</span>
+
+<span class="kn">from</span> <span class="nn">honeybee._lockable</span> <span class="k">import</span> <span class="n">lockable</span>
+<span class="kn">from</span> <span class="nn">honeybee.typing</span> <span class="k">import</span> <span class="n">valid_ep_string</span>
+
+
+<div class="viewcode-block" id="ConstructionSet"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">ConstructionSet</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set containing all energy constructions needed to create an energy model.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        name</span>
+<span class="sd">        wall_set</span>
+<span class="sd">        floor_set</span>
+<span class="sd">        roof_ceiling_set</span>
+<span class="sd">        aperture_set</span>
+<span class="sd">        door_set</span>
+<span class="sd">        shade_construction</span>
+<span class="sd">        constructions</span>
+<span class="sd">        modified_constructions</span>
+<span class="sd">        constructions_unique</span>
+<span class="sd">        modified_constructions_unique</span>
+<span class="sd">        materials_unique</span>
+<span class="sd">        modified_materials_unique</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_name&#39;</span><span class="p">,</span> <span class="s1">&#39;_wall_set&#39;</span><span class="p">,</span> <span class="s1">&#39;_floor_set&#39;</span><span class="p">,</span> <span class="s1">&#39;_roof_ceiling_set&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_aperture_set&#39;</span><span class="p">,</span> <span class="s1">&#39;_door_set&#39;</span><span class="p">,</span> <span class="s1">&#39;_shade_construction&#39;</span><span class="p">,</span> <span class="s1">&#39;_locked&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">wall_set</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">floor_set</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">roof_ceiling_set</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">aperture_set</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">door_set</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shade_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize energy construction set.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: Text string for construction set name. Must be &lt;= 100 characters.</span>
+<span class="sd">                Can include spaces but special characters will be stripped out.</span>
+<span class="sd">            wall_set: An optional WallSet object for this ConstructionSet.</span>
+<span class="sd">                If None, it will be the honeybee generic default WallSet.</span>
+<span class="sd">            floor_set: An optional FloorSet object for this ConstructionSet.</span>
+<span class="sd">                If None, it will be the honeybee generic default FloorSet.</span>
+<span class="sd">            roof_ceiling_set: An optional RoofCeilingSet object for this ConstructionSet.</span>
+<span class="sd">                If None, it will be the honeybee generic default RoofCeilingSet.</span>
+<span class="sd">            aperture_set: An optional ApertureSet object for this ConstructionSet.</span>
+<span class="sd">                If None, it will be the honeybee generic default ApertureSet.</span>
+<span class="sd">            door_set: An optional DoorSet object for this ConstructionSet.</span>
+<span class="sd">                If None, it will be the honeybee generic default DoorSet.</span>
+<span class="sd">            shade_construction: An optional ShadeConstruction to set the reflectance</span>
+<span class="sd">                properties of all outdoor shades to which this ConstructionSet is</span>
+<span class="sd">                assigned. If None, it will be the honyebee generic shade construction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># unlocked by default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wall_set</span> <span class="o">=</span> <span class="n">wall_set</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">floor_set</span> <span class="o">=</span> <span class="n">floor_set</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">roof_ceiling_set</span> <span class="o">=</span> <span class="n">roof_ceiling_set</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">aperture_set</span> <span class="o">=</span> <span class="n">aperture_set</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span> <span class="o">=</span> <span class="n">door_set</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shade_construction</span> <span class="o">=</span> <span class="n">shade_construction</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set a text string for construction set name.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+
+    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">valid_ep_string</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;construction set name&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">wall_set</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the WallSet assigned to this ConstructionSet.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wall_set</span>
+
+    <span class="nd">@wall_set</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">wall_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">WallSet</span><span class="p">),</span> \
+                <span class="s1">&#39;Expected WallSet. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_wall_set</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_wall_set</span> <span class="o">=</span> <span class="n">WallSet</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">floor_set</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the FloorSet assigned to this ConstructionSet.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_floor_set</span>
+
+    <span class="nd">@floor_set</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">floor_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">FloorSet</span><span class="p">),</span> \
+                <span class="s1">&#39;Expected FloorSet. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_floor_set</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_floor_set</span> <span class="o">=</span> <span class="n">FloorSet</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">roof_ceiling_set</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the RoofCeilingSet assigned to this ConstructionSet.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_roof_ceiling_set</span>
+
+    <span class="nd">@roof_ceiling_set</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">roof_ceiling_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">RoofCeilingSet</span><span class="p">),</span> \
+                <span class="s1">&#39;Expected RoofCeilingSet. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_roof_ceiling_set</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_roof_ceiling_set</span> <span class="o">=</span> <span class="n">RoofCeilingSet</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">aperture_set</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the ApertureSet assigned to this ConstructionSet.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_aperture_set</span>
+
+    <span class="nd">@aperture_set</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">aperture_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">ApertureSet</span><span class="p">),</span> \
+                <span class="s1">&#39;Expected ApertureSet. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_aperture_set</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_aperture_set</span> <span class="o">=</span> <span class="n">ApertureSet</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">door_set</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the DoorSet assigned to this ConstructionSet.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_door_set</span>
+
+    <span class="nd">@door_set</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">door_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">DoorSet</span><span class="p">),</span> \
+                <span class="s1">&#39;Expected DoorSet. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_door_set</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_door_set</span> <span class="o">=</span> <span class="n">DoorSet</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shade_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the ShadeConstruction assigned to this ConstructionSet.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shade_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_shade</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shade_construction</span>
+
+    <span class="nd">@shade_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">shade_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">ShadeConstruction</span><span class="p">),</span> \
+                <span class="s1">&#39;Expected ShadeConstruction. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+            <span class="n">value</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>   <span class="c1"># lock editing in case construction has multiple references</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shade_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">constructions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all constructions contained within the set.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">wall_set</span><span class="o">.</span><span class="n">constructions</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">floor_set</span><span class="o">.</span><span class="n">constructions</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">roof_ceiling_set</span><span class="o">.</span><span class="n">constructions</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">aperture_set</span><span class="o">.</span><span class="n">constructions</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span><span class="o">.</span><span class="n">constructions</span> <span class="o">+</span> \
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">shade_construction</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">modified_constructions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all constructions that are not defaulted within the set.&quot;&quot;&quot;</span>
+        <span class="n">mod_constructions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wall_set</span><span class="o">.</span><span class="n">modified_constructions</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">floor_set</span><span class="o">.</span><span class="n">modified_constructions</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">roof_ceiling_set</span><span class="o">.</span><span class="n">modified_constructions</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">aperture_set</span><span class="o">.</span><span class="n">modified_constructions</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span><span class="o">.</span><span class="n">modified_constructions</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shade_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">mod_constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_shade_construction</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mod_constructions</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">constructions_unique</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all unique constructions contained within the set.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">constructions</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">modified_constructions_unique</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all unique constructions that are not defaulted within the set.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">modified_constructions</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">materials_unique</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all unique materials contained within the set.&quot;&quot;&quot;</span>
+        <span class="n">materials</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">constr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">constructions</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">materials</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">constr</span><span class="o">.</span><span class="n">materials</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># ShadeConstruction</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">materials</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">modified_materials_unique</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all unique materials that are not defaulted within the set.&quot;&quot;&quot;</span>
+        <span class="n">materials</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">constr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">modified_constructions</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">materials</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">constr</span><span class="o">.</span><span class="n">materials</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># ShadeConstruction</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">materials</span><span class="p">))</span>
+
+<div class="viewcode-block" id="ConstructionSet.get_face_construction"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.get_face_construction">[docs]</a>    <span class="k">def</span> <span class="nf">get_face_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">face_type</span><span class="p">,</span> <span class="n">boundary_condition</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a construction object that will be assigned to a given type of face.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            face_type: Text string for the type of face (eg. &#39;Wall&#39;, &#39;Floor&#39;,</span>
+<span class="sd">                &#39;Roof&#39;, &#39;AirWall&#39;).</span>
+<span class="sd">            boundary_condition: Text string for the boundary condition</span>
+<span class="sd">                (eg. &#39;Outdoors&#39;, &#39;Surface&#39;, &#39;Adiabatic&#39;, &#39;Ground&#39;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">face_type</span> <span class="o">==</span> <span class="s1">&#39;Wall&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_constr_from_set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wall_set</span><span class="p">,</span> <span class="n">boundary_condition</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">face_type</span> <span class="o">==</span> <span class="s1">&#39;Floor&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_constr_from_set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">floor_set</span><span class="p">,</span> <span class="n">boundary_condition</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">face_type</span> <span class="o">==</span> <span class="s1">&#39;RoofCeiling&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_constr_from_set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">roof_ceiling_set</span><span class="p">,</span> <span class="n">boundary_condition</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">face_type</span> <span class="o">==</span> <span class="s1">&#39;AirWall&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">air_wall</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                <span class="s1">&#39;Face type </span><span class="si">{}</span><span class="s1"> is not recognized for ConstructionSet&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">face_type</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="ConstructionSet.get_aperture_construction"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.get_aperture_construction">[docs]</a>    <span class="k">def</span> <span class="nf">get_aperture_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">boundary_condition</span><span class="p">,</span> <span class="n">is_operable</span><span class="p">,</span>
+                                  <span class="n">parent_face_type</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a construction object that will be assigned to a given type of aperture.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            boundary_condition: Text string for the boundary condition</span>
+<span class="sd">                (eg. &#39;Outdoors&#39;, &#39;Surface&#39;)</span>
+<span class="sd">            is_operable: Boolean to note whether the aperture is operable.</span>
+<span class="sd">            parent_face_type: Text string for the type of face to which the aperture</span>
+<span class="sd">                is a child (eg. &#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">boundary_condition</span> <span class="o">==</span> <span class="s1">&#39;Outdoors&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">is_operable</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">parent_face_type</span> <span class="o">==</span> <span class="s1">&#39;Wall&#39;</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">aperture_set</span><span class="o">.</span><span class="n">window_construction</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">aperture_set</span><span class="o">.</span><span class="n">skylight_construction</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">aperture_set</span><span class="o">.</span><span class="n">operable_construction</span>
+        <span class="k">elif</span> <span class="n">boundary_condition</span> <span class="o">==</span> <span class="s1">&#39;Surface&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">aperture_set</span><span class="o">.</span><span class="n">interior_construction</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                <span class="s1">&#39;Boundary condition </span><span class="si">{}</span><span class="s1"> is not recognized for apertures in &#39;</span>
+                <span class="s1">&#39;ConstructionSet&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">boundary_condition</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="ConstructionSet.get_door_construction"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.get_door_construction">[docs]</a>    <span class="k">def</span> <span class="nf">get_door_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">boundary_condition</span><span class="p">,</span> <span class="n">is_glass</span><span class="p">,</span> <span class="n">parent_face_type</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a construction object that will be assigned to a given type of door.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            boundary_condition: Text string for the boundary condition</span>
+<span class="sd">                (eg. &#39;Outdoors&#39;, &#39;Surface&#39;)</span>
+<span class="sd">            is_glass: Boolean to note whether the door is glass (instead of opaque).</span>
+<span class="sd">            parent_face_type: Text string for the type of face to which the door</span>
+<span class="sd">                is a child (eg. &#39;Wall&#39;, &#39;Floor&#39;, &#39;Roof&#39;).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">boundary_condition</span> <span class="o">==</span> <span class="s1">&#39;Outdoors&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">is_glass</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">parent_face_type</span> <span class="o">==</span> <span class="s1">&#39;Wall&#39;</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span><span class="o">.</span><span class="n">exterior_construction</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span><span class="o">.</span><span class="n">overhead_construction</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span><span class="o">.</span><span class="n">exterior_glass_construction</span>
+        <span class="k">elif</span> <span class="n">boundary_condition</span> <span class="o">==</span> <span class="s1">&#39;Surface&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">is_glass</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span><span class="o">.</span><span class="n">interior_construction</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span><span class="o">.</span><span class="n">interior_glass_construction</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                <span class="s1">&#39;Boundary condition </span><span class="si">{}</span><span class="s1"> is not recognized for doors in &#39;</span>
+                <span class="s1">&#39;ConstructionSet&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">boundary_condition</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="ConstructionSet.from_dict"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a ConstructionSet from a dictionary.</span>
+
+<span class="sd">        Note that the dictionary must be a non-abridged version for this</span>
+<span class="sd">        classmethod to work.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: Dictionary describing the ConstructionSet.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ConstructionSet&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected ConstructionSet. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+
+        <span class="c1"># gather all material objects</span>
+        <span class="n">materials</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">mat</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;materials&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyMaterial&#39;</span><span class="p">:</span>
+                <span class="n">materials</span><span class="p">[</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">EnergyMaterial</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyMaterialNoMass&#39;</span><span class="p">:</span>
+                <span class="n">materials</span><span class="p">[</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">EnergyMaterialNoMass</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyWindowMaterialSimpleGlazSys&#39;</span><span class="p">:</span>
+                <span class="n">materials</span><span class="p">[</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">EnergyWindowMaterialSimpleGlazSys</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyWindowMaterialGlazing&#39;</span><span class="p">:</span>
+                <span class="n">materials</span><span class="p">[</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">EnergyWindowMaterialGlazing</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyWindowMaterialGas&#39;</span><span class="p">:</span>
+                <span class="n">materials</span><span class="p">[</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">EnergyWindowMaterialGas</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyWindowMaterialGasMixture&#39;</span><span class="p">:</span>
+                <span class="n">materials</span><span class="p">[</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">EnergyWindowMaterialGasMixture</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyWindowMaterialGasCustom&#39;</span><span class="p">:</span>
+                <span class="n">materials</span><span class="p">[</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">EnergyWindowMaterialGasCustom</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyWindowMaterialShade&#39;</span><span class="p">:</span>
+                <span class="n">materials</span><span class="p">[</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">EnergyWindowMaterialShade</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;EnergyWindowMaterialBlind&#39;</span><span class="p">:</span>
+                <span class="n">materials</span><span class="p">[</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">EnergyWindowMaterialBlind</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="s1">&#39;Material </span><span class="si">{}</span><span class="s1"> is not supported.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]))</span>
+
+        <span class="c1"># gather all construction objects</span>
+        <span class="n">constructions</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">cnst</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;constructions&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;OpaqueConstructionAbridged&#39;</span><span class="p">:</span>
+                <span class="n">mat_layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">materials</span><span class="p">[</span><span class="n">mat_name</span><span class="p">]</span> <span class="k">for</span> <span class="n">mat_name</span> <span class="ow">in</span> <span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;layers&#39;</span><span class="p">]]</span>
+                <span class="n">constructions</span><span class="p">[</span><span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> \
+                    <span class="n">OpaqueConstruction</span><span class="p">(</span><span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">mat_layers</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;WindowConstructionAbridged&#39;</span><span class="p">:</span>
+                <span class="n">mat_layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">materials</span><span class="p">[</span><span class="n">mat_name</span><span class="p">]</span> <span class="k">for</span> <span class="n">mat_name</span> <span class="ow">in</span> <span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;layers&#39;</span><span class="p">]]</span>
+                <span class="n">constructions</span><span class="p">[</span><span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> \
+                    <span class="n">WindowConstruction</span><span class="p">(</span><span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">mat_layers</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ShadeConstruction&#39;</span><span class="p">:</span>
+                <span class="n">constructions</span><span class="p">[</span><span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">ShadeConstruction</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">cnst</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="s1">&#39;Construction </span><span class="si">{}</span><span class="s1"> is not supported.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cnst</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]))</span>
+        <span class="n">constructions</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># build each of the sub-construction sets</span>
+        <span class="n">wall_set</span><span class="p">,</span> <span class="n">floor_set</span><span class="p">,</span> <span class="n">roof_ceiling_set</span><span class="p">,</span> <span class="n">aperture_set</span><span class="p">,</span> <span class="n">door_set</span><span class="p">,</span> <span class="n">shade_con</span> <span class="o">=</span> \
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_get_subsets_from_abridged</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">constructions</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">wall_set</span><span class="p">,</span> <span class="n">floor_set</span><span class="p">,</span> <span class="n">roof_ceiling_set</span><span class="p">,</span>
+                   <span class="n">aperture_set</span><span class="p">,</span> <span class="n">door_set</span><span class="p">,</span> <span class="n">shade_con</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ConstructionSet.from_dict_abridged"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.from_dict_abridged">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict_abridged</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">construction_dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a ConstructionSet from an abridged dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A ConstructionSetAbridged dictionary.</span>
+<span class="sd">            construction_dict: A dictionary with construction names as keys and</span>
+<span class="sd">                honeybee construction objects as values. These will be used to</span>
+<span class="sd">                assign the constructions to the ConstructionSet object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ConstructionSetAbridged&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Expected ConstructionSetAbridged. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+        <span class="n">wall_set</span><span class="p">,</span> <span class="n">floor_set</span><span class="p">,</span> <span class="n">roof_ceiling_set</span><span class="p">,</span> <span class="n">aperture_set</span><span class="p">,</span> <span class="n">door_set</span><span class="p">,</span> <span class="n">shade_con</span> <span class="o">=</span> \
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_get_subsets_from_abridged</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">construction_dict</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">wall_set</span><span class="p">,</span> <span class="n">floor_set</span><span class="p">,</span> <span class="n">roof_ceiling_set</span><span class="p">,</span>
+                   <span class="n">aperture_set</span><span class="p">,</span> <span class="n">door_set</span><span class="p">,</span> <span class="n">shade_con</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ConstructionSet.to_dict"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">abridged</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">none_for_defaults</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get ConstructionSet as a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            abridged: Boolean noting whether detailed materials and construction</span>
+<span class="sd">                objects should be written into the ConstructionSet (False) or just</span>
+<span class="sd">                an abridged version (True). Default: False.</span>
+<span class="sd">            none_for_defaults: Boolean to note whether default constructions in the</span>
+<span class="sd">                set should be included in detail (False) or should be None (True).</span>
+<span class="sd">                Default: True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ConstructionSet&#39;</span><span class="p">}</span> <span class="k">if</span> <span class="ow">not</span> \
+            <span class="n">abridged</span> <span class="k">else</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ConstructionSetAbridged&#39;</span><span class="p">}</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;wall_set&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wall_set</span><span class="o">.</span><span class="n">_to_dict</span><span class="p">(</span><span class="n">none_for_defaults</span><span class="p">)</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;floor_set&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">floor_set</span><span class="o">.</span><span class="n">_to_dict</span><span class="p">(</span><span class="n">none_for_defaults</span><span class="p">)</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;roof_ceiling_set&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">roof_ceiling_set</span><span class="o">.</span><span class="n">_to_dict</span><span class="p">(</span><span class="n">none_for_defaults</span><span class="p">)</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aperture_set</span><span class="o">.</span><span class="n">_to_dict</span><span class="p">(</span><span class="n">none_for_defaults</span><span class="p">)</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span><span class="o">.</span><span class="n">_to_dict</span><span class="p">(</span><span class="n">none_for_defaults</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">none_for_defaults</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;shade_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shade_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_shade_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;shade_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shade_construction</span><span class="o">.</span><span class="n">name</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">abridged</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">none_for_defaults</span><span class="p">:</span>
+                <span class="n">constructions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">modified_constructions_unique</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">constructions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">constructions_unique</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;constructions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">materials</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">cnst</span> <span class="ow">in</span> <span class="n">constructions</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">base</span><span class="p">[</span><span class="s1">&#39;constructions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cnst</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+                    <span class="n">materials</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">cnst</span><span class="o">.</span><span class="n">materials</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>  <span class="c1"># ShadeConstruction</span>
+                    <span class="n">base</span><span class="p">[</span><span class="s1">&#39;constructions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cnst</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;materials&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">mat</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">for</span> <span class="n">mat</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">materials</span><span class="p">))]</span>
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="ConstructionSet.duplicate"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.duplicate">[docs]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a copy of this ConstructionSet.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ConstructionSet.lock"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.lock">[docs]</a>    <span class="k">def</span> <span class="nf">lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The lock() method to will also lock the WallSet, FloorSet, etc.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_wall_set</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_floor_set</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_roof_ceiling_set</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_aperture_set</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_door_set</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ConstructionSet.unlock"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.unlock">[docs]</a>    <span class="k">def</span> <span class="nf">unlock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The unlock() method will also unlock the WallSet, FloorSet, etc.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_wall_set</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_floor_set</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_roof_ceiling_set</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_aperture_set</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_door_set</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_constr_from_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">face_type_set</span><span class="p">,</span> <span class="n">boundary_condition</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a specific construction from a face_type_set.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">boundary_condition</span> <span class="o">==</span> <span class="s1">&#39;Outdoors&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">face_type_set</span><span class="o">.</span><span class="n">exterior_construction</span>
+        <span class="k">elif</span> <span class="n">boundary_condition</span> <span class="o">==</span> <span class="s1">&#39;Surface&#39;</span> <span class="ow">or</span> <span class="n">boundary_condition</span> <span class="o">==</span> <span class="s1">&#39;Adiabatic&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">face_type_set</span><span class="o">.</span><span class="n">interior_construction</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">face_type_set</span><span class="o">.</span><span class="n">ground_construction</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_subsets_from_abridged</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">constructions</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get subset objects from and abirdged dictionary.&quot;&quot;&quot;</span>
+        <span class="n">wall_set</span> <span class="o">=</span> <span class="n">ConstructionSet</span><span class="o">.</span><span class="n">_make_construction_subset</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span> <span class="n">WallSet</span><span class="p">(),</span> <span class="s1">&#39;wall_set&#39;</span><span class="p">,</span> <span class="n">constructions</span><span class="p">)</span>
+        <span class="n">floor_set</span> <span class="o">=</span> <span class="n">ConstructionSet</span><span class="o">.</span><span class="n">_make_construction_subset</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span> <span class="n">FloorSet</span><span class="p">(),</span> <span class="s1">&#39;floor_set&#39;</span><span class="p">,</span> <span class="n">constructions</span><span class="p">)</span>
+        <span class="n">roof_ceiling_set</span> <span class="o">=</span> <span class="n">ConstructionSet</span><span class="o">.</span><span class="n">_make_construction_subset</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span> <span class="n">RoofCeilingSet</span><span class="p">(),</span> <span class="s1">&#39;roof_ceiling_set&#39;</span><span class="p">,</span> <span class="n">constructions</span><span class="p">)</span>
+        <span class="n">aperture_set</span> <span class="o">=</span> <span class="n">ConstructionSet</span><span class="o">.</span><span class="n">_make_aperture_subset</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span> <span class="n">ApertureSet</span><span class="p">(),</span> <span class="n">constructions</span><span class="p">)</span>
+        <span class="n">door_set</span> <span class="o">=</span> <span class="n">ConstructionSet</span><span class="o">.</span><span class="n">_make_door_subset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">DoorSet</span><span class="p">(),</span> <span class="n">constructions</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;shade_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;shade_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">shade_con</span> <span class="o">=</span> <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;shade_construction&#39;</span><span class="p">]]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shade_con</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">wall_set</span><span class="p">,</span> <span class="n">floor_set</span><span class="p">,</span> <span class="n">roof_ceiling_set</span><span class="p">,</span> <span class="n">aperture_set</span><span class="p">,</span> <span class="n">door_set</span><span class="p">,</span> <span class="n">shade_con</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_make_construction_subset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sub_set</span><span class="p">,</span> <span class="n">sub_set_name</span><span class="p">,</span> <span class="n">constructions</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Make a WallSet, FloorSet, or RoofCeilingSet from dictionary.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">sub_set_name</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;exterior_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">sub_set_name</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="n">sub_set_name</span><span class="p">][</span><span class="s1">&#39;exterior_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">exterior_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">sub_set_name</span><span class="p">][</span><span class="s1">&#39;exterior_construction&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="s1">&#39;interior_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">sub_set_name</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="n">sub_set_name</span><span class="p">][</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">interior_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">sub_set_name</span><span class="p">][</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="s1">&#39;ground_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">sub_set_name</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="n">sub_set_name</span><span class="p">][</span><span class="s1">&#39;ground_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">ground_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">sub_set_name</span><span class="p">][</span><span class="s1">&#39;ground_construction&#39;</span><span class="p">]]</span>
+        <span class="k">return</span> <span class="n">sub_set</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_make_aperture_subset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sub_set</span><span class="p">,</span> <span class="n">constructions</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Make an ApertureSet from a dictionary.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="s1">&#39;aperture_set&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;window_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">][</span><span class="s1">&#39;window_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">window_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">][</span><span class="s1">&#39;window_construction&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="s1">&#39;interior_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">][</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">interior_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">][</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="s1">&#39;skylight_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">][</span><span class="s1">&#39;skylight_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">skylight_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">][</span><span class="s1">&#39;skylight_construction&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="s1">&#39;operable_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">][</span><span class="s1">&#39;operable_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">operable_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;aperture_set&#39;</span><span class="p">][</span><span class="s1">&#39;operable_construction&#39;</span><span class="p">]]</span>
+        <span class="k">return</span> <span class="n">sub_set</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_make_door_subset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sub_set</span><span class="p">,</span> <span class="n">constructions</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Make a DoorSet from dictionary.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="s1">&#39;door_set&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;exterior_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;exterior_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">exterior_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;exterior_construction&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="s1">&#39;interior_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">interior_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="s1">&#39;exterior_glass_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;exterior_glass_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">exterior_glass_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;exterior_glass_construction&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="s1">&#39;interior_glass_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;interior_glass_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">interior_glass_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;interior_glass_construction&#39;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="s1">&#39;overhead_construction&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;overhead_construction&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">sub_set</span><span class="o">.</span><span class="n">overhead_construction</span> <span class="o">=</span> \
+                    <span class="n">constructions</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;door_set&#39;</span><span class="p">][</span><span class="s1">&#39;overhead_construction&#39;</span><span class="p">]]</span>
+        <span class="k">return</span> <span class="n">sub_set</span>
+
+<div class="viewcode-block" id="ConstructionSet.ToString"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ConstructionSet.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrite .NET ToString.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ConstructionSet</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                               <span class="bp">self</span><span class="o">.</span><span class="n">wall_set</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(),</span>
+                               <span class="bp">self</span><span class="o">.</span><span class="n">floor_set</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(),</span>
+                               <span class="bp">self</span><span class="o">.</span><span class="n">roof_ceiling_set</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(),</span>
+                               <span class="bp">self</span><span class="o">.</span><span class="n">aperture_set</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(),</span>
+                               <span class="bp">self</span><span class="o">.</span><span class="n">door_set</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(),</span>
+                               <span class="bp">self</span><span class="o">.</span><span class="n">_shade_construction</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A tuple based on the object properties, useful for hashing.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,)</span> <span class="o">+</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">hash</span><span class="p">(</span><span class="n">cnstr</span><span class="p">)</span> <span class="k">for</span> <span class="n">cnstr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">constructions</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">ConstructionSet</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Energy Construction Set: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">_FaceSetBase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Base class for the sets assigned to Faces (WallSet, FloorSet, RoofCeilingSet).&quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_exterior_construction&#39;</span><span class="p">,</span> <span class="s1">&#39;_interior_construction&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_ground_construction&#39;</span><span class="p">,</span> <span class="s1">&#39;_locked&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exterior_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interior_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">ground_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize set.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            exterior_construction: An OpaqueConstruction object for faces with an</span>
+<span class="sd">                Outdoors boundary condition.</span>
+<span class="sd">            interior_construction: An OpaqueConstruction object for faces with a</span>
+<span class="sd">                Surface or Adiabatic boundary condition.</span>
+<span class="sd">            ground_construction: : An OpaqueConstruction object for faces with a</span>
+<span class="sd">                Ground boundary condition.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># unlocked by default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span> <span class="o">=</span> <span class="n">exterior_construction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span> <span class="o">=</span> <span class="n">interior_construction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ground_construction</span> <span class="o">=</span> <span class="n">ground_construction</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for exterior Faces.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span>
+
+    <span class="nd">@exterior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for interior Faces.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span>
+
+    <span class="nd">@interior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ground_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for underground Faces.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span>
+
+    <span class="nd">@ground_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ground_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">constructions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all constructions contained within the set.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ground_construction</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">modified_constructions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all constructions that are not defaulted within the set.&quot;&quot;&quot;</span>
+        <span class="n">constructions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">constructions</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_modified</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Boolean noting whether any constructions are modified from the default.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">none_for_defaults</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the Set as a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            none_for_defaults: Boolean to note whether default constructions in the</span>
+<span class="sd">                set should be included in detail (False) or should be None (True).</span>
+<span class="sd">                Default: True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s1">&#39;Abridged&#39;</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">none_for_defaults</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;exterior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;ground_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;exterior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;ground_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ground_construction</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">return</span> <span class="n">base</span>
+
+    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a copy of this set.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_check_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check an OpaqueConstruction before assigning it.&quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">OpaqueConstruction</span><span class="p">),</span> \
+            <span class="s1">&#39;Expected OpaqueConstruction. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="n">value</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>   <span class="c1"># lock editing in case construction has multiple references</span>
+
+    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrite .NET ToString.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">3</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">constructions</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span><span class="p">,</span>
+                              <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Base Face Set&#39;</span>
+
+
+<div class="viewcode-block" id="WallSet"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.WallSet">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">WallSet</span><span class="p">(</span><span class="n">_FaceSetBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set containing all energy constructions needed to for an energy model&#39;s Walls.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        exterior_construction</span>
+<span class="sd">        interior_construction</span>
+<span class="sd">        ground_construction</span>
+<span class="sd">        constructions</span>
+<span class="sd">        modified_constructions</span>
+<span class="sd">        is_modified</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for exterior walls.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_exterior_wall</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span>
+
+    <span class="nd">@exterior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for interior walls.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_interior_wall</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span>
+
+    <span class="nd">@interior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ground_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for underground walls.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_underground_wall</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span>
+
+    <span class="nd">@ground_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ground_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Wall Construction Set:</span><span class="se">\n</span><span class="s1"> Exterior: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> Interior: </span><span class="si">{}</span><span class="s1">&#39;</span> \
+            <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Ground: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">ground_construction</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="FloorSet"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.FloorSet">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">FloorSet</span><span class="p">(</span><span class="n">_FaceSetBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set containing all energy constructions needed to for an energy model&#39;s Floors.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        exterior_construction</span>
+<span class="sd">        interior_construction</span>
+<span class="sd">        ground_construction</span>
+<span class="sd">        constructions</span>
+<span class="sd">        modified_constructions</span>
+<span class="sd">        is_modified</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for exterior-exposed floors.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_exposed_floor</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span>
+
+    <span class="nd">@exterior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for interior floors.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_interior_floor</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span>
+
+    <span class="nd">@interior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ground_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for ground-contact floor slabs.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_ground_slab</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span>
+
+    <span class="nd">@ground_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ground_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Floor Construction Set:</span><span class="se">\n</span><span class="s1"> Exterior: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> Interior: </span><span class="si">{}</span><span class="s1">&#39;</span> \
+            <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Ground: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">ground_construction</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RoofCeilingSet"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.RoofCeilingSet">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">RoofCeilingSet</span><span class="p">(</span><span class="n">_FaceSetBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set containing all energy constructions needed to for an energy model&#39;s Roofs.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        exterior_construction</span>
+<span class="sd">        interior_construction</span>
+<span class="sd">        ground_construction</span>
+<span class="sd">        constructions</span>
+<span class="sd">        modified_constructions</span>
+<span class="sd">        is_modified</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for exterior roofs.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_roof</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span>
+
+    <span class="nd">@exterior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for interior ceilings.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_interior_ceiling</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span>
+
+    <span class="nd">@interior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ground_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for underground roofs.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_underground_roof</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span>
+
+    <span class="nd">@ground_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ground_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ground_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;RoofCeiling Construction Set:</span><span class="se">\n</span><span class="s1"> Exterior: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> Interior: </span><span class="si">{}</span><span class="s1">&#39;</span> \
+            <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Ground: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">ground_construction</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ApertureSet"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ApertureSet">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">ApertureSet</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set containing all energy constructions needed to for an energy model&#39;s Apertures.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        window_construction</span>
+<span class="sd">        interior_construction</span>
+<span class="sd">        skylight_construction</span>
+<span class="sd">        operable_construction</span>
+<span class="sd">        constructions</span>
+<span class="sd">        modified_constructions</span>
+<span class="sd">        is_modified</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_window_construction&#39;</span><span class="p">,</span> <span class="s1">&#39;_interior_construction&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_skylight_construction&#39;</span><span class="p">,</span> <span class="s1">&#39;_operable_construction&#39;</span><span class="p">,</span> <span class="s1">&#39;_locked&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interior_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">skylight_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">operable_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize aperture set.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            window_construction: A WindowConstruction object for apertures</span>
+<span class="sd">                with an Outdoors boundary condition, False is_operable property,</span>
+<span class="sd">                and a Wall face type for their parent face.</span>
+<span class="sd">            interior_construction: A WindowConstruction object for all apertures</span>
+<span class="sd">                with a Surface boundary condition.</span>
+<span class="sd">            skylight_construction: : A WindowConstruction object for apertures with a</span>
+<span class="sd">                Outdoors boundary condition, False is_operable property, and a</span>
+<span class="sd">                RoofCeiling or Floor face type for their parent face.</span>
+<span class="sd">            operable_construction: A WindowConstruction object for all apertures</span>
+<span class="sd">                with an Outdoors boundary condition and True is_operable property.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># unlocked by default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window_construction</span> <span class="o">=</span> <span class="n">window_construction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span> <span class="o">=</span> <span class="n">interior_construction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">skylight_construction</span> <span class="o">=</span> <span class="n">skylight_construction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">operable_construction</span> <span class="o">=</span> <span class="n">operable_construction</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">window_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the WindowConstruction for exterior fixed windows in walls.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_window_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_double_pane</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_window_construction</span>
+
+    <span class="nd">@window_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">window_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_window_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_window_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the WindowConstruction for all interior apertures.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_single_pane</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span>
+
+    <span class="nd">@interior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_window_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">skylight_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the WindowConstruction for exterior fixed windows in roofs.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_skylight_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_double_pane</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_skylight_construction</span>
+
+    <span class="nd">@skylight_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">skylight_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_window_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_skylight_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">operable_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the WindowConstruction for all exterior operable windows.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_operable_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_double_pane</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_operable_construction</span>
+
+    <span class="nd">@operable_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">operable_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_window_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_operable_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">constructions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all constructions contained within the set.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">window_construction</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">skylight_construction</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">operable_construction</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">modified_constructions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all constructions that are not defaulted within the set.&quot;&quot;&quot;</span>
+        <span class="n">constructions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_window_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_window_construction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_skylight_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_skylight_construction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_operable_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_operable_construction</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">constructions</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_modified</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Boolean noting whether any constructions are modified from the default.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_window_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">_skylight_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">_operable_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">none_for_defaults</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get ApertureSetAbridged as a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            none_for_defaults: Boolean to note whether default constructions in the</span>
+<span class="sd">                set should be included in detail (False) or should be None (True).</span>
+<span class="sd">                Default: True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ApertureSetAbridged&#39;</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">none_for_defaults</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;window_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_window_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_window_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;skylight_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_skylight_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_skylight_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;operable_construction&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_operable_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_operable_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;window_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window_construction</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;skylight_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">skylight_construction</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;operable_construction&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">operable_construction</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">return</span> <span class="n">base</span>
+
+<div class="viewcode-block" id="ApertureSet.duplicate"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ApertureSet.duplicate">[docs]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a copy of this set.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_check_window_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check that a construction is valid before assigning it.&quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">WindowConstruction</span><span class="p">),</span> \
+            <span class="s1">&#39;Expected WindowConstruction. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="n">value</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>   <span class="c1"># lock editing in case construction has multiple references</span>
+
+<div class="viewcode-block" id="ApertureSet.ToString"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.ApertureSet.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrite .NET ToString.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">4</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">constructions</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_window_construction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_skylight_construction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_operable_construction</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Aperture Construction Set:</span><span class="se">\n</span><span class="s1"> Window: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> Interior: </span><span class="si">{}</span><span class="s1">&#39;</span> \
+            <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Skylight: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> Operable: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">window_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">skylight_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">operable_construction</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DoorSet"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.DoorSet">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">DoorSet</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set containing all energy constructions needed to for an energy model&#39;s Roofs.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        exterior_construction</span>
+<span class="sd">        interior_construction</span>
+<span class="sd">        exterior_glass_construction</span>
+<span class="sd">        interior_glass_construction</span>
+<span class="sd">        overhead_construction</span>
+<span class="sd">        constructions</span>
+<span class="sd">        modified_constructions</span>
+<span class="sd">        is_modified</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_exterior_construction&#39;</span><span class="p">,</span> <span class="s1">&#39;_interior_construction&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_exterior_glass_construction&#39;</span><span class="p">,</span> <span class="s1">&#39;_interior_glass_construction&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_overhead_construction&#39;</span><span class="p">,</span> <span class="s1">&#39;_locked&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exterior_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interior_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">exterior_glass_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interior_glass_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">overhead_construction</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize door set.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            exterior_construction: An OpaqueConstruction object for opaque doors with an</span>
+<span class="sd">                Outdoors boundary condition and a Wall face type for their parent face.</span>
+<span class="sd">            interior_construction: An OpaqueConstruction object for all opaque doors</span>
+<span class="sd">                with a Surface boundary condition.</span>
+<span class="sd">            exterior_glass_construction: A WindowConstruction object for all glass</span>
+<span class="sd">                doors with an Outdoors boundary condition.</span>
+<span class="sd">            interior_glass_construction: A WindowConstruction object for all glass</span>
+<span class="sd">                doors with a Surface boundary condition.</span>
+<span class="sd">            overhead_construction: : An OpaqueConstruction object for opaque doors with</span>
+<span class="sd">                an Outdoors boundary condition and a RoofCeiling or Floor face type for</span>
+<span class="sd">                their parent face.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># unlocked by default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span> <span class="o">=</span> <span class="n">exterior_construction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span> <span class="o">=</span> <span class="n">interior_construction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exterior_glass_construction</span> <span class="o">=</span> <span class="n">exterior_glass_construction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">interior_glass_construction</span> <span class="o">=</span> <span class="n">interior_glass_construction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">overhead_construction</span> <span class="o">=</span> <span class="n">overhead_construction</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for exterior opaque doors in walls.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_exterior_door</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span>
+
+    <span class="nd">@exterior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">exterior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for all interior opaque doors.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_interior_door</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span>
+
+    <span class="nd">@interior_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">interior_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">exterior_glass_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the WindowConstruction for exterior glass doors.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_glass_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_double_pane</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_glass_construction</span>
+
+    <span class="nd">@exterior_glass_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">exterior_glass_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_window_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_glass_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">interior_glass_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the WindowConstruction for all interior glass doors.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_glass_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_single_pane</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_glass_construction</span>
+
+    <span class="nd">@interior_glass_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">interior_glass_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_window_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interior_glass_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">overhead_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get or set the OpaqueConstruction for exterior opaque doors in roofs/floors.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_overhead_construction</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_lib</span><span class="o">.</span><span class="n">generic_exterior_door</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_overhead_construction</span>
+
+    <span class="nd">@overhead_construction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">overhead_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_check_construction</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_overhead_construction</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">constructions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all constructions contained within the set.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">exterior_glass_construction</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">interior_glass_construction</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">overhead_construction</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">modified_constructions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;List of all constructions that are not defaulted within the set.&quot;&quot;&quot;</span>
+        <span class="n">constructions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_glass_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_exterior_glass_construction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_glass_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_interior_glass_construction</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_overhead_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">constructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_overhead_construction</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">constructions</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_modified</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Boolean noting whether any constructions are modified from the default.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_glass_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interior_glass_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">_overhead_construction</span> <span class="ow">is</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">none_for_defaults</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get the DoorSet as a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            none_for_defaults: Boolean to note whether default constructions in the</span>
+<span class="sd">                set should be included in detail (False) or should be None (True).</span>
+<span class="sd">                Default: True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;DoorSetAbridged&#39;</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">none_for_defaults</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;exterior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;exterior_glass_construction&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_glass_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_glass_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;interior_glass_construction&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_interior_glass_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_interior_glass_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;overhead_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_overhead_construction</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">_overhead_construction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;exterior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;interior_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;exterior_glass_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exterior_glass_construction</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;interior_glass_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interior_glass_construction</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;overhead_construction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">overhead_construction</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">return</span> <span class="n">base</span>
+
+<div class="viewcode-block" id="DoorSet.duplicate"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.DoorSet.duplicate">[docs]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get a copy of this set.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_check_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check an OpaqueConstruction before assigning it.&quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">OpaqueConstruction</span><span class="p">),</span> \
+            <span class="s1">&#39;Expected OpaqueConstruction. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="n">value</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>   <span class="c1"># lock editing in case construction has multiple references</span>
+
+    <span class="k">def</span> <span class="nf">_check_window_construction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check that a construction is valid before assigning it.&quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">WindowConstruction</span><span class="p">),</span> \
+            <span class="s1">&#39;Expected WindowConstruction. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="n">value</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>   <span class="c1"># lock editing in case construction has multiple references</span>
+
+<div class="viewcode-block" id="DoorSet.ToString"><a class="viewcode-back" href="../../honeybee_energy.constructionset.html#honeybee_energy.constructionset.DoorSet.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrite .NET ToString.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">5</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">constructions</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_construction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_construction</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_exterior_glass_construction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interior_glass_construction</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_overhead_construction</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Door Construction Set:</span><span class="se">\n</span><span class="s1"> Exterior: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> Interior: </span><span class="si">{}</span><span class="s1">&#39;</span> \
+            <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Exterior Glass: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> Interior Glass: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> Overhead: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">exterior_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">interior_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">exterior_glass_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">interior_glass_construction</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">overhead_construction</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.material.gas module &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="honeybee_energy.material.glazing module" href="honeybee_energy.material.glazing.html" />
+    <link rel="prev" title="honeybee_energy.material package" href="honeybee_energy.material.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee_energy.material.html" title="Previous Chapter: honeybee_energy.material package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee_ener...</span>
+    </a>
+  </li>
+  <li>
+    <a href="honeybee_energy.material.glazing.html" title="Next Chapter: honeybee_energy.material.glazing module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">honeybee_ener... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee_energy.material.gas.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-honeybee_energy.material.gas">
+<span id="honeybee-energy-material-gas-module"></span><h1>honeybee_energy.material.gas module<a class="headerlink" href="#module-honeybee_energy.material.gas" title="Permalink to this headline">¶</a></h1>
+<p>Gas materials representing gaps within window constructions.</p>
+<p>They can only exist within window constructions bounded by glazing materials
+(they cannot be in the interior or exterior layer).</p>
+<dl class="class">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas">
+<em class="property">class </em><code class="descclassname">honeybee_energy.material.gas.</code><code class="descname">EnergyWindowMaterialGas</code><span class="sig-paren">(</span><em>name</em>, <em>thickness=0.0125</em>, <em>gas_type='Air'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.material.gas._EnergyWindowMaterialGasBase</span></code></p>
+<p>Gas gap layer.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+thickness
+gas_type
+conductivity
+viscosity
+specific_heat
+density
+prandtl</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.conductivity_at_temperature">
+<code class="descname">conductivity_at_temperature</code><span class="sig-paren">(</span><em>t_kelvin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGas.conductivity_at_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.conductivity_at_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the conductivity of the gas [W/m-K] at a given Kelvin temperature.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGas.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a EnergyWindowMaterialGas from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – <p>{
+“type”: ‘EnergyWindowMaterialGas’,
+“name”: ‘Argon Gap’,
+“thickness”: 0.01,
+“gas_type”: ‘Argon’}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.from_idf">
+<em class="property">classmethod </em><code class="descname">from_idf</code><span class="sig-paren">(</span><em>idf_string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGas.from_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.from_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create EnergyWindowMaterialGas from an EnergyPlus text string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idf_string</strong> – A text string fully describing an EnergyPlus material.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.from_standards_dict">
+<em class="property">classmethod </em><code class="descname">from_standards_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGas.from_standards_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.from_standards_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create EnergyWindowMaterialGas from OpenStudio standards dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – <p>{
+“name”: ‘Gap_1_W_0_0018’,
+“material_type”: “Gas”,
+“thickness”: 0.070866,
+“gas_type”: “Air”}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.gas_type">
+<code class="descname">gas_type</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.gas_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the text describing the gas in the gas gap layer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.molecular_weight">
+<code class="descname">molecular_weight</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.molecular_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the gas molecular weight.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.specific_heat_at_temperature">
+<code class="descname">specific_heat_at_temperature</code><span class="sig-paren">(</span><em>t_kelvin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGas.specific_heat_at_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.specific_heat_at_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the specific heat of the gas [J/kg-K] at a given Kelvin temperature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGas.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Energy Material Gas dictionary representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGas.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an EnergyPlus string representation of the material.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGas.viscosity_at_temperature">
+<code class="descname">viscosity_at_temperature</code><span class="sig-paren">(</span><em>t_kelvin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGas.viscosity_at_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGas.viscosity_at_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the viscosity of the gas [kg/m-s] at a given Kelvin temperature.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom">
+<em class="property">class </em><code class="descclassname">honeybee_energy.material.gas.</code><code class="descname">EnergyWindowMaterialGasCustom</code><span class="sig-paren">(</span><em>name</em>, <em>thickness</em>, <em>conductivity_coeff_a</em>, <em>viscosity_coeff_a</em>, <em>specific_heat_coeff_a</em>, <em>conductivity_coeff_b=0</em>, <em>viscosity_coeff_b=0</em>, <em>specific_heat_coeff_b=0</em>, <em>conductivity_coeff_c=0</em>, <em>viscosity_coeff_c=0</em>, <em>specific_heat_coeff_c=0</em>, <em>specific_heat_ratio=1.0</em>, <em>molecular_weight=20.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasCustom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.material.gas._EnergyWindowMaterialGasBase</span></code></p>
+<p>Custom gas gap layer.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+thickness
+conductivity_coeff_a
+viscosity_coeff_a
+specific_heat_coeff_a
+conductivity_coeff_b
+viscosity_coeff_b
+specific_heat_coeff_b
+conductivity_coeff_c
+viscosity_coeff_c
+specific_heat_coeff_c
+specific_heat_ratio
+molecular_weight
+conductivity
+viscosity
+specific_heat
+density
+prandtl</dd>
+<dt>Usage:</dt>
+<dd>co2_gap = EnergyWindowMaterialGasCustom(‘CO2’, 0.0125, 0.0146, 0.000014, 827.73)
+co2_gap.specific_heat_ratio = 1.4
+co2_gap.molecular_weight = 44
+print(co2_gap)</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.conductivity_at_temperature">
+<code class="descname">conductivity_at_temperature</code><span class="sig-paren">(</span><em>t_kelvin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasCustom.conductivity_at_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.conductivity_at_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the conductivity of the gas [W/m-K] at a given Kelvin temperature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.conductivity_coeff_a">
+<code class="descname">conductivity_coeff_a</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.conductivity_coeff_a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the first conductivity coefficient.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.conductivity_coeff_b">
+<code class="descname">conductivity_coeff_b</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.conductivity_coeff_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the second conductivity coefficient.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.conductivity_coeff_c">
+<code class="descname">conductivity_coeff_c</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.conductivity_coeff_c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the third conductivity coefficient.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasCustom.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a EnergyWindowMaterialGasCustom from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – <p>{
+“type”: ‘EnergyWindowMaterialGasCustom’,
+“name”: ‘CO2’,
+“thickness”: 0.01,
+“conductivity_coeff_a”: 0.0146,
+“viscosity_coeff_a”: 0.000014,
+“specific_heat_coeff_a”: 827.73,
+“specific_heat_ratio”: 1.4
+“molecular_weight”: 44}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.from_idf">
+<em class="property">classmethod </em><code class="descname">from_idf</code><span class="sig-paren">(</span><em>idf_string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasCustom.from_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.from_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create EnergyWindowMaterialGasCustom from an EnergyPlus text string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idf_string</strong> – A text string fully describing an EnergyPlus material.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.molecular_weight">
+<code class="descname">molecular_weight</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.molecular_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the molecular weight.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_at_temperature">
+<code class="descname">specific_heat_at_temperature</code><span class="sig-paren">(</span><em>t_kelvin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasCustom.specific_heat_at_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_at_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the specific heat of the gas [J/kg-K] at a given Kelvin temperature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_coeff_a">
+<code class="descname">specific_heat_coeff_a</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_coeff_a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the first specific heat coefficient.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_coeff_b">
+<code class="descname">specific_heat_coeff_b</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_coeff_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the second specific heat coefficient.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_coeff_c">
+<code class="descname">specific_heat_coeff_c</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_coeff_c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the third specific heat coefficient.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_ratio">
+<code class="descname">specific_heat_ratio</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.specific_heat_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the specific heat ratio.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasCustom.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Energy Material Gas Custom dictionary representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasCustom.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an EnergyPlus string representation of the material.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.viscosity_at_temperature">
+<code class="descname">viscosity_at_temperature</code><span class="sig-paren">(</span><em>t_kelvin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasCustom.viscosity_at_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.viscosity_at_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the viscosity of the gas [kg/m-s] at a given Kelvin temperature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.viscosity_coeff_a">
+<code class="descname">viscosity_coeff_a</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.viscosity_coeff_a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the first viscosity coefficient.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.viscosity_coeff_b">
+<code class="descname">viscosity_coeff_b</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.viscosity_coeff_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the second viscosity coefficient.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.viscosity_coeff_c">
+<code class="descname">viscosity_coeff_c</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasCustom.viscosity_coeff_c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the third viscosity coefficient.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture">
+<em class="property">class </em><code class="descclassname">honeybee_energy.material.gas.</code><code class="descname">EnergyWindowMaterialGasMixture</code><span class="sig-paren">(</span><em>name</em>, <em>thickness=0.0125</em>, <em>gas_types=('Argon'</em>, <em>'Air')</em>, <em>gas_fractions=(0.9</em>, <em>0.1)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasMixture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee_energy.material.gas._EnergyWindowMaterialGasBase</span></code></p>
+<p>Gas gap layer with a mixture of gasses.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+thickness
+gas_types
+gas_fractions
+gas_count
+conductivity
+viscosity
+specific_heat
+density
+prandtl</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.conductivity_at_temperature">
+<code class="descname">conductivity_at_temperature</code><span class="sig-paren">(</span><em>t_kelvin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasMixture.conductivity_at_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.conductivity_at_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the conductivity of the gas [W/m-K] at a given Kelvin temperature.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasMixture.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a EnergyWindowMaterialGasMixture from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – <p>{
+“type”: ‘EnergyWindowMaterialGasMixture’,
+“name”: ‘Argon Mixture Gap’,
+“thickness”: 0.01,
+‘gas_type_fraction’: ({‘gas_type’: ‘Air’, ‘gas_fraction’: 0.95},</p>
+<blockquote>
+<div>{‘gas_type’: ‘Argon’, ‘gas_fraction’: 0.05})}</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.from_idf">
+<em class="property">classmethod </em><code class="descname">from_idf</code><span class="sig-paren">(</span><em>idf_string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasMixture.from_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.from_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create EnergyWindowMaterialGas from an EnergyPlus text string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idf_string</strong> – A text string fully describing an EnergyPlus material.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.gas_count">
+<code class="descname">gas_count</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.gas_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>An integer indicating the number of gasses in the mixture.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.gas_fractions">
+<code class="descname">gas_fractions</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.gas_fractions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a tuple of numbers the fractions of gases in the gas gap layer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.gas_types">
+<code class="descname">gas_types</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.gas_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a tuple of text describing the gases in the gas gap layer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.molecular_weight">
+<code class="descname">molecular_weight</code><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.molecular_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the gas molecular weight.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.specific_heat_at_temperature">
+<code class="descname">specific_heat_at_temperature</code><span class="sig-paren">(</span><em>t_kelvin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasMixture.specific_heat_at_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.specific_heat_at_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the specific heat of the gas [J/kg-K] at a given Kelvin temperature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasMixture.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Energy Material Gas Mixture dictionary representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasMixture.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an EnergyPlus string representation of the material.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.viscosity_at_temperature">
+<code class="descname">viscosity_at_temperature</code><span class="sig-paren">(</span><em>t_kelvin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/material/gas.html#EnergyWindowMaterialGasMixture.viscosity_at_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.material.gas.EnergyWindowMaterialGasMixture.viscosity_at_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the viscosity of the gas [kg/m-s] at a given Kelvin temperature.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

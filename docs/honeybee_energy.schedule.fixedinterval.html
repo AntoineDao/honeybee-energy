@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.schedule.fixedinterval module &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="honeybee_energy.schedule.rule module" href="honeybee_energy.schedule.rule.html" />
+    <link rel="prev" title="honeybee_energy.schedule.day module" href="honeybee_energy.schedule.day.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee_energy.schedule.day.html" title="Previous Chapter: honeybee_energy.schedule.day module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee_ener...</span>
+    </a>
+  </li>
+  <li>
+    <a href="honeybee_energy.schedule.rule.html" title="Next Chapter: honeybee_energy.schedule.rule module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">honeybee_ener... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee_energy.schedule.fixedinterval.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.rule.html">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-honeybee_energy.schedule.fixedinterval">
+<span id="honeybee-energy-schedule-fixedinterval-module"></span><h1>honeybee_energy.schedule.fixedinterval module<a class="headerlink" href="#module-honeybee_energy.schedule.fixedinterval" title="Permalink to this headline">¶</a></h1>
+<p>Annual schedule defined by a list of values at a fixed interval or timestep.</p>
+<dl class="class">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval">
+<em class="property">class </em><code class="descclassname">honeybee_energy.schedule.fixedinterval.</code><code class="descname">ScheduleFixedInterval</code><span class="sig-paren">(</span><em>name</em>, <em>values</em>, <em>schedule_type_limit=None</em>, <em>timestep=1</em>, <em>start_date=01 Jan</em>, <em>placeholder_value=0</em>, <em>interpolate=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An annual schedule defined by a list of values at a fixed interval or timestep.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+values
+schedule_type_limit
+timestep
+start_date
+placeholder_value
+interpolate
+end_date_time
+is_leap_year
+data_collection</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.ToString">
+<code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.VALIDTIMESTEPS">
+<code class="descname">VALIDTIMESTEPS</code><em class="property"> = (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60)</em><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.VALIDTIMESTEPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.average_schedules">
+<em class="property">static </em><code class="descname">average_schedules</code><span class="sig-paren">(</span><em>name</em>, <em>schedules</em>, <em>weights=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.average_schedules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.average_schedules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a ScheduleFixedInterval that’s a weighted average between other schedules.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> – A name for the new averaged ScheduleFixedInterval.</li>
+<li><strong>schedules</strong> – A list of ScheduleFixedInterval objects that will be averaged
+together to make a new ScheduleFixedInterval. This list may also contain
+ScheduleRulesets but it is recommened there be at least one
+ScheduleFixedInterval. Otherwise, the ScheduleRuleset.average_schedules
+method should be used.</li>
+<li><strong>weights</strong> – An optional list of fractioanl numbers with the same length
+as the input schedules that sum to 1. These will be used to weight
+each of the ScheduleFixedInterval objects in the resulting average
+schedule. If None, the individual schedules will be weighted equally.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.data_collection">
+<code class="descname">data_collection</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.data_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>DataCollection of schedule values at this schedule’s start_date and timestep.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.data_collection_at_timestep">
+<code class="descname">data_collection_at_timestep</code><span class="sig-paren">(</span><em>timestep=1</em>, <em>start_date=01 Jan</em>, <em>end_date=31 Dec</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.data_collection_at_timestep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.data_collection_at_timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a ladybug DataCollection representing this schedule at a given timestep.</p>
+<p>Note that ladybug DataCollections always follow the “Ladybug Tools
+Interpretation” of date time values as noted in the
+ScheduleDay.values_at_timestep documentation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>timestep</strong> – An integer for the number of steps per hour at which to make
+the resulting DataCollection.</li>
+<li><strong>start_date</strong> – An optional ladybug Date object for when to start the
+DataCollection. Default: 1 Jan on a non-leap year.</li>
+<li><strong>end_date</strong> – An optional ladybug Date object for when to end the
+DataCollection. Default: 31 Dec on a non-leap year.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.end_date_time">
+<code class="descname">end_date_time</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.end_date_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a ladybug DateTime object for the end time of the schedule’s values.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.extract_all_from_idf_file">
+<em class="property">static </em><code class="descname">extract_all_from_idf_file</code><span class="sig-paren">(</span><em>idf_file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.extract_all_from_idf_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.extract_all_from_idf_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract all ScheduleFixedInterval objects from an EnergyPlus IDF file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>idf_file</strong> – A path to an IDF file containing objects for Schedule:File
+which should have correct file paths to CSVs storing the schedule
+values.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt>A list of all Schedule:File objects in the IDF file as</dt>
+<dd>honeybee_energy ScheduleFixedInterval objects.</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">schedules</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ScheduleFixedInterval from a dictionary.</p>
+<p>Note that the dictionary must be a non-abridged version for this
+classmethod to work.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – ScheduleFixedInterval dictionary following the format below.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+&quot;type&quot;: &#39;ScheduleFixedInterval&#39;,
+&quot;name&quot;: &#39;Automated Awning Transmittance&#39;,
+&quot;values&quot;: [], // list of numbers for the values of the schedule
+&quot;schedule_type_limit&quot;: {}, // ScheduleTypeLimit dictionary representation
+&quot;timestep&quot;: 1, // Integer for the timestep of the schedule
+&quot;start_date&quot;: {}, // Date dictionary representation
+&quot;placeholder_value&quot;: 0, // Number for the values out of range
+&quot;interpolate&quot;: False // Boolean noting whether to interpolate between values
+}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.from_idf">
+<em class="property">classmethod </em><code class="descname">from_idf</code><span class="sig-paren">(</span><em>idf_string</em>, <em>type_idf_string=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.from_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.from_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ScheduleFixedInterval from an EnergyPlus IDF text strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>idf_string</strong> – A text string fully describing an EnergyPlus
+Schedule:File.</li>
+<li><strong>type_idf_string</strong> – An optional text string for the ScheduleTypeLimits.
+If None, the resulting schedule will have no ScheduleTypeLimit.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.interpolate">
+<code class="descname">interpolate</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether values should be interpolated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.is_leap_year">
+<code class="descname">is_leap_year</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.is_leap_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a boolean noting whether the schedule is over a leap year.</p>
+<p>Note that this property originates from the leap_year property on the
+input start_date.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.lock">
+<code class="descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.lock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.name">
+<code class="descname">name</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the text string for schedule name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.placeholder_value">
+<code class="descname">placeholder_value</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.placeholder_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the value to be used for all times not covered by the input values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.schedule_type_limit">
+<code class="descname">schedule_type_limit</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.schedule_type_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a ScheduleTypeLimit object used to assign units to schedule values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.start_date">
+<code class="descname">start_date</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.start_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ladybug Date object noting when the the input values take effect.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.timestep">
+<code class="descname">timestep</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the integer for the schedule’s number of steps per hour.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><em>abridged=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>ScheduleFixedInterval dictionary representation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>abridged</strong> – Boolean to note whether the full dictionary describing the
+object should be returned (False) or just an abridged version (True),
+which only specifies the name of the ScheduleTypeLimit. Default: False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.to_idf">
+<code class="descname">to_idf</code><span class="sig-paren">(</span><em>schedule_directory</em>, <em>include_datetimes=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.to_idf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.to_idf" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDF string representation of the schedule.</p>
+<p>Note that this method does both the production of the IDF string
+representation of the Schedule:File as well as the actual writing of
+the schedule to a CSV format that can be read in by EnergyPlus.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>schedule_directory</strong> – [Required] Text string of a path to a folder on this
+machine to which the CSV version of the file will be written.</li>
+<li><strong>include_datetimes</strong> – Boolean to note whether a column of datetime objects
+should be written into the CSV alongside the data. Default is False,
+which will keep the resulting CSV lighter in file size but you may
+want to include such datetimes in order to verfy that values align with
+the expected timestep. Note that the included datetimes will follow the
+EnergyPlus interpetation of aligning values to timesteps in which case
+the timestep to which the value is matched means that the value was
+utilized over all of the previous timestep.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>Text string representation of the Schedule:File</dt>
+<dd><p class="first last">describing this schedule.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">schedule_file</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.to_idf_collective_csv">
+<em class="property">static </em><code class="descname">to_idf_collective_csv</code><span class="sig-paren">(</span><em>schedules</em>, <em>schedule_directory</em>, <em>file_name</em>, <em>include_datetimes=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.to_idf_collective_csv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.to_idf_collective_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write several ScheduleFixedIntervals into the same CSV file and get IDF text.</p>
+<p>This method is useful when several ScheduleFixedInterval objects are serving a
+similar purpose and the data would be more easily managed if they all were in
+the same file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>schedules</strong> – A list of ScheduleFixedInterval objects to be written into
+the same CSV.</li>
+<li><strong>schedule_directory</strong> – [Required] Text string of a full path to a folder on
+this machine to which the CSV version of the file will be written.</li>
+<li><strong>file_name</strong> – Text string for the name to be used for the CSV file that
+houses all of the schedule data.</li>
+<li><strong>include_datetimes</strong> – Boolean to note whether a column of datetime objects
+should be written into the CSV alongside the data. Default is False,
+which will keep the resulting CSV lighter in file size but you may
+want to include such datetimes in order to verfy that values align with
+the expected timestep.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>A list of IDF text string representations of the</dt>
+<dd><p class="first last">Schedule:File describing this schedule.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">schedule_files</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.to_idf_compact">
+<code class="descname">to_idf_compact</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.to_idf_compact"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.to_idf_compact" title="Permalink to this definition">¶</a></dt>
+<dd><p>IDF string representation of the schedule as a Schedule:Compact.</p>
+<p>Schedule:Compact strings contain all of the schedule values and can be
+written directly into IDF files. So they are sometimes preferable to
+Schedule:Files objects when it’s important that all simulation data be
+repreented in a single IDF file. However, such a representation of the
+schedule often prevents the IDF from being read by programs such as the
+IDFEditor and it can increase the overall size of the schedule in the
+resulting files by an order of magnitude.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.unlock">
+<code class="descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.unlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.values">
+<code class="descname">values</code><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the schedule’s numerical values, which occur at a fixed interval.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.values_at_timestep">
+<code class="descname">values_at_timestep</code><span class="sig-paren">(</span><em>timestep=1</em>, <em>start_date=None</em>, <em>end_date=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/fixedinterval.html#ScheduleFixedInterval.values_at_timestep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.fixedinterval.ScheduleFixedInterval.values_at_timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of sequential schedule values over the year at a given timestep.</p>
+<p>Note that there are two possible ways that these values can be mapped to
+corresponding times:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The EnergyPlus interpretation that uses “time until”</li>
+<li>The Ladybug Tools interpretation that uses “time of beginning”</li>
+</ul>
+</div></blockquote>
+<p>The EnergyPlus interpretation should be used when aligning the schedule
+with EnergyPlus results while the Ladybug Tools interpretation should be
+used when aligning the schedule with ladybug DataCollections or other
+ladybug objects. See the ScheduleDay.values_at_timestep method
+documentation for a complete description of these two interpretations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>timestep</strong> – An integer for the number of steps per hour at which to return
+the resulting values.</li>
+<li><strong>start_date</strong> – An optional ladybug Date object for when to start the list
+of values. Default: 1 Jan with a leap year equal to self.start_date.</li>
+<li><strong>end_date</strong> – An optional ladybug Date object for when to end the list
+of values. Default: 31 Dec with a leap year equal to self.start_date.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

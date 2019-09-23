@@ -1,0 +1,34 @@
+honeybee\_energy package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    honeybee_energy.lib
+    honeybee_energy.load
+    honeybee_energy.material
+    honeybee_energy.properties
+    honeybee_energy.schedule
+
+Submodules
+----------
+
+.. toctree::
+
+   honeybee_energy.boundarycondition
+   honeybee_energy.construction
+   honeybee_energy.constructionset
+   honeybee_energy.idealair
+   honeybee_energy.programtype
+   honeybee_energy.reader
+   honeybee_energy.writer
+
+Module contents
+---------------
+
+.. automodule:: honeybee_energy
+    :members:
+    :undoc-members:
+    :show-inheritance:

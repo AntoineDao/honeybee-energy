@@ -1,0 +1,7 @@
+honeybee\_energy.idealair module
+================================
+
+.. automodule:: honeybee_energy.idealair
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee_energy.schedule.rule module &#8212; honeybee energy 1.11.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="honeybee_energy.schedule.ruleset module" href="honeybee_energy.schedule.ruleset.html" />
+    <link rel="prev" title="honeybee_energy.schedule.fixedinterval module" href="honeybee_energy.schedule.fixedinterval.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee energy</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.11.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.library.html">honeybee_energy.lib.library package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee_energy.lib.library.html#module-honeybee_energy.lib.library">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructions.html">honeybee_energy.lib.constructions module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.constructionsets.html">honeybee_energy.lib.constructionsets module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.materials.html">honeybee_energy.lib.materials module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.programtypes.html">honeybee_energy.lib.programtypes module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.schedules.html">honeybee_energy.lib.schedules module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.lib.scheduletypelimits.html">honeybee_energy.lib.scheduletypelimits module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.lib.html#module-honeybee_energy.lib">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.equipment.html">honeybee_energy.load.equipment module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.infiltration.html">honeybee_energy.load.infiltration module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.lighting.html">honeybee_energy.load.lighting module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.people.html">honeybee_energy.load.people module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.setpoint.html">honeybee_energy.load.setpoint module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.load.ventilation.html">honeybee_energy.load.ventilation module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.load.html#module-honeybee_energy.load">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.gas.html">honeybee_energy.material.gas module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.glazing.html">honeybee_energy.material.glazing module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.opaque.html">honeybee_energy.material.opaque module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.material.shade.html">honeybee_energy.material.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.material.html#module-honeybee_energy.material">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.aperture.html">honeybee_energy.properties.aperture module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.door.html">honeybee_energy.properties.door module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.face.html">honeybee_energy.properties.face module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.model.html">honeybee_energy.properties.model module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.room.html">honeybee_energy.properties.room module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.properties.shade.html">honeybee_energy.properties.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.properties.html#module-honeybee_energy.properties">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.boundarycondition.html">honeybee_energy.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.construction.html">honeybee_energy.construction module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.constructionset.html">honeybee_energy.constructionset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.idealair.html">honeybee_energy.idealair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.programtype.html">honeybee_energy.programtype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.reader.html">honeybee_energy.reader module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.writer.html">honeybee_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee_energy.schedule.fixedinterval.html" title="Previous Chapter: honeybee_energy.schedule.fixedinterval module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee_ener...</span>
+    </a>
+  </li>
+  <li>
+    <a href="honeybee_energy.schedule.ruleset.html" title="Next Chapter: honeybee_energy.schedule.ruleset module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">honeybee_ener... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee_energy.schedule.rule.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee_energy.html">honeybee_energy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.lib.html">honeybee_energy.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.load.html">honeybee_energy.load package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.material.html">honeybee_energy.material package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee_energy.properties.html">honeybee_energy.properties package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee_energy.schedule.html">honeybee_energy.schedule package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="honeybee_energy.schedule.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.day.html">honeybee_energy.schedule.day module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.fixedinterval.html">honeybee_energy.schedule.fixedinterval module</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">honeybee_energy.schedule.rule module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.ruleset.html">honeybee_energy.schedule.ruleset module</a></li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee_energy.schedule.typelimit.html">honeybee_energy.schedule.typelimit module</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee_energy.schedule.html#module-honeybee_energy.schedule">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee_energy.html#module-honeybee_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-honeybee_energy.schedule.rule">
+<span id="honeybee-energy-schedule-rule-module"></span><h1>honeybee_energy.schedule.rule module<a class="headerlink" href="#module-honeybee_energy.schedule.rule" title="Permalink to this headline">¶</a></h1>
+<p>Object storing rules for how a given ScheduleDay gets applied over a year.</p>
+<dl class="class">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule">
+<em class="property">class </em><code class="descclassname">honeybee_energy.schedule.rule.</code><code class="descname">ScheduleRule</code><span class="sig-paren">(</span><em>schedule_day</em>, <em>apply_sunday=False</em>, <em>apply_monday=False</em>, <em>apply_tuesday=False</em>, <em>apply_wednesday=False</em>, <em>apply_thursday=False</em>, <em>apply_friday=False</em>, <em>apply_saturday=False</em>, <em>apply_holiday=False</em>, <em>start_date=None</em>, <em>end_date=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Schedule rule including a DaySchedule and when it should be applied.</p>
+<p>Note that a ScheduleRule cannot be assigned to Rooms, Shades, etc.  The
+ScheduleRule must be added to a ScheduleRuleset and then the ScheduleRuleset
+can be applied to such objects.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>schedule_day
+apply_sunday
+apply_monday
+apply_tuesday
+apply_wednesday
+apply_thursday
+apply_friday
+apply_saturday
+apply_holiday
+start_date
+end_date
+apply_weekday
+apply_weekend
+apply_all
+days_applied
+week_apply_tuple</dd>
+</dl>
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.ToString">
+<code class="descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_all">
+<code class="descname">apply_all</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on all days.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_day_by_dow">
+<code class="descname">apply_day_by_dow</code><span class="sig-paren">(</span><em>dow</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.apply_day_by_dow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_day_by_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the rule to apply to the day of the week (or holidays) by its dow integer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>week_day_index</strong> – <p>An integer from 1-8 for the day of the week (or the
+holiday). Values correspond to the following:</p>
+<blockquote>
+<div>1 - Sunday
+2 - Monday
+3 - Tuesday
+4 - Wednesday
+5 - Thursday
+6 - Friday
+7 - Saturday
+8 - Holiday</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_day_by_name">
+<code class="descname">apply_day_by_name</code><span class="sig-paren">(</span><em>day_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.apply_day_by_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_day_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the rule to apply to the day of the week (or holidays) by its name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>day_name</strong> – A text string for the day on which this rule should be applied.
+The following options are acceptable:
+‘sunday’, ‘monday’, ‘tuesday’, ‘wednesday’, ‘thursday’, ‘friday’,
+‘saturday’, ‘holiday’, ‘weekday’, ‘weekend’, ‘all’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_friday">
+<code class="descname">apply_friday</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_friday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on Fridays.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_holiday">
+<code class="descname">apply_holiday</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_holiday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on Holidays.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_monday">
+<code class="descname">apply_monday</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_monday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on Mondays.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_saturday">
+<code class="descname">apply_saturday</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_saturday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on Saturdays.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_sunday">
+<code class="descname">apply_sunday</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_sunday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on Sundays.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_thursday">
+<code class="descname">apply_thursday</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_thursday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on Thursdays.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_tuesday">
+<code class="descname">apply_tuesday</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_tuesday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on Tuesdays.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_wednesday">
+<code class="descname">apply_wednesday</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_wednesday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on Wednesdays.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_weekday">
+<code class="descname">apply_weekday</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_weekday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on week days.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.apply_weekend">
+<code class="descname">apply_weekend</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.apply_weekend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean noting whether to apply schedule_day on weekends.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.days_applied">
+<code class="descname">days_applied</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.days_applied" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of text values for the days applied.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.does_rule_apply">
+<code class="descname">does_rule_apply</code><span class="sig-paren">(</span><em>doy</em>, <em>dow=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.does_rule_apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.does_rule_apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if this rule applies to a given day of the year and day of the week.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>doy</strong> – An integer between 1 anf 365 for the day of the year to test.</li>
+<li><strong>dow</strong> – An integer between 1 anf 7 for the day of the week to test. If None,
+this value will be derived from the doy, assuming the first day of
+the year is a Sunday.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.does_rule_apply_doy">
+<code class="descname">does_rule_apply_doy</code><span class="sig-paren">(</span><em>doy</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.does_rule_apply_doy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.does_rule_apply_doy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if this rule applies to a given day of the year.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doy</strong> – An integer between 1 anf 365 for the day of the year to test.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.does_rule_apply_doy_leap_year">
+<code class="descname">does_rule_apply_doy_leap_year</code><span class="sig-paren">(</span><em>doy</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.does_rule_apply_doy_leap_year"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.does_rule_apply_doy_leap_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if this rule applies to a given day of a leap year.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doy</strong> – An integer between 1 anf 366 for the day of the leap year to test.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.does_rule_apply_leap_year">
+<code class="descname">does_rule_apply_leap_year</code><span class="sig-paren">(</span><em>doy</em>, <em>dow=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.does_rule_apply_leap_year"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.does_rule_apply_leap_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if this rule applies to a given day of a leap year and day of the week.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>doy</strong> – An integer between 1 anf 366 for the day of the leap year to test.</li>
+<li><strong>dow</strong> – An integer between 1 anf 7 for the day of the week to test. If None,
+this value will be derived from the doy, assuming the first day of
+the year is a Sunday.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.end_date">
+<code class="descname">end_date</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.end_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a ladybug Date object for the end of the period.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.extract_all_from_schedule_week">
+<em class="property">static </em><code class="descname">extract_all_from_schedule_week</code><span class="sig-paren">(</span><em>week_idf_string</em>, <em>day_schedule_dict</em>, <em>start_date=None</em>, <em>end_date=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.extract_all_from_schedule_week"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.extract_all_from_schedule_week" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract all ScheduleRule objects from an IDF string of a Schedule:Week.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>week_idf_string</strong> – A text string fully describing an EnergyPlus
+Schedule:Week:Daily or Schedule:Week:Compact.</li>
+<li><strong>day_schedule_dict</strong> – A dictionary with the names of ScheduleDay objects as
+keys and the corresponding ScheduleDay objects as values. These objects
+will be used to build the ScheduleRules using the week_idf_string.</li>
+<li><strong>start_date</strong> – A ladybug Date object for the start of the period over which
+the ScheduleRules apply. If None, Jan 1 will be used.</li>
+<li><strong>end_date</strong> – A ladybug Date object for the end of the period over which
+the ScheduleRules apply. If None, Dec 31 will be used.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>A list of ScheduleRule objects that together describe</dt>
+<dd><p class="first last">the Schedule:Week.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">schedule_rules</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.from_days_applied">
+<em class="property">classmethod </em><code class="descname">from_days_applied</code><span class="sig-paren">(</span><em>schedule_day</em>, <em>applicable_days=None</em>, <em>start_date=None</em>, <em>end_date=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.from_days_applied"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.from_days_applied" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a ScheduleRule using a list of days when the rule is applied.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>schedule_day</strong> – A ScheduleDay object associated with this rule.</li>
+<li><strong>applicable_days</strong> – A list of text strings for the days when theScheduleRule
+will be applied. For example [‘holiday’, ‘weekend’].
+The following options are acceptable:
+‘sunday’, ‘monday’, ‘tuesday’, ‘wednesday’, ‘thursday’, ‘friday’,
+‘saturday’, ‘holiday’, ‘weekday’, ‘weekend’, ‘all’</li>
+<li><strong>start_date</strong> – A ladybug Date object for the start of the period over which
+the schedule_day will be applied. If None, Jan 1 will be used.</li>
+<li><strong>end_date</strong> – A ladybug Date object for the end of the period over which
+the schedule_day will be applied. If None, Dec 31 will be used.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ScheduleRule from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – ScheduleRule dictionary following the format below.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+&quot;type&quot;: &#39;ScheduleRule&#39;
+&quot;schedule_day&quot;: {
+    &quot;type&quot;: &#39;ScheduleDay&#39;,
+    &quot;name&quot;: &#39;Office Occupancy&#39;,
+    &quot;values&quot;: [0, 1, 0],
+    &quot;times&quot;: [(0, 0), (9, 0), (17, 0)],
+    &quot;interpolate&quot;: False
+    }
+&quot;apply_sunday&quot;: False,
+&quot;apply_monday&quot;: True,
+&quot;apply_tuesday&quot;: True,
+&quot;apply_wednesday&quot;: True,
+&quot;apply_thursday&quot;: True,
+&quot;apply_friday&quot;: True,
+&quot;apply_saturday&quot;: False,
+&quot;apply_holiday&quot;: False,
+&quot;start_date&quot;: (1, 1),
+&quot;end_date&quot;: (12, 31)
+}
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.lock">
+<code class="descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lock() method will also lock the schedule_day.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.schedule_day">
+<code class="descname">schedule_day</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.schedule_day" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the ScheduleDay object associated with this rule..</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.start_date">
+<code class="descname">start_date</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.start_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a ladybug Date object for the start of the period.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>ScheduleRule dictionary representation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.unlock">
+<code class="descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee_energy/schedule/rule.html#ScheduleRule.unlock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.unlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unlock() method will also unlock the schedule_day.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee_energy.schedule.rule.ScheduleRule.week_apply_tuple">
+<code class="descname">week_apply_tuple</code><a class="headerlink" href="#honeybee_energy.schedule.rule.ScheduleRule.week_apply_tuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a tuple of 7 booleans for each of the days of the week.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
